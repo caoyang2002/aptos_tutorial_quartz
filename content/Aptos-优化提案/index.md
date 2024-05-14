@@ -6,3 +6,7 @@ title: AIP-优化提案
 
 英文文档：https://github.com/aptos-foundation/AIPs
 
+
+
+- [[AIP-73]] 可调度 token 标准
+

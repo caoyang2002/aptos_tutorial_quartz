@@ -1,0 +1,21 @@
+
+ Quartz v4.2.3 
+
+Cleaned output directory `public` in 17ms
+Found 25 input files from `content` in 15ms
+[2K[1GParsed 25 Markdown files in 6s
+Filtered out 0 files in 193μs
+[2K[1GEmitted 44 files to `public` in 1s
+Done processing 25 files in 7s
+Started a Quartz server listening at http://localhost:8080
+hint: exit with ctrl+c
+[200] /
+[200] /prescript.js
+[200] /static/contentIndex.json
+[200] /%E4%BB%8Ehello_world%E5%BC%80%E5%A7%8B
+[404] /%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B
+[200] /Aptos-%E4%BC%98%E5%8C%96%E6%8F%90%E6%A1%88
+[200] /%E5%AF%86%E7%A0%81%E5%AD%A6
+[200] /%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83
+[200] /Move-%E7%9A%84%E5%8E%86%E5%8F%B2
+[200] /%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95

@@ -15,8 +15,10 @@ date:2024-5-1
 title: test
 description: 说明
 aliases: 别称
-tags: 标签
+tags: 
+  - 标签一
+  - 标签二
 draft: true
-date:2024-5-1
+date:2024-05-01
 ```
 

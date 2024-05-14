@@ -1,6 +1,6 @@
 **简体中文** | [English](docs/README_en.md) | [更改日志](docs/CHANGELOG.md)
 
-# Aptos 开发教程
+# 一、Aptos 开发教程
 
 [IP 访问](http://chyraw.com)  | [域名访问](http://43.138.107.218/)
 
@@ -20,7 +20,35 @@
 
 
 
-# 文档站使用说明
+# 二、文档站使用说明
+
+## 1. 安装
+
+前置条件
+
+Quartz 需要 [Node](https://nodejs.org/) 版本 **v18.14** 和 `npm` 版本 v9.3.1 以上才能正常工作。请确保您的设备上已经安装了再继续。推荐使用 `nvm`
+
+开始安装
+
+```bash
+git clone https://github.com/caoyang2002/aptos_tutorial_quartz.git
+```
+
+```bash
+cd /home/ubuntu/aptos_tutorial_quartz
+```
+
+```bash
+num i
+```
+
+```bash
+npx quartz build --serve  # 运行
+```
+
+
+
+## 2. 编辑内容
 
 文档格式：Markdown（`.md`  后缀）
 

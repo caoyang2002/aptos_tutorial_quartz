@@ -41,18 +41,19 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
 六、[[算法]]【编辑中】
 
-- 两数之和
+- [[两数之和]]
 
-七、标准库
+七、标准库【标记中】
 
 - [[Move-标准库]]
 
-六、[[错误解析]]【编辑中】
+八、[[错误解析]]【编辑中】
 
-- test
-- [[test]]
-- [[两数]]
-- [[两数之和]]
+九、功能实现【编辑中】
+
+- hash-表
+
+
 
 
 
@@ -60,11 +61,22 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
 `不霁何虹`、`Aaron`、`Greg`
 
+
+
+---
+
+---
+
 > 学习参考
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)
 >
-> [move中文](https://move-dao.github.io/move-book-zh/move-tutorial.html)
+> [move 中文教程](https://move-dao.github.io/move-book-zh/move-tutorial.html)
+>
+> [Aptos_Move 标准库](https://aptos.dev/reference/move/)
+>
+> [Aptos AI 助手](https://assistant.aptosfoundation.org)
+
 
 > 社区：
 >
@@ -74,8 +86,8 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 >
 > [web3doc](https://aptos.web3doc.top/guides/getting-started)
 >
-> 
->
+
+
 > 高校：
 >
 > [复旦链协](https://www.fudanblockchain.club)
@@ -86,8 +98,8 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 >
 > [登链社区](https://learnblockchain.cn)
 >
-> 
->
+
+
 > 其他：
 >
 > [decert](https://decert.me/)

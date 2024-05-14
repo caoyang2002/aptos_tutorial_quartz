@@ -1,5 +1,5 @@
 ---
-title: Move_stdlib_string
+title: Move-stdlib-String
 ---
 
 [toc]

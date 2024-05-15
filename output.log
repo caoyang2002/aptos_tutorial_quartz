@@ -127,3 +127,11 @@ hint: exit with ctrl+c
 [200] /%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83
 [200] /%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95
 [404] /%E5%85%AC%E9%93%BE
+[200] /%E4%BB%8Ehello_world%E5%BC%80%E5%A7%8B
+Detected a source code change, doing a hard rebuild...
+Cleaned output directory `public` in 2s
+Found 25 input files from `content` in 113ms
+[2K[1GParsed 25 Markdown files in 5s
+Filtered out 0 files in 128μs
+[2K[1GEmitted 44 files to `public` in 7s
+Done processing 25 files in 15s

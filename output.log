@@ -25,3 +25,31 @@ hint: exit with ctrl+c
 [404] /React
 [200] /%E7%AE%97%E6%B3%95/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C
 [200] /%E7%AE%97%E6%B3%95
+
+ Quartz v4.2.3 
+
+Cleaned output directory `public` in 27ms
+Found 25 input files from `content` in 8ms
+[2K[1GParsed 25 Markdown files in 3s
+Filtered out 0 files in 145μs
+[2K[1GEmitted 44 files to `public` in 984ms
+Done processing 25 files in 4s
+Started a Quartz server listening at http://localhost:8080
+hint: exit with ctrl+c
+[200] /
+[200] /prescript.js
+[200] /index.css
+[200] /postscript.js
+[200] /static/contentIndex.json
+[200] /
+[200] /index.css
+[200] /prescript.js
+[200] /postscript.js
+[200] /static/contentIndex.json
+[200] /Aptos-%E4%BC%98%E5%8C%96%E6%8F%90%E6%A1%88
+[200] /Move-%E7%9A%84%E5%8E%86%E5%8F%B2
+[404] /%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B
+[200] /Move-%E6%A0%87%E5%87%86%E5%BA%93/Move-Vector
+Detected a source code change, doing a hard rebuild...
+Reason: Error: Build failed with 1 error:
+quartz.config.ts:31:19: ERROR: Expected ":" but found "#fefefe"

@@ -8,7 +8,11 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
+<<<<<<< HEAD
     pageTitle: "Move-Aptos Computer",
+=======
+    pageTitle: "Move_Aptos Computer",
+>>>>>>> b76bd77c0b63c9c5268a6f09f1efc59b35f790e5
     enableSPA: true,
     enablePopovers: true,
     analytics: {

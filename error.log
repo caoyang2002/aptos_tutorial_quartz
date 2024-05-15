@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-Unknown arguments: servenohup, quartz, build
-=======
-nohup: ignoring input
->>>>>>> b76bd77c0b63c9c5268a6f09f1efc59b35f790e5
 LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character "＋" used in math mode [unicodeTextInMathMode]
 LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character "１" used in math mode [unicodeTextInMathMode]
 LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character "１" used in math mode [unicodeTextInMathMode]

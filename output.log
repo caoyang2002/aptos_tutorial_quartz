@@ -1,6 +1,21 @@
 
  Quartz v4.2.3 
 
+<<<<<<< HEAD
+Cleaned output directory `public` in 14ms
+Found 25 input files from `content` in 7ms
+[2K[1GParsed 25 Markdown files in 2s
+Filtered out 0 files in 185μs
+[2K[1GEmitted 44 files to `public` in 514ms
+Done processing 25 files in 3s
+Started a Quartz server listening at http://localhost:8080
+hint: exit with ctrl+c
+[200] /%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83
+[200] /index.css
+[200] /prescript.js
+[200] /postscript.js
+[200] /static/contentIndex.json
+=======
 Cleaned output directory `public` in 17ms
 Found 25 input files from `content` in 15ms
 [2K[1GParsed 25 Markdown files in 6s
@@ -19,6 +34,7 @@ hint: exit with ctrl+c
 [200] /%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83
 [200] /Move-%E7%9A%84%E5%8E%86%E5%8F%B2
 [200] /%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95
+<<<<<<< HEAD
 [200] /
 [200] /prescript.js
 [200] /static/contentIndex.json
@@ -56,3 +72,6 @@ hint: exit with ctrl+c
 [200] /prescript.js
 [200] /postscript.js
 [200] /static/contentIndex.json
+=======
+>>>>>>> b76bd77c0b63c9c5268a6f09f1efc59b35f790e5
+>>>>>>> 157191644ec82a6732a52c4bd09cb45f1f8012af

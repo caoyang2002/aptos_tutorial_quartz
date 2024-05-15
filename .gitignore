@@ -11,3 +11,7 @@ private/
 replit.nix
 *.log
 *.pid
+error.log
+output.log
+quartz.pid
+

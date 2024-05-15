@@ -71,11 +71,42 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 ---
 
 > 从业者
-> 
+>
 > 梁培利（成都信息工程大学）
+>
+> - [[DApp-设计与开发]]：从零开始实现一个 NFT 的交易市场
+>
+>     - [开源笔记](https://github.com/bookerhuang/Learning-Notes)
+>     - 前置基础
+>     
+>         - 区块链基础：[《精通以太坊》](https://weread.qq.com/web/bookDetail/c0532740718247c1c0545f7)
+>         - Solidity基础：[官方文档](https://docs.soliditylang.org/zh/latest/)
+>     - 相关技术栈
+>         - Solidity / JavaScript
+>         - Node.js / React.js
+>         - Hardhat / Remix IDE / Metamask
+>         - ERC20 / ERC721 / Openzepplin
+>         - VSCode / Github / Vercel / Cloudflare
+>         - IPFS / The Graph / Readthedocs
+>
+> - [[DA p p-金融]]：
+>
 > 
+>
+>
 > 肖臻（北京大学）
 >
+> - https://www.bilibili.com/video/av37065233/?p=2&vd_source=8c6436f893599ab79e15253337a87ed5
+>
+> - https://blog.nowcoder.net/n/30cbdb37108b4d93b3a5a93b8226ae31
+> - https://www.cnblogs.com/coderzjz/p/13788649.html
+> - https://www.cnblogs.com/coderzjz/p/14025979.html
+
+> https://www.coursera.org/learn/cryptocurrency/home/welcome
+>
+> https://bitcoinbook.cs.princeton.edu/
+>
+> https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 
 > 学习参考
 >
@@ -107,9 +138,26 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 > [清华链协](https://www.thubadao.xyz/aboutus)
 >
 > [登链社区](https://learnblockchain.cn)
->
 
 
 > 其他：
 >
 > [decert](https://decert.me/)
+
+
+
+
+
+
+
+The Web3 区块链教程大纲（付费，非本人）
+
+https://twitter.com/seek_web3/status/1787056563183923485
+
+https://twitter.com/seek_web3/status/1787454439118487941
+
+https://twitter.com/seek_web3/status/1787873082100924760
+
+https://twitter.com/seek_web3/status/1788429301735731652
+
+https://twitter.com/seek_web3/status/1788570092189761635

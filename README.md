@@ -35,7 +35,7 @@ git clone https://github.com/caoyang2002/aptos_tutorial_quartz.git
 ```
 
 ```bash
-cd /home/ubuntu/aptos_tutorial_quartz
+cd aptos_tutorial_quartz
 ```
 
 ```bash
@@ -43,7 +43,11 @@ num i
 ```
 
 ```bash
-npx quartz build --serve  # 运行
+./run.sh
+```
+
+```bash
+./stop.sh
 ```
 
 

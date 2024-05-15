@@ -668,3 +668,37 @@ LaTeX-incompatible input and strict mode is set to 'warn': Unicode text characte
 LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character "－" used in math mode [unicodeTextInMathMode]
 LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character "－" used in math mode [unicodeTextInMathMode]
 Killed
+node:internal/errors:490
+    ErrorCaptureStackTrace(err);
+    ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'yargs' imported from /Users/caoyang/Documents/Aptos/Learning/aptos_tutorial_quartz/quartz/bootstrap-cli.mjs
+    at new NodeError (node:internal/errors:399:5)
+    at packageResolve (node:internal/modules/esm/resolve:794:9)
+    at moduleResolve (node:internal/modules/esm/resolve:843:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1070:11)
+    at DefaultModuleLoader.resolve (node:internal/modules/esm/loader:306:12)
+    at DefaultModuleLoader.getModuleJob (node:internal/modules/esm/loader:155:32)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:76:33)
+    at link (node:internal/modules/esm/module_job:75:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.0.0
+node:internal/errors:490
+    ErrorCaptureStackTrace(err);
+    ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'yargs' imported from /Users/caoyang/Documents/Aptos/Learning/aptos_tutorial_quartz/quartz/bootstrap-cli.mjs
+    at new NodeError (node:internal/errors:399:5)
+    at packageResolve (node:internal/modules/esm/resolve:794:9)
+    at moduleResolve (node:internal/modules/esm/resolve:843:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1070:11)
+    at DefaultModuleLoader.resolve (node:internal/modules/esm/loader:306:12)
+    at DefaultModuleLoader.getModuleJob (node:internal/modules/esm/loader:155:32)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:76:33)
+    at link (node:internal/modules/esm/module_job:75:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v20.0.0

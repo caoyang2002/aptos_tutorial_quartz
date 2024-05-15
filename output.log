@@ -118,3 +118,12 @@ Filtered out 0 files in 98μs
 Done processing 25 files in 7s
 Started a Quartz server listening at http://localhost:8080
 hint: exit with ctrl+c
+[200] /test
+[200] /test
+[200] /prescript.js
+[200] /static/contentIndex.json
+[200] /tags/%E6%A0%87%E7%AD%BE%E4%B8%80
+[200] /
+[200] /%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83
+[200] /%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95
+[404] /%E5%85%AC%E9%93%BE

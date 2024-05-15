@@ -1,8 +1,9 @@
 ---
 title: test
 description: 说明
-aliases: 别称
-tags: 
+aliases:
+  - 别称
+tags:
   - 标签一
   - 标签二
 draft: false
@@ -20,7 +21,7 @@ aliases: 别称
 tags: 
   - 标签一
   - 标签二
-draft: true
+draft: false
 date: 2024-05-01
 ```
 

@@ -104,6 +104,10 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 > [Aptos AI 助手](https://assistant.aptosfoundation.org)
 
 
+> 白皮书
+> [[APTOS-白皮书]]
+> [[BITCOIN-白皮书]]
+
 > 社区：
 >
 > [OpenBuild](https://openbuild.xyz)

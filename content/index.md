@@ -70,6 +70,13 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
 ---
 
+> 从业者
+> 
+> 梁培利（成都信息工程大学）
+> 
+> 肖臻（北京大学）
+>
+
 > 学习参考
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)

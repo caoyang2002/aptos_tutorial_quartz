@@ -2,7 +2,7 @@
 title: 从 hello_world 开始
 ---
 
-> 建议使用 Linix
+> 建议使用 Linix & Mac
 
 # 写一个 hello world 程序
 
@@ -127,17 +127,19 @@ title: 从 hello_world 开始
 
 
 
+
+
 > 可能遇到的问题：
->
-> - 网络问题
+> 
+>- 网络问题
 >
 > ```json
-> caoyang@cccy sources % aptos move test
+>caoyang@cccy sources % aptos move test
 > {
 >   "Error": "Unexpected error: Failed to run tests: Unable to resolve packages for package 'hello_move': While resolving dependency 'AptosFramework' in package 'hello_move': Failed to fetch to latest Git state for package 'AptosFramework', to skip set --skip-fetch-latest-git-deps | Exit status: exit status: 128"
 > }
 > ```
->
+> 
 > 解决方法：
 >
 > 1. 切换为能访问 GitHub 的网络
@@ -147,12 +149,12 @@ title: 从 hello_world 开始
 > 2. 修改 `Move.toml` 中的 GitHub 官方地址为 Gitee 地址
 >
 >     ```toml
->     [dependencies.AptosFramework]
+>    [dependencies.AptosFramework]
 >     # git = "https://github.com/aptos-labs/aptos-core.git"
 >     git = "https://gitee.com/WGB5445/aptos-core.git"
 >     rev = "mainnet"
 >     subdir = "aptos-move/framework/aptos-framework"
->     ```
+>    ```
 
 
 

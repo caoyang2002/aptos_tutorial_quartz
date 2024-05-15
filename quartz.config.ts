@@ -36,10 +36,6 @@ const config: QuartzConfig = {
           secondary: "#00796b", // 目录：深绿色，作为对比色，与蓝色形成鲜明对比，增加层次感 
           tertiary: "#ffe100", // 鼠标焦点：，鲜艳的黄色，作为点缀色，增加活力和视觉焦点
           highlight: "rgba(3, 169, 244, 0.15)" // 目录高亮：明亮的蓝色，用于目录高亮显示，提升整体设计的时尚感
-<<<<<<< HEAD
-=======
-	  
->>>>>>> 79647ced1c4d88e3c029688cf3883413d83140e9
           // light: "#faf8f8",
           // lightgray: "#e5e5e5",
           // gray: "#b8b8b8",

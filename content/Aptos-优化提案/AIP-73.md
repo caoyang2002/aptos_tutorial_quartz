@@ -14,15 +14,10 @@ status: 审查中
 last-call-end-date: 04/08/2024
 type: 框架
 created: 2024-03-08
-source: 
+original: 
   - en: "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-73.md"
   - zh: "https://github.com/ALCOVE-LAB/Aptos-Docs/blob/main/AIP/aip-73.md"
 ```
-
-[TOC]
-
-# AIP-73 - 可调度 token 标准
-
 ## 一、摘要
 
 目前，Aptos 框架定义了一个单一的 `fungible_asset.move` 作为我们的可替代资产标准，这使得其他开发者难以自定义他们所需的逻辑。通过这项 AIP，我们希望开发者能够自定义他们自己的取出和存入方式 —— 允许以一种可扩展性更好的方式使用我们的 Aptos 框架。

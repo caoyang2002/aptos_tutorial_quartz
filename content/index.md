@@ -70,7 +70,7 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
 ---
 
-> 从业者
+> **从业者**
 >
 > 梁培利（成都信息工程大学）
 >
@@ -93,7 +93,7 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 >
 > https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 
-> 学习参考
+> **学习参考**
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)
 >
@@ -104,8 +104,10 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 > [Aptos AI 助手](https://assistant.aptosfoundation.org)
 
 
-> 白皮书
+> **白皮书**
+>
 > [[APTOS-白皮书]]
+>
 > [[BITCOIN-白皮书]]
 
 > 社区：
@@ -132,10 +134,6 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 > 其他：
 >
 > [decert](https://decert.me/)
-
-
-
-
 
 
 

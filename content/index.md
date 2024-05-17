@@ -1,10 +1,7 @@
 ---
 title: 目录
 ---
-
-Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
-
-本站主要基于 Aptos的文档，以及OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处标明出处。
+本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。
 
 
 

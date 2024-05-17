@@ -14,4 +14,4 @@ replit.nix
 error.log
 output.log
 quartz.pid
-
+ssh_login.sh

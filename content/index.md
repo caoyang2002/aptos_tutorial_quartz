@@ -128,7 +128,7 @@ title: 目录
 >
 > [[BITCOIN-白皮书]]
 > 
-> [[Ethereum-白皮书]]
+> [[ETHEREUM白皮书]]
 > 
 > [[SOLANA-白皮书]]
 > 

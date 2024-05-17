@@ -100,38 +100,63 @@ date: 2024-05-01
 test
 ```
 
-
-
-
+行高亮
+````
+```js {1-3,5} 
+let a = 10; < 高亮
+let b = 10; < 高亮
+let c = 10; < 高亮
+let d = 10;
+let e = 10; < 高亮
+let f = 10;
+let g = 10;
+```
+````
 
 ```js {1-3,5} 
-let a = 10;
-let b = 10;
-let c = 10;
+let a = 10; < 高亮
+let b = 10; < 高亮
+let c = 10; < 高亮
 let d = 10;
-let e = 10;
+let e = 10; < 高亮
 let f = 10;
 let g = 10;
 ```
 
+关键词高亮
 
+````
+```js /useState/
+const [age, setAge] = useState(50);  useState 高亮
+const [name, setName] = useState('Taylor');
+```
+````
 
 ```js /useState/
-const [age, setAge] = useState(50);
+const [age, setAge] = useState(50);  useState 高亮
 const [name, setName] = useState('Taylor');
 ```
 
+起始位置
+
+````
 ```rust showLineNumbers{3}
-let a = 10;
+let a = 10; < 起始位置为第三行 
 let b = 10;
 let c = 10;
 let d = 10;
 let e = 10;
 let f = 10;
-let g = 10;
-let h = 10;
-let i = 10;
-let j = 10;
+```
+````
+
+```rust showLineNumbers{3}
+let a = 10; < 起始位置为第三行 
+let b = 10;
+let c = 10;
+let d = 10;
+let e = 10;
+let f = 10;
 ```
 
 ````

@@ -1,5 +1,5 @@
 ---
-title: Solana-白皮书
+title: SOLANA-白皮书
 ---
 ```yaml
 url:

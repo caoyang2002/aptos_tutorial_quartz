@@ -1,5 +1,5 @@
 ---
-title: aptos-白皮书
+title: APTOS-白皮书
 ---
 [官方原文](https://aptosfoundation.org/whitepaper/aptos-whitepaper_en.pdf)
 

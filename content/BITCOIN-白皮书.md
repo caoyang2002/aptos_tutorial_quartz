@@ -1,5 +1,5 @@
 ---
-title: bitcoin-白皮书
+title: BITCOIN-白皮书
 ---
 [官方原文](https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf)
 

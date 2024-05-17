@@ -4,6 +4,10 @@ title: 目录
 
 Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
+本站主要基于 Aptos的文档，以及OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处标明出处。
+
+
+
 [[Aptos-优化提案]]
 
 [[Move 的历史]]
@@ -59,7 +63,6 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 [[test]]
 
 
-
 已引用的回复
 
 `不霁何虹`、`Aaron`、`Greg`
@@ -70,16 +73,16 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 
 ---
 
-> **从业者**
+**从业者**
 >
-> 梁培利（成都信息工程大学）
+> **梁培利（成都信息工程大学）**
 >
 > - [[course/Dapp-设计与开发]]：从零开始实现一个 NFT 的交易市场
 >
 > - [[DA p p-金融]]：
-
 >
-> 肖臻（北京大学）
+>
+> **肖臻（北京大学）**
 >
 > - https://www.bilibili.com/video/av37065233/?p=2&vd_source=8c6436f893599ab79e15253337a87ed5
 >
@@ -93,7 +96,7 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 >
 > https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 
-> **学习参考**
+**学习参考**
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)
 >
@@ -104,21 +107,32 @@ Move 是一个独立的开发语言，同 C/C++、java、Go 一样。
 > [Aptos AI 助手](https://assistant.aptosfoundation.org)
 
 
-> **白皮书**
+**白皮书**
+> 
+> https://whitepaper.io/
 >
 > [[APTOS-白皮书]]
 >
 > [[BITCOIN-白皮书]]
+> 
+> [[Ethereum-白皮书]]
+> 
+> [[SOLANA-白皮书]]
+> 
 
-> 社区：
+**社区**
 >
 > [OpenBuild](https://openbuild.xyz)
 >
 > [BuilerDao](https://buidlerdao.xyz)
 >
 > [web3doc](https://aptos.web3doc.top/guides/getting-started)
->
 
+
+**机构**
+> 
+> [加密湾](https://jiami.one)
+> 
 
 > 高校：
 >

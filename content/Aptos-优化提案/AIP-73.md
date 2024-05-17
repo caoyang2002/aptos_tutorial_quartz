@@ -1,9 +1,6 @@
 ---
 title: AIP-73 可调度 token 标准
 ---
-
-
-
 ```yaml
 aip: 73
 title: 可调度 token 标准

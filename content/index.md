@@ -69,6 +69,12 @@ title: 目录
 ---
 
 ---
+**书籍**
+>
+>[精通以太坊](https://github.com/inoutcode/ethereum_book)
+>
+>[精通比特币](https://github.com/inoutcode/bitcoin_book_2nd)
+>
 
 **从业者**
 >
@@ -76,12 +82,19 @@ title: 目录
 >
 > - [[course/Dapp-设计与开发]]：从零开始实现一个 NFT 的交易市场
 >
-> - [[DA p p-金融]]：
+> - [[course/Dapp-设计与开发]]：
 >
 >
 > **肖臻（北京大学）**
 >
 > - https://www.bilibili.com/video/av37065233/?p=2&vd_source=8c6436f893599ab79e15253337a87ed5
+> 
+> Prof. Gary Gensler（MIT）
+> 
+> - https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/resources/session-1-introduction/
+>Blockchain-Web3 MOOCs（Youtube）
+>- https://www.youtube.com/watch?v=j_Gf7E1vAhE
+>
 >
 > - https://blog.nowcoder.net/n/30cbdb37108b4d93b3a5a93b8226ae31
 > - https://www.cnblogs.com/coderzjz/p/13788649.html
@@ -102,6 +115,9 @@ title: 目录
 > [Aptos_Move 标准库](https://aptos.dev/reference/move/)
 >
 > [Aptos AI 助手](https://assistant.aptosfoundation.org)
+> 
+> https://www.notion.so/caoyang2002/BlockChain-Wiki-be6b85e834fd45ca8e2f188ae02b6075?pvs=4
+> 
 
 
 **白皮书**

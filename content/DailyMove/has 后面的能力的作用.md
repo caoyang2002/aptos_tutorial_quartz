@@ -99,35 +99,51 @@ key 是什么意思？ store 是什么意思？”
 
 ![https://pbs.twimg.com/media/GEzgthRaMAAYzqT?format=jpg&name=medium](https://pbs.twimg.com/media/GEzgthRaMAAYzqT?format=jpg&name=medium)
 
-但是，这个键到底是什么意思呢？这意味着它可以从全局状态中借出，这是 Move 中一个_关键_的概念。全局状态可以想象成一个包含每个地址和该地址上每个资源的大型映射。
+但是，这个 `key` 到底是什么意思呢？这意味着它可以从全局状态中借出，这是 Move 中一个 `Key` 的概念。全局状态可以想象成一个包含每个地址和该地址上每个资源的大型映射。
+
+在这个情况下，`mailbox_router_address` 和 `MailboxRouter`
 
 ![https://pbs.twimg.com/media/GEzg7kvaIAAuMrj?format=jpg&name=large](https://pbs.twimg.com/media/GEzg7kvaIAAuMrj?format=jpg&name=large)
 
 但是，我们如何把信放进邮箱呢？路由器有一个 SmartTable，有两个输入 MailboxId 和 Mailbox。MailboxId 必须具有 _存储_ 功能。这允许它在另一个对象中本地存储，传统上是一个表或向量。Mailbox 也具有此功能。
 
-但它也是 _复制_ 和 _删除_
+![https://pbs.twimg.com/media/GEzhdsKaoAA0kFb?format=jpg&name=medium](https://pbs.twimg.com/media/GEzhdsKaoAA0kFb?format=jpg&name=medium)
 
-复制允许直接复制内部。想象一下像地址这样的东西不只有一个，而像 NFT 或一些硬币的数量，你不能复制。
+但它也是 `copy` 和 `drop`
 
-所有具有 _复制_ 功能的结构都要求所有内部字段也是复制的。
+`copy` 允许直接复制内部。想象一下像地址这样的东西不只有一个，而像 NFT 或一些硬币的数量，你不能复制。
 
-_删除_ 也允许您随时删除该值。这可能不是您想要的，因为您的最喜爱的 NFT 只是从区块链中消失了。
+所有具有 `copy` 功能的结构都要求所有内部字段也是复制的。
 
-让我们来看看我们要放入邮箱的信封。这些只有 _存储_，因为类型 Coin 和 Token 没有 _复制_ 或 _删除_。
+`drop` 也允许您随时删除该值。这可能不是您想要的，因为您的最喜爱的 NFT 只是从区块链中消失了。
+
+![https://pbs.twimg.com/media/GEzh280aIAAgQDy?format=png&name=medium](https://pbs.twimg.com/media/GEzh280aIAAgQDy?format=png&name=medium)
+
+让我们来看看我们要放入邮箱的信封。这些只有 `store`，因为类型 Coin 和 Token 没有 `copy` 或 `drop`。
 
 但是，你可能会想，我如何在阅读信后销毁信封呢？在现实世界中，我拿出信，扔掉信封。让我们看看。
+
+![https://pbs.twimg.com/media/GEzicVEaoAAf0Fj?format=jpg&name=medium](https://pbs.twimg.com/media/GEzicVEaoAAf0Fj?format=jpg&name=medium)
 
 像 Envelope 这样的结构可以分解为它的各个部分。这意味着我们可以将其拆分为各个部分，并且扔掉我们不需要的部分，并将部分分发到我们需要保留的其他地方。
 
 就像你可能会撕开一个信封，并将其中放着你辛苦赚来的工资的部分扔掉一样。
 
+![https://pbs.twimg.com/media/GEzi-QvaUAEGMtZ?format=jpg&name=medium](https://pbs.twimg.com/media/GEzi-QvaUAEGMtZ?format=jpg&name=medium)
+
 但是，Greg，我只是想寄信而已。
 
 信封可以逐步构建，每个部分都在里面。
 
+![https://pbs.twimg.com/media/GEzjZNUaIAA_REx?format=jpg&name=900x900](https://pbs.twimg.com/media/GEzjZNUaIAA_REx?format=jpg&name=900x900)
+
+![https://pbs.twimg.com/media/GEzjgK9bsAI2kU_?format=jpg&name=large](https://pbs.twimg.com/media/GEzjgK9bsAI2kU_?format=jpg&name=large)
+
 当用户想要领取信时，他们根据自己的邮箱被授权领取信。但是，发件人也会留在信中。这是一种保护措施，以防止邮件发送到错误的人（如果只有美国邮政也能为我做到这一点就好了）。
 
 打开邮件和查看邮件非常简单，因为功能允许我们存储邮件并将其组件转移到其他地方。你甚至可以在邮件在邮箱中的时候查看邮件，就像我总是忘记删除的 1k 封电子邮件一样。
+
+![https://pbs.twimg.com/media/GEzj9xFbQAAq4nn?format=jpg&name=medium](https://pbs.twimg.com/media/GEzj9xFbQAAq4nn?format=jpg&name=medium)
 
 感谢阅读，希望你对 Move 结构功能有所了解。
 

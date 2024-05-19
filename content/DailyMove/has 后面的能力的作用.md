@@ -1,6 +1,9 @@
 ---
 title: has 后面的能力的作用
 ---
+```yaml
+orig
+```
 # Question
 
 This one was inspired by questions about:

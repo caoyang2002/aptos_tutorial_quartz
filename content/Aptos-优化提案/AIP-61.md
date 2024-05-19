@@ -16,6 +16,7 @@ requires: "<AIP number(s)>"
 original:
   en: https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-61.md
   zh: https://github.com/ALCOVE-LAB/Aptos-Docs/blob/main/AIP/aip-61.md
+note: 已校对
 ```
 ## 一、摘要
 

@@ -1,11 +1,15 @@
 ---
 title: Aptos-术语表
 ---
+> 纯机翻，未核对
+
+```yaml
+original: 
+  en: "https://aptos.dev/reference/glossary"
+note: 纯机翻、未核对
+```
 
 [toc]
-
-https://aptos.dev/reference/glossary
-
 # Aptos术语表
 
 ## A

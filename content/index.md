@@ -1,9 +1,13 @@
 ---
 title: 目录
 ---
+站长（simons）邮箱：[reggiesimons2cy@gmail.com](mailto:reggiesimons2cy@gmail.com)
+
+[GitHub 开源地址](https://github.com/caoyang2002/aptos_tutorial_quartz)
+
 本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。
 
-目前我正在学习英语（以翻译文档的方式），所以可以保证我标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[翻译原则与术语规范]]。
+目前我正在学习英语（以翻译文档的方式），所以可以保证在头部 yaml 中标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[翻译原则与术语规范]]。
 
 [[Aptos-优化提案]]（AIP）
 

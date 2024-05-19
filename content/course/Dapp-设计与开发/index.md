@@ -1,6 +1,11 @@
 ---
 title: DApp-设计与开发
 ---
+```yaml
+
+note: 已校对
+```
+
 [开源笔记](https://github.com/bookerhuang/Learning-Notes)
 
 [作业成品](https://github.com/cananoo/nft-market-starter/tree/master)

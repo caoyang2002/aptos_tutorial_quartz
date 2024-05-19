@@ -14,6 +14,7 @@ created: 2024-03-08
 original: 
   - en: "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-73.md"
   - zh: "https://github.com/ALCOVE-LAB/Aptos-Docs/blob/main/AIP/aip-73.md"
+note: 已校对
 ```
 ## 一、摘要
 

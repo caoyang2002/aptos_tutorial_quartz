@@ -3,6 +3,8 @@ title: DailyMove
 ---
 > 内容基本来自于 Aptos 工程师 Greg 的推特，
 
+> 目前还没时间校对，移除此信息即表示校对完成
+
 [[Move Prover]]
 
 [[可分割 token 和 ERC-404]]

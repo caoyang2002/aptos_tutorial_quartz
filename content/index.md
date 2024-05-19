@@ -109,7 +109,7 @@ title: 目录
 >
 > [[BITCOIN-白皮书]]
 > 
-> [[ETHEREUM白皮书]]
+> [[ETHEREUM-白皮书]]
 > 
 > [[SOLANA-白皮书]]
 > 

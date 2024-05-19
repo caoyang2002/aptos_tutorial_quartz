@@ -1,7 +1,12 @@
 ---
 title: AIP-优化提案
 ---
-
+```yaml
+original: 
+  - en: "https://github.com/aptos-foundation/AIPs/"
+  - zh: "https://github.com/ALCOVE-LAB/Aptos-Docs/"
+note: 已校对
+```
 中文文档：https://github.com/ALCOVE-LAB/Aptos-Docs
 
 英文文档：https://github.com/aptos-foundation/AIPs

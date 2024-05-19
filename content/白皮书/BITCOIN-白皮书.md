@@ -1,17 +1,16 @@
 ---
 title: BITCOIN-白皮书
 ---
-[官方原文](https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf)
-
 ```yaml
 title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
 author:
   - name: Satoshi Nakamoto
     email: satoshin@gmx.com
     website: www.bitcoin.org
-url:
-  en: https://bitcoin.org/bitcoin.pdf
-  ch: https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf
+original:
+  en: "https://bitcoin.org/bitcoin.pdf"
+  ch: "https://bitcoin.org/files/bitcoin-paper/bitcoin_zh_cn.pdf"
+note: 官方提供中文，我未校对
 ```
 
 [toc]

@@ -1,15 +1,15 @@
 ---
 title: APTOS-白皮书
 ---
-[官方原文](https://aptosfoundation.org/whitepaper/aptos-whitepaper_en.pdf)
+```yaml
+original: 
+  Aptos: "https://aptosfoundation.org/whitepaper/aptos-whitepaper_en.pdf"
+  BuilderDao: "https://buidlerdao.notion.site/Aptos-Web3-fa04fe55b4364594ad0ee20e429cb3f6"
+  simons: "https://github.com/caoyang2002/aptos_tutorial_quartz/blob/main/content/白皮书/APTOS-白皮书.md"
+note: 这个版本是我翻译的，已校对
+```
 
-[BuilderDAO 翻译原文](https://buidlerdao.notion.site/Aptos-Web3-fa04fe55b4364594ad0ee20e429cb3f6)
-
-[toc]
-
-
-
-**摘要**
+# 一、摘要
 
 随着区块链作为一种新型互联网基础设施的崛起，开发者们正以迅猛的速度部署着数以万计的去中心化应用。然而，由于频繁的中断、高昂的成本、有限的吞吐量以及众多的安全问题，区块链的应用尚未普及。为了在 Web3 时代实现大规模使用，区块链基础设施需要像云基础设施一样，成为一个值得信赖、可扩展、经济高效且持续优化的平台，以构建能够被广泛使用的应用。
 

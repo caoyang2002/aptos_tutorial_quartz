@@ -3,13 +3,11 @@ title: ETHEREUM-白皮书
 ---
 
 ```yaml
-url:
-  - zh: https://ethereum.org/zh/whitepaper/
-  - en: https://ethereum.org/en/whitepaper/
+original:
+  - zh: "https://ethereum.org/zh/whitepaper/"
+  - en: "https://ethereum.org/en/whitepaper/"
+note: 官方提供中文，我未校对
 ```
-
-
-
 # 以太坊白皮书
 
 

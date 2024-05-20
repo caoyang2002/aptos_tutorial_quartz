@@ -1,6 +1,12 @@
 ---
 title: Move 0x1 中断是什么意思？
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # Question
 
 And the OG post, was inspired by discord questions of:

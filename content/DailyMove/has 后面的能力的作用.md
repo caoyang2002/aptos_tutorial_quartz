@@ -2,7 +2,10 @@
 title: has 后面的能力的作用
 ---
 ```yaml
-orig
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
 ```
 # Question
 

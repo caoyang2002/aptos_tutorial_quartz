@@ -1,6 +1,12 @@
 ---
 title: 出售可组合的 NFT
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # Question
 
 Some gaming builders were really excited about composable NFTs.

@@ -1,6 +1,12 @@
 ---
 title: Move Prover
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # English
 
 People asked me about the Move Prover previously for Aptos and what makes it special.

@@ -3,6 +3,7 @@ title: 搭建一个简单的在线 Move 运行环境
 ---
 ```yaml
 original: 原创
+status: 已完成
 note: "本人测试过 Mac 和 Windows，可以完美运行"
 ```
 # 一、前端（ts、react）

@@ -1,6 +1,12 @@
 ---
 title: NFT 的可拓展性
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # English
 
 Have you been wondering, what's this extensibility that people are talking about on Aptos NFTs?

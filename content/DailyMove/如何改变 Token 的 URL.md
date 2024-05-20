@@ -1,6 +1,12 @@
 ---
 title: 如何改变 Token 的 URL
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # Question
 
 The latest episode comes from a builder asking me:

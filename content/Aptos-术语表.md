@@ -4,8 +4,8 @@ title: Aptos-术语表
 > 纯机翻，未核对
 
 ```yaml
-original: 
-  en: "https://aptos.dev/reference/glossary"
+original: "https://aptos.dev/reference/glossary"
+status: 待编辑
 note: 纯机翻、未核对
 ```
 

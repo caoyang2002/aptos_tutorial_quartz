@@ -1,6 +1,12 @@
 ---
 title: 分割 NFT
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # Question
 
 Another builder asked me:

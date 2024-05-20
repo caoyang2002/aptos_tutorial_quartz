@@ -1,6 +1,12 @@
 ---
 title: " VRF（可验证的随机函数）的使用"
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # Question
 
 "Is there a VRF on-chain and how do I use this?"

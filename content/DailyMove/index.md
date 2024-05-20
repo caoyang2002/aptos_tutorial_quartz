@@ -1,9 +1,15 @@
 ---
 title: DailyMove
 ---
-> 内容基本来自于 Aptos 工程师 Greg 的推特，
+```yaml
+original: 
+  author: Greg
+  url: 'https://github.com/aptos-labs/daily-move'
+```
 
-> 目前还没时间校对，移除此信息即表示校对完成
+
+
+> 内容基本来自于 Aptos 工程师 Greg 的推特，
 
 [[Move Prover]]
 
@@ -24,3 +30,5 @@ title: DailyMove
 [[出售可组合的 NFT]]
 
 [[Move 0x1 中断是什么意思？]]
+
+[[在 Move 中构建一个堆数据结构]]

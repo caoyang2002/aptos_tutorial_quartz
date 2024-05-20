@@ -1,6 +1,12 @@
 ---
 title: Smart 的 Gas save
 ---
+```yaml
+original: 
+  author: Greg
+  url: 
+note: 纯机翻、未核对
+```
 # English
 
 Ever wonder what's the difference between vector, Table, SimpleMap, and others on Aptos?

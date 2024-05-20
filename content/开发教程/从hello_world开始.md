@@ -9,10 +9,10 @@ title: 从 hello_world 开始
 1. 创建一个目录
 
     ```bash
-    mkdit hello_world
+    mkdir hello_world
     ```
 
-2. 初始化 aptos move 文件夹结构
+2. 初始化项目结构为 move 结构
 
     ```bash
     aptos mvoe init --name hello_move
@@ -47,11 +47,9 @@ title: 从 hello_world 开始
     > subdir = "aptos-move/framework/aptos-framework"
     > 
     > [dev-dependencies]
-    > ```
-    >
-    > 
+    > ``` 
 
-1. 初始化 aptos 账户
+3. 初始化 aptos 账户
 
     ```bash
     aptos init --network testnet # 选择测试网

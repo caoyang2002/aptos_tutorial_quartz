@@ -59,7 +59,7 @@ title: 目录
 ---
 **书籍**
 >
->[精通以太坊](https://github.com/inoutcode/ethereum_book)
+>[[精通以太坊]]
 >
 >[精通比特币](https://github.com/inoutcode/bitcoin_book_2nd)
 >

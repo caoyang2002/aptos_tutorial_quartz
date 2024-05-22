@@ -54,39 +54,55 @@ title: latex语法
 
 # 关系符：
 
-| Symbol        | Command       |
-| ------------- | ------------- |
-| $\le$         | `\le`         |
-| $\ge$         | `\ge`         |
-| $\neq$        | `\neq`        |
-| $\sim$        | `\sim`        |
-| $\ll$         | `\ll`         |
-| $\gg$         | `\gg`         |
-| $\doteq$      | `\doteq`      |
-| $\simeq$      | `\simeq`      |
-| $\sqsubset$   | `\sqsubset`   |
-| $\sqsupset$   | `\sqsupset`   |
-| $\equiv$      | `\equiv`      |
-| $\frown$      | `\frown`      |
-| $\sqsubseteq$ | `\sqsubseteq` |
-| $\sqsupseteq$ | `\sqsupseteq` |
-| $\propto$     | `\propto`     |
-| $\bowtie$     | `\bowtie`     |
-| $\in$         | `\in`         |
-| $\ni$         | `\ni`         |
-| $\prec$       | `\prec`       |
-| $\succ$       | `\succ`       |
-| $\vdash$      | `\vdash`      |
-| $\dashv$      | `\dashv`      |
-| $\preceq$     | `\preceq`     |
-| $\succeq$     | `\succeq`     |
-| $\models$     | `\models`     |
-| $\perp$       | `\perp`       |
-| $\parallel$   | `\parallel`   |
-| $\mid$        | `\mid`        |
-| $\bumpeq$     | `\bumpeq`     |
+| Symbol        | Command       |     |
+| ------------- | ------------- | --- |
+| $\le$         | `\le`         |     |
+| $\ge$         | `\ge`         |     |
+| $\neq$        | `\neq`        |     |
+| $\sim$        | `\sim`        |     |
+| $\ll$         | `\ll`         |     |
+| $\gg$         | `\gg`         |     |
+| $\doteq$      | `\doteq`      |     |
+| $\simeq$      | `\simeq`      |     |
+| $\sqsubset$   | `\sqsubset`   |     |
+| $\sqsupset$   | `\sqsupset`   |     |
+| $\equiv$      | `\equiv`      |     |
+| $\frown$      | `\frown`      |     |
+| $\sqsubseteq$ | `\sqsubseteq` |     |
+| $\sqsupseteq$ | `\sqsupseteq` |     |
+| $\propto$     | `\propto`     |     |
+| $\bowtie$     | `\bowtie`     |     |
+| $\in$         | `\in`         |     |
+| $\ni$         | `\ni`         |     |
+| $\prec$       | `\prec`       |     |
+| $\succ$       | `\succ`       |     |
+| $\vdash$      | `\vdash`      |     |
+| $\dashv$      | `\dashv`      |     |
+| $\preceq$     | `\preceq`     |     |
+| $\succeq$     | `\succeq`     |     |
+| $\models$     | `\models`     |     |
+| $\perp$       | `\perp`       |     |
+| $\parallel$   | `\parallel`   |     |
+| $\mid$        | `\mid`        |     |
+| $\bumpeq$     | `\bumpeq`     |     |
 
 只要将not放在符号前面或者在 \ 和单词之间插入一个 n ，就可以形成许多这些关系的否定形式，这里有一些例子，加上一些其他的否定，它也适用于许多其他的。
+
+
+| Symbol          | Command           |
+| --------------- | ----------------- |
+| $\nmid$         |                   |
+| $\nleq$         |                   |
+| $\ngeq$         |                   |
+| $\nsim$         |                   |
+| $\ncong$        |                   |
+| $\nparallel$    |                   |
+| $\nmid$         |                   |
+| $\not>$         |                   |
+| $\not<$         |                   |
+| $\not= or \neq$ | `\not=` or `\neq` |
+| $\not\le$       | `\not\le`         |
+
 
 
 

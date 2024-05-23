@@ -5,15 +5,15 @@ title: AIP-73 可调度 token 标准
 aip: 73
 title: 可调度 token 标准
 author: 
-  - name: Runtian Zhou
+  name: Runtian Zhou
 discussions-to: "https://github.com/aptos-foundation/AIPs/issues/374"
 status: 审查中
 last-call-end-date: 04/08/2024
 type: 框架
 created: 2024-03-08
 original: 
-  - en: "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-73.md"
-  - zh: "https://github.com/ALCOVE-LAB/Aptos-Docs/blob/main/AIP/aip-73.md"
+  en: "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-73.md"
+  zh: "https://github.com/ALCOVE-LAB/Aptos-Docs/blob/main/AIP/aip-73.md"
 note: 已校对
 ```
 ## 一、摘要

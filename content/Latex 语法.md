@@ -102,6 +102,10 @@ title: latex语法
 | $\not<$         |                   |
 | $\not= or \neq$ | `\not=` or `\neq` |
 | $\not\le$       | `\not\le`         |
+| $\not\ge$       | `\not\ge`         |
+| $\not\sim$      | `\not\sim`        |
+| $\not\approx$   | `\not\approx`     |
+| $\not\cong$     | `\not\cong`       |
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: 提高 Gas 覆盖率
+title: AIP-84 提高 Gas 覆盖率
 ---
 ```yaml
 aip: 84

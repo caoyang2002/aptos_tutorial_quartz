@@ -6,3 +6,5 @@ original: ""
 status: 待编辑
 note: 待编辑
 ```
+
+[[计算机基础/Mac/index]]

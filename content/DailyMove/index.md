@@ -4,6 +4,7 @@ title: DailyMove
 ```yaml
 original: 
   author: Greg
+	profile: "https://x.com/Greg_Nazario"
   url: 'https://github.com/aptos-labs/daily-move'
 ```
 

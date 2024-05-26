@@ -1,5 +1,5 @@
 ---
-title: 安装环境
+title: 安装-Aptos-CLI
 ---
 ```yaml
 original: 原创

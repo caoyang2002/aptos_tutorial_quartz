@@ -1,0 +1,594 @@
+---
+title: todo-list-example
+---
+```yaml
+original: "https://aptos.dev/tutorials/build-e2e-dapp/"
+note: 未校对
+```
+# 创建智能合约
+
+这是关于在 `Aptos` 上构建端到端 dapp 的教程的第一章。
+
+>[!NOTE]
+>请确保你已经正确安装了 `aptos cli` 如果你不清楚是否如此， 请使用 `aptos --version` 测试是否能正确输出 `aptos cli` 的版本号。
+>如果你没有正确输出，那么请查看[[安装-Aptos-CLI]]
+
+现在你已经准备好了，在你的终端上：
+
+进入 `my-first-dapp` 的根目录，并创建一个新的 `move` 目录。
+
+```bash
+cd my-first-dapp
+mkdir move
+```
+
+进入新的 `move` 目录并初始化 Move 项目：
+
+```bash
+cd move
+aptos move init --name my_todo_list 
+```
+
+该命令在 `move` 目录内部创建了一个 `sources/` 目录和 `Move.toml` 文件。
+
+你的新 move 目录现在应该类似于：
+
+```bash
+├── Move.toml
+└── sources
+```
+
+## `Move.toml` 文件是什么？
+
+`Move.toml` 文件是一个清单文件，包含有关包的名称、版本和依赖项等元数据。
+
+查看新的 `Move.toml` 文件。你应该能看到你的包信息和一个 `AptosFramework` 依赖项。注意，名称属性与我们之前传递给 `aptos move init` 命令的 `--name` 属性相同。`AptosFramework` 依赖项指向 `aptos-core/aptos-move/framework/aptos-framework` 在 `GitHub` 存储库的主分支。
+
+## 什么是 `sources` 目录？
+
+`sources` 目录保存了一系列 `.move` 模块文件。当我们稍后想要使用 `CLI` 编译包时，编译器将寻找该 `sources` 目录及其 `Move.toml` 文件。
+
+创建 `Move` 模块
+
+ `Move` 模块需要使用一个账户来发布。所以首先我们需要创建一个账户。一旦我们有了账户的私钥，我们就可以在它的账户地址下创建一个模块，并使用该账户发布该模块。
+
+在我们的 `move` 目录中，运行 
+
+```rust
+aptos init --network devnet # 在提示时按 Enter（大概需要按两次）
+```
+
+这为我们创建了一个包含 `config.yaml` 文件的 `.aptos` 目录，该文件保存了我们的配置文件信息。在 `config.yaml` 文件中，我们现在有我们的配置文件列表，其中包含一个默认配置文件。如果你打开该文件，你会看到类似以下内容：
+
+```yaml
+profiles:
+  default:
+    private_key: "0xee8f387ef0b4bb0018c4b91d1c0f71776a9b85935b4c6ec2823d6c0022fbf5cb"
+    public_key: "0xc6c07218d79a806380ca67761905063ec7a78d41f79619f4562462a0f8b6be11"
+    account: cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018
+    rest_url: "https://api.devnet.aptoslabs.com" 
+    faucet_url: "https://faucet.devnet.aptoslabs.com" 
+```
+
+
+从现在开始，无论我们在这个 `move` 目录中运行哪个 `CLI` 命令，它都会使用该默认配置文件运行。我们使用 `devnet` 网络标志，所以最终当我们发布我们的包时，它将被发布到 `devnet` 网络。
+
+>[!NOTE]
+>你刚刚在 `Aptos`（开发）网络上创建了一个新的账户！耶！你可以通过前往 Aptos Explorer Devnet 网络视图，将配置文件中的账户地址值粘贴到搜索字段中，并点击下拉选项来查看它！
+>
+>如前所述，我们的 sources 目录保存我们的 `.move` 模块文件；那么让我们添加我们的第一个 `Move` 文件。
+
+打开 `Move.toml` 文件。
+将以下代码添加到该 `Move` 文件中，用你在 `.aptos/config.yaml` 中的实际默认配置文件账户地址替换：
+```toml
+[addresses]
+todolist_addr='<default-profile-account-address>'
+```
+
+
+如果默认配置文件账户地址是 `cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018`，你的 `Move.toml` 文件应该看起来像这样：
+
+```toml
+[addresses]
+todolist_addr='cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018'
+```
+
+在 `sources` 目录内创建一个新的 `todolist.move` 文件，并将以下内容添加到该文件中：
+
+```rust
+module todolist_addr::todolist {
+
+}
+```
+
+>[!NOTE]
+>`Move` 模块存储在地址下（所以当它发布后任何人都可以使用那个地址访问它）；`Move` 模块的语法是
+>```rust
+>module <account-address>::<module-name> {
+>}
+>```
+>
+> 在我们的模块中，`account-address` 是 `todolist_addr`（我们在前一步在 `Move.toml` 文件中声明的一个包含地址的变量），`module-name` 是 `todolist`（我们任意选择的一个名称）。
+
+## 合约逻辑
+
+在开始编写代码之前，让我们先了解我们希望我们的智能合约程序做什么。为了便于理解，我们将保持一个简单的逻辑：
+
+1. 一个账户创建一个新列表。
+
+2. 一个账户在他们的列表上创建一个新任务。
+
+3. 每当有人创建一个新任务时，发出一个 task_created 事件。
+
+4. 让账户标记他们的任务为已完成。
+
+    > [!NOTE]
+    > 创建事件不是强制性的，但如果 `dapps/` 用户想要监控数据，例如使用 `Aptos Indexer` 查看有多少人创建了新任务，这将是有用的。
+
+我们可以从定义一个 `TodoList 结构体`开始，它保存：
+
+1. 任务数组
+2. 新任务事件
+3. 一个任务计数器，用于计算创建的任务数量（我们可以用它来区分任务）
+
+还要创建一个 `Task 结构体`，它保存：
+
+1. 任务 ID - 从 `TodoList` 任务计数器派生。
+
+2. 地址 - 创建该任务的账户地址。
+
+3. 内容 - 任务内容。
+
+4. 已完成 - 一个布尔值，标记该任务是否已完成。
+
+5. 在 `todolist.move` 文件中，使用以下内容更新模块：
+
+```rust
+struct TodoList has key {
+    tasks: Table<u64, Task>,
+    set_task_event: event::EventHandle<Task>,
+    task_counter: u64
+}
+
+struct Task has store, drop, copy {
+    task_id: u64,
+    address:address,
+    content: String,
+    completed: bool,
+  }
+```
+
+我们刚刚添加了什么？
+
+TodoList
+
+一个具有 `key` 和 `store` 能力的 `struct`：
+
+`key` 能力允许 `struct` 用作存储标识符。换句话说，`key` 是一种能够被存储在顶层并作为存储的能力。我们在这里需要它，以便让 `TodoList` 成为我们用户账户中存储的资源。
+
+当一个 `struct` 具有 `key` 能力时，它将这个 `struct` 变成一个资源：
+
+资源存储在账户下 - 因此它只有在分配给账户时才存在，并且只能通过这个账户访问。
+Task
+
+一个具有 `store` 、`drop` 和 `copy` 能力的 `struct`
+
+• `store` - Task 需要存储，因为它存储在另一个 struct（TodoList）内部。
+
+• `copy` - 值可以被复制（或者按值克隆）。
+
+• `drop` - 值可以在作用域结束时被丢弃。
+
+让我们尝试编译我们现在所拥有的项目：
+
+进入 move 目录，然后运行。
+
+```bash
+cd move 
+aptos move compile
+```
+
+看到错误了吗？让我们理解它们。
+
+我们有一些关于未绑定类型的错误 - 这是因为我们使用了某些类型，但从未导入它们，编译器不知道从哪里获取它们。
+
+在模块的顶部，通过添加以下内容来导入这些类型：
+```rust
+use aptos_framework::event;
+use std::string::String;
+use aptos_std::table::Table;
+```
+
+再次运行
+
+```rust 
+aptos move compile
+```
+
+如果一切顺利，我们应该看到类似于以下的响应（其中生成的账户地址是你的默认配置文件账户地址）：
+
+```bash
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING myTodolist
+{
+"Result": [
+    "cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist"
+  ]
+}
+```
+
+到目前为止，我们已经成功编译了我们的 Move 模块。耶！
+
+我们还有一个新创建的 `move/build` 目录（由编译器创建），它保存了我们的编译模块、构建信息和 `sources` 目录。
+
+## 创建列表 `create_list` 函数
+
+账户可以并且应该对我们的合约做的第一件事是创建一个新列表。
+
+创建列表本质上是提交一个交易，所以我们需要知道签署并提交交易的签名者：
+
+添加一个接受签名者的 `create_list` 函数
+
+```rust
+public entry fun create_list(account: &signer){
+
+}
+```
+
+让我们理解这个函数的组成部分
+
+`entry` - 入口函数是可以通过交易调用的函数。简单来说，每当你想要向链上提交交易时，你应该调用一个入口函数。
+
+`&signer` - signer 参数是由 Move 虚拟机注入的，表示签署该交易的地址。
+
+我们的代码有一个 `TodoList` 资源。资源存储在账户下；因此，它只有在分配给账户时才存在，并且只能通过这个账户访问。
+
+这意味着要创建 `TodoList` 资源，我们需要将其分配给一个账户，只有这个账户才能访问。
+
+`create_list` 函数可以处理那个 `TodoList` 资源的创建。
+
+将以下内容添加到 `create_list` 函数
+
+```rust
+public entry fun create_list(account: &signer){
+  let tasks_holder = TodoList {
+    tasks: table::new(),
+    set_task_event: account::new_event_handle<Task>(account),
+    task_counter: 0
+  };
+  // 将 TodoList 资源移动到签名者账户下
+  move_to(account, tasks_holder);
+}
+```
+
+这个函数接收一个签名者，创建一个新的 `TodoList` 资源，并使用 `move_to` 将资源存储在提供的签名者账户中。
+
+## 创建任务  `create_task` 函数
+
+正如之前提到的，我们的合约有一个创建任务函数，允许账户创建一个新任务。创建任务本质上也是提交一个交易，所以我们需要知道签署并提交交易的签名者。我们函数中另一个我们想要接受的元素是任务内容。
+
+添加一个接受签名者和任务内容的 `create_task` 函数以及函数逻辑。
+
+```rust
+public entry fun create_task(account: &signer, content: String) acquires TodoList {
+    // 获取签名者地址
+    let signer_address = signer::address_of(account);
+    // 获取 TodoList 资源
+    let todo_list = borrow_global_mut<TodoList>(signer_address);
+    // 增加任务计数器
+    let counter = todo_list.task_counter + 1;
+    // 创建一个新任务
+    let new_task = Task {
+      task_id: counter,
+      address: signer_address,
+      content,
+      completed: false
+    };
+    // 将新任务添加到任务表中
+    table::upsert(&mut todo_list.tasks, counter, new_task);
+    // 设置任务计数器为增加后的计数器
+    todo_list.task_counter = counter;
+    // 发出新任务创建事件
+    event::emit_event<Task>(
+      &mut borrow_global_mut<TodoList>(signer_address).set_task_event,
+      new_task,
+    );
+  }
+```
+
+由于我们现在使用了两个新模块 —— `signer` 和 `table`（你可以看到它在 `signer::` 和 `table::` 中的使用） - 我们需要导入这些模块。在文件顶部，添加这两个 `use` 语句：
+`use std::signer;`
+`use aptos_std::table::{Self, Table}; // 这个我们已经有过，需要修改`
+
+回到代码；这里发生了什么？
+
+首先，我们想要获取签名者地址，这样我们就可以获取这个账户的 `TodoList` 资源。
+
+然后，我们使用 signer_address 检索 TodoList 资源；有了它，我们就可以访问 TodoList 的属性。
+
+现在我们可以增加 task_counter 属性，使用 signer_address、计数器和提供的内容创建一个新任务。
+
+我们将其推入到持有我们所有任务的 todo_list.tasks 表中，以及新的计数器（作为表的键）和新创建的任务。
+
+然后我们将全局任务计数器设置为新的增加后的计数器。
+
+最后，我们发出一个包含新任务数据的 task_created 事件。emit_event 是 aptos-framework 函数，它接受一个事件句柄的引用和一个消息。在我们的例子中，我们向函数传递了一个引用（使用符号 &）到账户的 TodoList 资源的 set_task_event 属性作为第一个参数，以及第二个消息参数，即我们刚刚创建的新任务。记住，我们的 TodoList 结构体中有一个 set_task_event 属性。
+
+## 完成任务函数
+
+我们的合约还应该包含一个选项，即可以为任务标记为已完成。
+
+添加一个接受签名者和任务 ID 的 `complete_task` 函数：
+
+```rust
+public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList {
+  // 获取签名者地址
+  let signer_address = signer::address_of(account);
+  // 获取 TodoList 资源
+  let todo_list = borrow_global_mut<TodoList>(signer_address);
+  // 获取匹配任务 ID 的任务
+  let task_record = table::borrow_mut(&mut todo_list.tasks, task_id);
+  // 将任务更新为已完成
+  task_record.completed = true;
+}
+```
+
+让我们理解代码。
+
+和我们在创建列表函数中一样，我们通过签名者地址检索 TodoList 结构体，这样我们就可以访问存储账户所有任务的任务表。
+
+然后，我们在 todo_list.tasks 表上查找提供的任务 ID 对应的任务。
+
+最后，我们将那个任务的 completed 属性更新为 true。
+
+现在尝试编译代码：
+
+```rust
+aptos move compile
+```
+
+另一个未绑定错误？为了解决这个问题，添加一个 use 语句来使用 account 模块。
+
+```rust
+use aptos_framework::account;
+```
+
+再次运行 aptos move compile。
+添加验证
+
+由于这段代码现在可以编译，我们希望在创建新任务或更新任务为已完成之前进行一些验证和检查，以确保我们的函数按预期工作。
+
+给 create_task 函数添加一个检查，以确保签名者账户有一个列表：
+public entry fun create_task(account: &signer, content: String) acquires TodoList {
+  // 获取签名者地址
+  let signer_address = signer::address_of(account);
+
+  // 断言签名者已创建列表
+  assert!(exists<TodoList>(signer_address), 1);
+
+  ...
+}
+
+给 complete_task 函数添加一个检查，以确保：
+签名者已创建列表。
+任务存在。
+任务未完成。
+使用：
+
+public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList {
+  // 获取签名者地址
+  let signer_address = signer::address_of(account);
+  // 断言签名者已创建列表
+  assert!(exists<TodoList>(signer_address), 1);
+  // 获取 TodoList 资源
+  let todo_list = borrow_global_mut<TodoList>(signer_address);
+  // 断言任务存在
+  assert!(table::contains(&todo_list.tasks, task_id), 2);
+  // 获取匹配任务 ID 的任务
+  let task_record = table::borrow_mut(&mut todo_list.tasks, task_id);
+  // 断言任务未完成
+  assert!(task_record.completed == false, 3);
+  // 将任务更新为已完成
+  task_record.completed = true;
+}
+
+我们刚刚添加了我们的第一个断言语句！
+
+如果你注意到，assert 接受两个参数：第一个是检查的内容，第二个是错误代码。而不是传入一个任意数字，约定是在使用这些断言的地方声明错误，并使用这些错误代码。
+
+在模块文件的顶部（在 use 语句下），添加这些错误声明：
+
+// 错误
+const E_NOT_INITIALIZED: u64 = 1;
+const ETASK_DOESNT_EXIST: u64 = 2;
+const ETASK_IS_COMPLETED: u64 = 3;
+
+现在我们可以用这些常量更新我们的断言：
+
+public entry fun create_task(account: &signer, content: String) acquires TodoList {
+  // 获取签名者地址
+  let signer_address = signer::address_of(account);
+
+  // 断言签名者已创建列表
+  assert!(exists<TodoList>(signer_address), E_NOT_INITIALIZED);
+
+  ...
+}
+
+
+
+public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList {
+  // 获取签名者地址
+  let signer_address = signer::address_of(account);
+  assert!(exists<TodoList>(signer_address), E_NOT_INITIALIZED);
+  // 获取 TodoList 资源
+  let todo_list = borrow_global_mut<TodoList>(signer_address);
+  // 断言任务存在
+  assert!(table::contains(&todo_list.tasks, task_id), ETASK_DOESNT_EXIST);
+  // 获取匹配任务 ID 的任务
+  let task_record = table::borrow_mut(&mut todo_list.tasks, task_id);
+  // 断言任务未完成
+  assert!(task_record.completed == false, ETASK_IS_COMPLETED);
+  // 将任务更新为已完成
+  task_record.completed = true;
+}
+
+太棒了！！
+
+让我们暂停片刻，通过运行 aptos move compile 命令确保我们的代码可以编译。如果一切顺利，我们应该看到类似于以下的输出：
+
+包括依赖项 AptosFramework
+包括依赖项 AptosStdlib
+包括依赖项 MoveStdlib
+构建 myTodolist
+{
+"Result": [
+    "cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist"
+  ]
+}
+
+如果你遇到错误，请确保你正确地遵循了上述步骤，并尝试确定问题的原因。
+
+编写测试
+
+现在我们的智能合约逻辑已经准备好了，我们需要为它添加一些测试。
+
+测试函数使用 #[test] 注解。
+
+在文件底部添加以下代码：
+#[test]
+public entry fun test_flow() {
+
+}
+
+提示
+我们需要在这里使用 entry，因为我们正在测试一个入口函数。
+为了简单起见，因为我们没有太多代码需要测试，我们使用一个函数来测试应用程序的整个流程。测试步骤是：
+  // 创建一个列表
+  // 创建一个任务
+  // 将任务更新为已完成
+
+更新测试函数为：
+
+#[test(admin = @0x123)]
+public entry fun test_flow(admin: signer) acquires TodoList {
+  // 为测试创建一个管理员 @todolist_addr 账户
+  account::create_account_for_test(signer::address_of(&admin));
+  // 使用管理员账户初始化合约
+  create_list(&admin);
+
+  // 由管理员账户创建一个任务
+  create_task(&admin, string::utf8(b"New Task"));
+  let task_count = event::counter(&borrow_global<TodoList>(signer::address_of(&admin)).set_task_event);
+  assert!(task_count == 1, 4);
+  let todo_list = borrow_global<TodoList>(signer::address_of(&admin));
+  assert!(todo_list.task_counter == 1, 5);
+  let task_record = table::borrow(&todo_list.tasks, todo_list.task_counter);
+  assert!(task_record.task_id == 1, 6);
+  assert!(task_record.completed == false, 7);
+  assert!(task_record.content == string::utf8(b"New Task"), 8);
+  assert!(task_record.address == signer::address_of(&admin), 9);
+
+  // 将任务更新为已完成
+  complete_task(&admin, 1);
+  let todo_list = borrow_global<TodoList>(signer::address_of(&admin));
+  let task_record = table::borrow(&todo_list.tasks, 1);
+  assert!(task_record.task_id == 1, 10);
+  assert!(task_record.completed == true, 11);
+  assert!(task_record.content == string::utf8(b"New Task"), 12);
+  assert!(task_record.address == signer::address_of(&admin), 13);
+}
+
+我们的 #[test] 注解已经改变，并声明了一个账户变量。
+
+此外，函数本身现在接受一个 signer 参数。
+
+让我们理解我们的测试。
+
+由于我们的测试在账户范围外运行，我们需要创建账户以供测试使用。#[test] 注解为我们提供了声明这些账户的选项。我们使用一个管理员账户，并将其设置为一个随机账户地址 (@0x123)。函数接受这个 signer（账户）并使用内置函数通过创建一个账户来测试。
+
+然后我们简单地通过以下步骤来完成流程：
+
+创建一个列表
+创建一个任务
+将任务更新为已完成
+并在每个步骤断言预期的数据/行为。
+
+在再次运行测试之前，我们需要导入（use）我们代码中现在使用的一些新模块：
+
+在文件顶部添加此 use 语句：
+use std::string::{Self, String}; // 已经有它，需要修改
+
+运行 aptos move 测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+运行 Move 单元测试
+[ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::test_flow
+测试结果：OK。总测试数：1；通过：1；失败：0
+{
+  "Result": "Success"
+}
+
+让我们再添加一个测试，以确保我们的 complete_task 函数按预期工作。添加另一个测试函数：
+#[test(admin = @0x123)]
+#[expected_failure(abort_code = E_NOT_INITIALIZED)]
+public entry fun account_can_not_update_task(admin: signer) acquires TodoList {
+  // 为测试创建一个管理员 @todolist_addr 账户
+  account::create_account_for_test(signer::address_of(&admin));
+  // 账户不能切换任务，因为没有创建列表
+  complete_task(&admin, 2);
+}
+
+此测试确认如果他们之前没有创建列表，账户就不能使用该函数。
+
+测试还使用了特殊的注解 #[expected_failure]，正如其名，它期望以 E_NOT_INITIALIZED 错误代码失败。
+
+运行 aptos move 测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+运行 Move 单元测试
+[ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::account_can_not_update_task
+[ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::test_flow
+测试结果：OK。总测试数：2；通过：2；失败：0
+{
+  "Result": "Success"
+}
+
+现在一切都工作正常，我们可以编译 Move 模块并将 Move 包发布到链上，这样我们的 React 应用程序（和其他人）就可以与我们的智能合约交互了！
+
+将 todolist 模块发布到链上
+
+目前，将 Move 包发布到链上的最简单方法是使用 CLI：
+
+进入我们的 move 目录，运行：aptos move 编译
+我们得到了一些未使用别名的错误。这是因为我们之前添加了字符串别名，因为我们在测试中使用了它。但我们的智能合约代码中没有使用这个别名。
+
+这就是为什么我们在想要编译模块时会得到这个错误，而仅运行测试时却没有。
+
+为了解决这个问题，我们可以添加一个仅在测试中使用的 use 语句。
+
+在我们所有的 import 语句处添加以下 use 语句。
+
+use std::string::String; // 更改为这个
+...
+#[test_only]
+use std::string; // 添加这个
+
+运行：aptos move 测试和 aptos move 编译 - 所有都应该无误。
+运行：aptos move 发布
+在提示时输入 yes。
+这将编译、模拟并最终将你的模块发布到 devnet。你应该看到类似于以下成功消息：
+{
+  "Result": {
+{    "transaction_hash": "0x96b84689a53a28db7be6346627a99967f719946bc22766811a674e69da7783fa"}
+    "gas_used": 7368,
+    "gas_unit_price": 100,
+    "sender": "cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018",
+    "sequence_number": 2,
+    "success": true,
+    "timestamp_us": 1674246585276143,
+    "version": 651327,
+    "vm_status": "Executed successfully"
+  }
+}
+
+现在你可以去 Aptos Explorer，将右上角的下拉菜单更改为 Devnet 网络，并查找那个 transaction_hash 值 - 这将显示你交易的详细信息。
+现在让我们在第二章中设置一个 React 应用程序。

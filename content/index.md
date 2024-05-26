@@ -13,7 +13,7 @@ title: 目录
 
 [[Move 的历史]]
 
-一、[[安装环境]] 【完成】
+一、[[安装-Aptos-CLI]] 【完成】
 
 二、[[开发教程]]【未编辑】
 
@@ -55,6 +55,22 @@ title: 目录
 
 
 ---
+**Web3 相关内容推荐**
+
+==开发方面==
+1. @Kevin@HackQuest  HackQuest 
+	- [开发者课程](https://hackquest.io)
+1. @秋秋 @Vanessa OpenBuild 
+	- [开发者社区的各系列开发课程](https://openbuild.xyz/)
+2. WTF Academy 
+	- [系列开发教程](https://www.wtf.academy/)
+3. @🌊崔棉大师👾 
+	- [经典 Solidity 开发课程](https://www.bilibili.com/video/BV1oZ4y1B7WS/)
+    - [近期正在筹备的 Solana 开发教程](https://github.com/Fankouzu/solana-basic-ui)
+
+==投研方面==
+1. @杨唯梓 Gryphsis Academy 
+	- [投研课程](https://www.gryphsis.com/)
 
 ---
 **书籍**
@@ -95,6 +111,7 @@ title: 目录
 >
 > https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 
+
 **学习参考**
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)
@@ -129,6 +146,8 @@ title: 目录
 > [BuilerDao](https://buidlerdao.xyz)
 >
 > [web3doc](https://aptos.web3doc.top/guides/getting-started)
+>
+>[HackQuest](hackquest.io)
 
 
 **机构**

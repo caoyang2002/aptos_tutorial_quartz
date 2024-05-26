@@ -6,22 +6,19 @@ original:
   author: Greg
   x_post: "https://x.com/Greg_Nazario/status/1755696024159735890"
   GitHub_url: "https://github.com/aptos-labs/daily-move/blob/main/snippets/fractional-token/sources/fractional_token.move"
-note: 正在核对，但是我注意到 GitHub 中的代码已经被更新了，正在咨询 Greg，以决定是否继续翻译
+note: 已校对
 ```
-
-# 问题
+# 中文
 
 另一位构建者问我：
 
 “我如何分割一个 NFT ？”
 
-源代码完全涵盖了如何将其分割，并且使用扩展示例，你实际上可以在此基础上添加更多！
-
-# 中文
+[源代码](https://github.com/aptos-labs/daily-move/blob/main/snippets/fractional-token/sources/fractional_token.move)完全涵盖了如何将其分割，并且使用扩展示例，你实际上可以在此基础上添加更多！
 
 早上好！人们一直在问我，你如何分割一个 NFT ？让我们在这一集的 #DailyMove 中深入探讨一种可能的数字资产分割方式。
 
-首先，什么是分割资产。
+首先，什么是分割资产?
 
 分割资产是指将单个物品分割成部分所有权，即整体物品的一部分。
 
@@ -35,15 +32,13 @@ note: 正在核对，但是我注意到 GitHub 中的代码已经被更新了，
 
 我们将使用可替代资产来进行分割。让我们来看一下数字资产的存储。
 
-我们希望允许锁定数字资产，并且如果所有者持有100％的分割部分，则可以解锁它。
+我们希望允许锁定数字资产，并且如果所有者持有 100％ 的资产部分，则可以解锁它。
 
 我们在这里存储了数字资产以进行锁定。
 
-ExtendRef允许某人仅在拥有100％时对资产进行分割，而BurnRef将允许在索赔代币时销毁分割的部分。
+`ExtendRef` 允许某人仅在拥有 100％ 时对资产进行分割，而 `BurnRef` 将允许在代币被认领时销毁这些被分割的部分。
 
 如果我们发现我们缺少某些功能，可以使用 `ObjectGroup` 使我们在未来扩展这一点。
-
-![https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small](https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small)
 
 ```rust
 #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
@@ -69,8 +64,6 @@ struct FractionalDigitalAsset has key {
 这是因为我们希望确保资产可供其他系统使用，并且不会消失。
 
 然后，我们继续从源数字资产构建一些有关可替代资产的信息。
-
-![https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium](https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium)
 
 ```rust
 /// Fractionalizes an asset.  We specifically keep it below u128 for simplicity
@@ -106,8 +99,6 @@ entry fun fractionalize_asset(caller: &signer, asset: Object<TokenObject>, suppl
 
 此时，如果支持可交换资产，你可以直接使用你喜爱的钱包或 DeFi 工具与分割资产一起使用。
 
-![https://pbs.twimg.com/media/GF16A8FagAABXeq?format=png&name=900x900](https://pbs.twimg.com/media/GF16A8FagAABXeq?format=png&name=900x900)
-
 ```rust
 primary_fungible_store::create_primary_store_enabled_fungible_asset(
 		&constructor,
@@ -140,11 +131,9 @@ primary_fungible_store::create_primary_store_enabled_fungible_asset(
 }
 ```
 
-但是，如果你只想要数字资产呢？
+但是，如果你只想要收回数字资产呢？
 
-如果你有所有的股份，你可以简单地重新组合所有股份，并烧毁所有分割的部分，将数字资产解锁回到你的钱包。
-
-![https://pbs.twimg.com/media/GF17gzFbIAAlXU-?format=jpg&name=medium](https://pbs.twimg.com/media/GF17gzFbIAAlXU-?format=jpg&name=medium)
+如果你有所有的权益（shares），你可以简单地重新组合所有权益（shares），并烧毁所有被分割的部分，将数字资产解锁，使其回到你的钱包。
 
 ```rust
 /// A fractionalized asset can be removed, if and only if the owner controls all of the fungible assets
@@ -191,7 +180,7 @@ entry fun recombine_asset(caller: &signer, metadata_object: Object<Metadata>) ac
 - 使可交换资产也成为数字资产，以便在钱包中显示为NFT
 - 还有许多其他！
 
-感谢大家阅读这一集的[#DailyMove](https://twitter.com/hashtag/DailyMove?src=hashtag_click)
+感谢大家阅读这一集的 [#DailyMove](https://twitter.com/hashtag/DailyMove?src=hashtag_click)
 
 特别感谢[@AptosNoob](https://twitter.com/AptosNoob)提出这个问题！
 
@@ -202,15 +191,17 @@ entry fun recombine_asset(caller: &signer, metadata_object: Object<Metadata>) ac
 [https://github.com/aptos-labs/daily-move/blob/main/snippets/fractional-token/sources/fractional_token.move](https://github.com/aptos-labs/daily-move/blob/main/snippets/fractional-token/sources/fractional_token.move)
 
 
-# Question
+
+
+
+---
+# English
 
 Another builder asked me:
 
 "How do I fractionalize an NFT?"
 
 The source code goes fully into how to fractionalize it, and using the extending example, you can actually add more on top!
-
-# English
 
 gm ! People have been asking me, how do you fractionalize an NFT? Let's dive into one possible way to fractionalize a Digital Asset on this episode of [#DailyMove](https://twitter.com/hashtag/DailyMove?src=hashtag_click)
 
@@ -237,24 +228,8 @@ The ExtendRef for allows someone to defractionalize the asset only if they have 
 Having the "ObjectGroup" allows us to extend this in the future, if we find that we're missing something.
 
 
-![https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small](https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small)
+![image_1](https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small)
 
-```rust
-#[resource_group_member(group = aptos_framework::object::ObjectGroup)]
-/// A locker for a digital asset and fractionalizes it accordingly
-struct FractionalDigitalAsset has key {
-	/// The address of the locked up token
-	asset: Object<TokenObject>,
-	/// For transferring the locked up token back out
-	extend_ref: ExtendRef,
-	/// For burning the tokens at the end
-	burn_ref: BurnRef,
-	/// For locking/unlocking the token from the object containing the token
-	transfer_ref: TransferRef,
-}
-```
-
-[https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small](https://pbs.twimg.com/media/GF13P8mbEAAvE-u?format=png&name=small)
 
 Okay, let's now start fractionalizing!
 
@@ -266,7 +241,7 @@ This is because we want to make sure the asset is usable by other systems, and n
 
 Then, we go ahead and build up some information about the Fungible Asset from the Digital Asset that was its source.
 
-[https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium](https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium)
+![https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium](https://pbs.twimg.com/media/GF15db1bAAEx4HX?format=jpg&name=medium)
 
 Here's the fun part!
 
@@ -278,13 +253,14 @@ Note, the mint ref is thrown away at the end of this function. No additional sha
 
 At this point your favorite wallet or defi tools can be used with the fractional asset directly if the support fungible assets.
 
-[https://pbs.twimg.com/media/GF16A8FagAABXeq?format=png&name=900x900](https://pbs.twimg.com/media/GF16A8FagAABXeq?format=png&name=900x900)
+![image_2](https://pbs.twimg.com/media/GF16A8FagAABXeq?format=png&name=900x900)
 
 But, what if you just want the Digital Asset back?
 
 You can simply recombine all the shares if you have them, and burn all of the fractionalized pieces, unlocking the Digital Asset back to your wallet.
 
-[https://pbs.twimg.com/media/GF17gzFbIAAlXU-?format=jpg&name=medium](https://pbs.twimg.com/media/GF17gzFbIAAlXU-?format=jpg&name=medium)
+
+![image_3](https://pbs.twimg.com/media/GF17gzFbIAAlXU-?format=jpg&name=medium)
 
 What next?
 

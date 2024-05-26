@@ -1,5 +1,5 @@
 ---
-title: 如何改变 Token 的 URL
+title: 如何更改 Token 的 URL
 ---
 ```yaml
 original: 
@@ -7,15 +7,14 @@ original:
   url: 
 note: 纯机翻、未核对
 ```
-# Question
+
+# English
 
 The latest episode comes from a builder asking me:
 
 "How can I mutate the token URI after the token is created?"
 
 The actual code example shows mutating URIs, but then extended to extending tokens / objects, and even burning them in the source.
-
-# English
 
 Have you been wondering, what's this extensibility that people are talking about on Aptos NFTs?
 
@@ -81,7 +80,7 @@ As always check out the source code here!
 
 [](https://t.co/2Mwh4y2BVm)[https://github.com/aptos-labs/daily-move/blob/main/snippets/modifying-nfts/sources/modify_nfts.move#L179-L195](https://github.com/aptos-labs/daily-move/blob/main/snippets/modifying-nfts/sources/modify_nfts.move#L179-L195)
 
-# 问题
+# 中文
 
 最新的一集来自一位构建者向我提问：
 
@@ -89,7 +88,6 @@ As always check out the source code here!
 
 实际的代码示例展示了如何改变URI，然后扩展到了扩展代币/对象，甚至在源代码中烧毁它们。
 
-# 中文
 
 你是否一直在想，人们在Aptos NFTs上谈论的这种可扩展性是什么？
 

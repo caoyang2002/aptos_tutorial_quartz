@@ -355,12 +355,19 @@ aptos move compile
 use aptos_framework::account;
 ```
 
-再次运行 aptos move compile。
+再次运行 
+
+```rust
+aptos move compile
+```
+
 添加验证
 
 由于这段代码现在可以编译，我们希望在创建新任务或更新任务为已完成之前进行一些验证和检查，以确保我们的函数按预期工作。
 
-给 create_task 函数添加一个检查，以确保签名者账户有一个列表：
+给 `create_task` 函数添加一个检查，以确保签名者账户有一个列表：
+
+```rust
 public entry fun create_task(account: &signer, content: String) acquires TodoList {
   // 获取签名者地址
   let signer_address = signer::address_of(account);
@@ -370,13 +377,15 @@ public entry fun create_task(account: &signer, content: String) acquires TodoLis
 
   ...
 }
+```
 
-给 complete_task 函数添加一个检查，以确保：
+给 `complete_task` 函数添加一个检查，以确保：
 签名者已创建列表。
 任务存在。
 任务未完成。
 使用：
 
+```rust
 public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList {
   // 获取签名者地址
   let signer_address = signer::address_of(account);
@@ -393,20 +402,24 @@ public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList
   // 将任务更新为已完成
   task_record.completed = true;
 }
+```
 
 我们刚刚添加了我们的第一个断言语句！
 
-如果你注意到，assert 接受两个参数：第一个是检查的内容，第二个是错误代码。而不是传入一个任意数字，约定是在使用这些断言的地方声明错误，并使用这些错误代码。
+如果你注意到，`assert` 接受两个参数：第一个是检查的内容，第二个是错误代码。而不是传入一个任意数字，约定是在使用这些断言的地方声明错误，并使用这些错误代码。
 
 在模块文件的顶部（在 use 语句下），添加这些错误声明：
 
+```rust
 // 错误
 const E_NOT_INITIALIZED: u64 = 1;
 const ETASK_DOESNT_EXIST: u64 = 2;
 const ETASK_IS_COMPLETED: u64 = 3;
+```
 
 现在我们可以用这些常量更新我们的断言：
 
+```rust
 public entry fun create_task(account: &signer, content: String) acquires TodoList {
   // 获取签名者地址
   let signer_address = signer::address_of(account);
@@ -416,9 +429,9 @@ public entry fun create_task(account: &signer, content: String) acquires TodoLis
 
   ...
 }
+```
 
-
-
+```rust
 public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList {
   // 获取签名者地址
   let signer_address = signer::address_of(account);
@@ -434,44 +447,51 @@ public entry fun complete_task(account: &signer, task_id: u64) acquires TodoList
   // 将任务更新为已完成
   task_record.completed = true;
 }
+```
 
 太棒了！！
 
-让我们暂停片刻，通过运行 aptos move compile 命令确保我们的代码可以编译。如果一切顺利，我们应该看到类似于以下的输出：
+让我们暂停片刻，通过运行 `aptos move compile` 命令确保我们的代码可以编译。如果一切顺利，我们应该看到类似于以下的输出：
 
-包括依赖项 AptosFramework
-包括依赖项 AptosStdlib
-包括依赖项 MoveStdlib
-构建 myTodolist
+```rust
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING myTodolist
 {
 "Result": [
     "cbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist"
   ]
 }
+```
 
 如果你遇到错误，请确保你正确地遵循了上述步骤，并尝试确定问题的原因。
 
-编写测试
+## 编写测试
 
 现在我们的智能合约逻辑已经准备好了，我们需要为它添加一些测试。
 
-测试函数使用 #[test] 注解。
+测试函数使用 `#[test]` 注解。
 
 在文件底部添加以下代码：
+
+```rust
 #[test]
 public entry fun test_flow() {
 
 }
+```
 
-提示
-我们需要在这里使用 entry，因为我们正在测试一个入口函数。
-为了简单起见，因为我们没有太多代码需要测试，我们使用一个函数来测试应用程序的整个流程。测试步骤是：
-  // 创建一个列表
-  // 创建一个任务
-  // 将任务更新为已完成
+>[!TIP]
+>我们需要在这里使用 entry，因为我们正在测试一个入口函数。
+>为了简单起见，因为我们没有太多代码需要测试，我们使用一个函数来测试应用程序的整个流程。测试步骤是：
+>  // 创建一个列表
+>  // 创建一个任务
+>  // 将任务更新为已完成
 
 更新测试函数为：
 
+```rust
 #[test(admin = @0x123)]
 public entry fun test_flow(admin: signer) acquires TodoList {
   // 为测试创建一个管理员 @todolist_addr 账户
@@ -500,14 +520,15 @@ public entry fun test_flow(admin: signer) acquires TodoList {
   assert!(task_record.content == string::utf8(b"New Task"), 12);
   assert!(task_record.address == signer::address_of(&admin), 13);
 }
+```
 
-我们的 #[test] 注解已经改变，并声明了一个账户变量。
+我们的 `#[test]` 注解已经改变，并声明了一个账户变量。
 
-此外，函数本身现在接受一个 signer 参数。
+此外，函数本身现在接受一个 `signer` 参数。
 
 让我们理解我们的测试。
 
-由于我们的测试在账户范围外运行，我们需要创建账户以供测试使用。#[test] 注解为我们提供了声明这些账户的选项。我们使用一个管理员账户，并将其设置为一个随机账户地址 (@0x123)。函数接受这个 signer（账户）并使用内置函数通过创建一个账户来测试。
+由于我们的测试在账户范围外运行，我们需要创建账户以供测试使用。#[test] 注解为我们提供了声明这些账户的选项。我们使用一个管理员账户，并将其设置为一个随机账户地址 (`@0x123`)。函数接受这个 `signer`（账户）并使用内置函数通过创建一个账户来测试。
 
 然后我们简单地通过以下步骤来完成流程：
 
@@ -516,20 +537,34 @@ public entry fun test_flow(admin: signer) acquires TodoList {
 将任务更新为已完成
 并在每个步骤断言预期的数据/行为。
 
-在再次运行测试之前，我们需要导入（use）我们代码中现在使用的一些新模块：
+在再次运行测试之前，我们需要导入（`use`）我们代码中现在使用的一些新模块：
 
-在文件顶部添加此 use 语句：
+在文件顶部添加此 `use` 语句：
+
+```rust
 use std::string::{Self, String}; // 已经有它，需要修改
+```
 
-运行 aptos move 测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+运行
+
+```rust
+aptos move
+```
+
+测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+
+```bash
 运行 Move 单元测试
 [ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::test_flow
 测试结果：OK。总测试数：1；通过：1；失败：0
 {
   "Result": "Success"
 }
+```
 
-让我们再添加一个测试，以确保我们的 complete_task 函数按预期工作。添加另一个测试函数：
+让我们再添加一个测试，以确保我们的 `complete_task` 函数按预期工作。添加另一个测试函数：
+
+```rust
 #[test(admin = @0x123)]
 #[expected_failure(abort_code = E_NOT_INITIALIZED)]
 public entry fun account_can_not_update_task(admin: signer) acquires TodoList {
@@ -538,12 +573,21 @@ public entry fun account_can_not_update_task(admin: signer) acquires TodoList {
   // 账户不能切换任务，因为没有创建列表
   complete_task(&admin, 2);
 }
+```
 
 此测试确认如果他们之前没有创建列表，账户就不能使用该函数。
 
-测试还使用了特殊的注解 #[expected_failure]，正如其名，它期望以 E_NOT_INITIALIZED 错误代码失败。
+测试还使用了特殊的注解 `#[expected_failure]`，正如其名，它期望以 `E_NOT_INITIALIZED` 错误代码失败。
 
-运行 aptos move 测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+运行 
+
+```rust
+aptos move
+```
+
+测试命令。如果一切顺利，我们应该看到类似于以下成功消息：
+
+```bash
 运行 Move 单元测试
 [ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::account_can_not_update_task
 [ PASS ] 0xcbddf398841353776903dbab2fdaefc54f181d07e114ae818b1a67af28d1b018::todolist::test_flow
@@ -551,31 +595,54 @@ public entry fun account_can_not_update_task(admin: signer) acquires TodoList {
 {
   "Result": "Success"
 }
+```
 
 现在一切都工作正常，我们可以编译 Move 模块并将 Move 包发布到链上，这样我们的 React 应用程序（和其他人）就可以与我们的智能合约交互了！
 
-将 todolist 模块发布到链上
+将 `todolist` 模块发布到链上
 
 目前，将 Move 包发布到链上的最简单方法是使用 CLI：
 
-进入我们的 move 目录，运行：aptos move 编译
+运行：
+```bash
+cd move
+aptos move compile
+```
+
 我们得到了一些未使用别名的错误。这是因为我们之前添加了字符串别名，因为我们在测试中使用了它。但我们的智能合约代码中没有使用这个别名。
 
 这就是为什么我们在想要编译模块时会得到这个错误，而仅运行测试时却没有。
 
-为了解决这个问题，我们可以添加一个仅在测试中使用的 use 语句。
+为了解决这个问题，我们可以添加一个仅在测试中使用的 `use` 语句。
 
-在我们所有的 import 语句处添加以下 use 语句。
+在我们所有的 `import` 语句处添加以下 `use` 语句。
 
+```rust
 use std::string::String; // 更改为这个
 ...
 #[test_only]
 use std::string; // 添加这个
+```
 
-运行：aptos move 测试和 aptos move 编译 - 所有都应该无误。
-运行：aptos move 发布
-在提示时输入 yes。
-这将编译、模拟并最终将你的模块发布到 devnet。你应该看到类似于以下成功消息：
+运行：
+
+```bash
+aptos move test
+aptos move compile
+```
+所有都应该无误。
+
+运行：
+
+```bash
+aptos move publish
+```
+
+在提示时输入 `yes`。
+
+这将编译、模拟并最终将你的模块发布到 `devnet`。你应该看到类似于以下成功消息：
+
+```bash
 {
   "Result": {
 {    "transaction_hash": "0x96b84689a53a28db7be6346627a99967f719946bc22766811a674e69da7783fa"}
@@ -589,6 +656,8 @@ use std::string; // 添加这个
     "vm_status": "Executed successfully"
   }
 }
+```
 
-现在你可以去 Aptos Explorer，将右上角的下拉菜单更改为 Devnet 网络，并查找那个 transaction_hash 值 - 这将显示你交易的详细信息。
-现在让我们在第二章中设置一个 React 应用程序。
+现在你可以去 `Aptos Explorer`，将右上角的下拉菜单更改为 `Devnet` 网络，并查找那个 `transaction_hash` 值 - 这将显示你交易的详细信息。
+
+现在让我们在第二章中设置一个 `React` 应用程序。

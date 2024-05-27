@@ -1,5 +1,5 @@
 ---
-title: 2-创建前端
+title: 2-设置 React 应用程序
 ---
 # 设置 React 应用程序
 
@@ -21,7 +21,11 @@ npx create-react-app client --template typescript
 
 你的文件结构应该看起来像这样：
 
-client-folder
+```bash
+.
+├── client
+└── move
+```
 
 运行：
 
@@ -56,6 +60,8 @@ export default App;
 
 - 当一个账户还没有创建列表时（在左边）。
 - 当一个账户已经创建了列表，现在可以向其中添加任务时（在右边）。
+
+![image](https://aptos.dev/assets/images/build-e2e-dapp-img-3-4c39d270f2b788de062ca26db99610f7.png)
 
 我们将为用户界面使用 `Ant Design` 库：
 
@@ -100,4 +106,4 @@ npm start
 
 你应该能看到与我们的 UI 模型匹配的标题。
 
-现在是时候在第三章中添加钱包支持了。
+现在是时候在第三章中[添加钱包支持](./3-添加钱包支持)了。

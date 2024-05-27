@@ -58,13 +58,20 @@ title: 目录
 **Web3 相关内容推荐**
 
 ==开发方面==
-1. @Kevin@HackQuest  HackQuest 
+1. [HackQuest]((https://hackquest.io))
 	- [开发者课程](https://hackquest.io)
-1. @秋秋 @Vanessa OpenBuild 
+2. [OpenBuild](https://openbuild.xyz)
 	- [开发者社区的各系列开发课程](https://openbuild.xyz/)
-2. WTF Academy 
+	- [Move 初级开发](https://openbuild.xyz/learn/courses/81)
+	- [Move 中级开发教程](https://openbuild.xyz/learn/courses/82)
+	- [32 小时 DApp 全栈开发](https://openbuild.xyz/learn/courses/79)
+	- [Lending in DeFi](https://openbuild.xyz/learn/courses/38)
+	- [区块链安全](https://openbuild.xyz/learn/courses/46)
+	- [数据结构和算法入门](https://openbuild.xyz/learn/courses/59)
+	- [区块链技术](https://openbuild.xyz/learn/courses/3)
+1. [WTF Academy](https://www.wtf.academy)
 	- [系列开发教程](https://www.wtf.academy/)
-3. @🌊崔棉大师👾 
+2. @🌊崔棉大师👾 
 	- [经典 Solidity 开发课程](https://www.bilibili.com/video/BV1oZ4y1B7WS/)
     - [近期正在筹备的 Solana 开发教程](https://github.com/Fankouzu/solana-basic-ui)
 

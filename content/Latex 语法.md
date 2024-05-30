@@ -1,9 +1,11 @@
 ---
 title: latex语法
 ---
-1.操作符
-
-
+```yaml
+original: ""
+author: "none"
+```
+1. 操作符
 
 | Symbol             | Command            |
 | ------------------ | ------------------ |

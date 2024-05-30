@@ -6,6 +6,7 @@ original: 原创
 note: 可以运行的安装方法
 status: 已完成
 ```
+
 [aptos 开发手册](https://aptos.dev/tools/aptos-cli/)
 
 # 一、Mac

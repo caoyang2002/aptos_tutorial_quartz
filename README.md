@@ -2,11 +2,7 @@
 
 # 一、Aptos 开发教程
 
-[IP 访问](http://chyraw.com)  | [域名访问](http://43.138.107.218/)
-
-
-
-
+[IP 访问](http://chyraw.com) | [域名访问](http://43.138.107.218/)
 
 # 二、文档站使用说明
 
@@ -44,16 +40,11 @@ num i
 ./stop.sh
 ```
 
-
-
-
-
-
 ## 2. 编辑内容
 
-文档格式：Markdown（`.md`  后缀）
+文档格式：Markdown（`.md` 后缀）
 
-属性设置:  （写在文章顶部）
+属性设置: （写在文章顶部）
 
 ```yaml
 ---
@@ -70,9 +61,7 @@ title: 文章标题
 > > - 两数之和 是文件名
 > > - title：找出两个数字的和
 > > - 文件路径：`/算法/两数之和`
-> > - `index.md` 中嵌入 `[[两数之和]]`  （`index.md` 是访问文件夹时，默认被访问的）
-
-
+> > - `index.md` 中嵌入 `[[两数之和]]` （`index.md` 是访问文件夹时，默认被访问的）
 
 WIKI 格式：
 
@@ -82,14 +71,11 @@ WIKI 格式：
 
 > 一定是文件名，不是文件中的 title 字段
 
-
-
-
-```yaml 
+```yaml
 title: test
 description: 说明
 aliases: 别称
-tags: 
+tags:
   - 标签一
   - 标签二
 draft: false
@@ -101,8 +87,9 @@ test
 ```
 
 行高亮
+
 ````
-```js {1-3,5} 
+```js {1-3,5}
 let a = 10; < 高亮
 let b = 10; < 高亮
 let c = 10; < 高亮
@@ -113,7 +100,7 @@ let g = 10;
 ```
 ````
 
-```js {1-3,5} 
+```js {1-3,5}
 let a = 10; < 高亮
 let b = 10; < 高亮
 let c = 10; < 高亮
@@ -141,7 +128,7 @@ const [name, setName] = useState('Taylor');
 
 ````
 ```rust showLineNumbers{3}
-let a = 10; < 起始位置为第三行 
+let a = 10; < 起始位置为第三行
 let b = 10;
 let c = 10;
 let d = 10;
@@ -151,7 +138,7 @@ let f = 10;
 ````
 
 ```rust showLineNumbers{3}
-let a = 10; < 起始位置为第三行 
+let a = 10; < 起始位置为第三行
 let b = 10;
 let c = 10;
 let d = 10;
@@ -161,15 +148,10 @@ let f = 10;
 
 ````
 ```js /useState/
-const [age, setAge] = useState(50); 
+const [age, setAge] = useState(50);
 const [name, setName] = useState('Taylor');
 ```
 ````
-
-
-
-
-
 
 ---
 
@@ -185,11 +167,12 @@ const [name, setName] = useState('Taylor');
 >
 > “工作时门开着的人会遭遇各种打扰，但他们偶尔也会得到一些关于世界和可能重要的事情的线索。” — 理查德·哈明
 
-
-
-
-
 # 参考
 
 [hello-algo](https://www.hello-algo.com/chapter_hashing/hash_map/#612)
 
+# vercel
+
+```bash
+vercel --prod
+```

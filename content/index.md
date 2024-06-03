@@ -3,6 +3,8 @@ title: 目录
 ---
 站长（simons）邮箱：[reggiesimons2cy@gmail.com](mailto:reggiesimons2cy@gmail.com)
 
+推荐使用 [IP 访问](http://43.138.107.218/)
+
 [GitHub 开源地址](https://github.com/caoyang2002/aptos_tutorial_quartz)
 
 本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。

@@ -19,7 +19,7 @@ note: 已校对
 - [[Node.js]] / [[React.js]]
 - [[Hardhat]] / [[Remix IDE]] / [[Metamask]]
 - [[ERC20]] / [[ERC721]] / [[Openzepplin]]
-- [[VSCode]] / [[GitHub]] / [[Vercel]] / [[Cloudflare]]
+- [[VSCode]] / [[GitHub]] / [[vercel]] / [[Cloudflare]]
 - [[IPFS]] / [[The Graph]] / [[Readthedocs]]
 
 ---
@@ -40,6 +40,7 @@ note: 已校对
 七、[[详解 ERC-20]]
 
 八、[[详解 ERC-721]]
+
 
 
 # 附录

@@ -57,7 +57,7 @@ title: 目录
 ---
 **Web3 相关内容推荐**
 
-==开发方面==
+==合约开发方面==
 1. [HackQuest]((https://hackquest.io))
 	- [开发者课程](https://hackquest.io)
 2. [OpenBuild](https://openbuild.xyz)
@@ -78,6 +78,10 @@ title: 目录
 ==投研方面==
 1. @杨唯梓 Gryphsis Academy 
 	- [投研课程](https://www.gryphsis.com/)
+
+==运维方面==
+- [[vercel]]
+- [cloudflare]
 
 ---
 **书籍**

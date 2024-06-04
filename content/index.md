@@ -186,15 +186,6 @@ title: 目录
 > [decert](https://decert.me/)
 
 
+[V2EX](https://v2ex.com)
 
-The Web3 区块链教程大纲（付费，非本人）
-
-https://twitter.com/seek_web3/status/1787056563183923485
-
-https://twitter.com/seek_web3/status/1787454439118487941
-
-https://twitter.com/seek_web3/status/1787873082100924760
-
-https://twitter.com/seek_web3/status/1788429301735731652
-
-https://twitter.com/seek_web3/status/1788570092189761635
+[IPFS图床](https://cdn.ipfsscan.io)

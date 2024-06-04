@@ -2,7 +2,6 @@
 title: DApp-设计与开发
 ---
 ```yaml
-
 note: 已校对
 ```
 
@@ -18,7 +17,7 @@ note: 已校对
 - [[Solidity]] / [[JavaScript]]
 - [[Node.js]] / [[React.js]]
 - [[Hardhat]] / [[Remix IDE]] / [[Metamask]]
-- [[ERC20]] / [[ERC721]] / [[Openzepplin]]
+- [[ERC20]] / [[ERC-721]] / [[Openzepplin]]
 - [[VSCode]] / [[GitHub]] / [[vercel]] / [[Cloudflare]]
 - [[IPFS]] / [[The Graph]] / [[Readthedocs]]
 

@@ -1,7 +1,7 @@
 ---
 title: 目录
 ---
-站长（simons）邮箱：[reggiesimons2cy@gmail.com](mailto:reggiesimons2cy@gmail.com)
+
 
 推荐使用 [IP 访问](http://43.138.107.218/)
 
@@ -86,13 +86,7 @@ title: 目录
 - [cloudflare]
 
 ---
-**书籍**
->
->[[精通以太坊]]
->
->[精通比特币](https://github.com/inoutcode/bitcoin_book_2nd)
->
->[权益证明]()
+
 
 **从业者**
 >
@@ -125,6 +119,25 @@ title: 目录
 > https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 
 
+
+
+| [白皮书](https://whitepaper.io/) | 书籍                                                     |
+| ----------------------------- | ------------------------------------------------------ |
+| [[APTOS-白皮书]]                 | [[精通以太坊]]                                              |
+| [[BITCOIN-白皮书]]               | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
+| [[ETHEREUM-白皮书]]              | [权益证明]()                                               |
+| [[SOLANA-白皮书]]                |                                                        |
+
+| 社区                                                          | 高校                                               | 机构                       | 其他                               | 安全团队                           |
+| ----------------------------------------------------------- | ------------------------------------------------ | ------------------------ | -------------------------------- | ------------------------------ |
+| [登链社区](https://learnblockchain.cn)                          | [复旦链协](https://www.fudanblockchain.club)         | [加密湾](https://jiami.one) | [decert](https://decert.me/)<br> | [慢雾](https://cn.slowmist.com/) |
+| [HackQuest](https://hackquest.io)                           | [浙大链协](https://zjubcadocs.readthedocs.io/zh-cn/) |                          |                                  |                                |
+| [web3doc](https://aptos.web3doc.top/guides/getting-started) | [清华链协](https://www.thubadao.xyz/aboutus)         |                          |                                  |                                |
+| [BuilerDao](https://buidlerdao.xyz)                         |                                                  |                          |                                  |                                |
+| [OpenBuild](https://openbuild.xyz)                          |                                                  |                          |                                  |                                |
+|                                                             |                                                  |                          |                                  |                                |
+
+
 **学习参考**
 >
 > [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)
@@ -141,51 +154,13 @@ title: 目录
 > 
 
 
-**白皮书**
-> 
-> https://whitepaper.io/
->
-> [[APTOS-白皮书]]
->
-> [[BITCOIN-白皮书]]
-> 
-> [[ETHEREUM-白皮书]]
-> 
-> [[SOLANA-白皮书]]
-> 
-
-**社区**
->
-> [OpenBuild](https://openbuild.xyz)
->
-> [BuilerDao](https://buidlerdao.xyz)
->
-> [web3doc](https://aptos.web3doc.top/guides/getting-started)
->
->[HackQuest](hackquest.io)
-
-
-**机构**
-> 
-> [加密湾](https://jiami.one)
-> 
-
-> 高校：
->
-> [复旦链协](https://www.fudanblockchain.club)
->
-> [浙大链协](https://zjubcadocs.readthedocs.io/zh-cn/)
->
-> [清华链协](https://www.thubadao.xyz/aboutus)
->
-> [登链社区](https://learnblockchain.cn)
-
-
-> 其他：
->
-> [decert](https://decert.me/)
-
-
 [V2EX](https://v2ex.com)
 
 [IPFS图床](https://cdn.ipfsscan.io)
+
+
+当前网站地址： https://www.chyraw.com
+粉红猛犸社区： https://www.pinkmammoth.xyz/
+博客： https://caoyang2002.top/
+邮箱：[reggiesimons2cy@gmail.com](mailto:reggiesimons2cy@gmail.com)
+

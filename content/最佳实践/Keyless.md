@@ -1,7 +1,6 @@
 ---
-title: keyless0最佳实践
+title: keyless-最佳实践
 ---
-
 ```yaml
 original: "https://github.com/caoyang2002/aptos_mvoe-learning/tree/main/Dapp/aa-top-keyless-example-next"
 ```
@@ -15,7 +14,6 @@ original: "https://github.com/caoyang2002/aptos_mvoe-learning/tree/main/Dapp/aa-
 # 运行
 
 ```bash
-
 pnpm i
 pnpm dev
 ```

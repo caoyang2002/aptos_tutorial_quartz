@@ -139,10 +139,10 @@ cd <你的项目名>
 >
 >   ```bash
 >   pnpm dev
->
+>  
 >   > test-keyless-example-next@0.1.0 dev /Users/caoyang/Desktop/GitHub/aptos_mvoe-learning/Dapp/test/test-keyless-example-next
 >   > next dev
->
+>  
 >    ⚠ Port 3000 is in use, trying 3001 instead. # 我的 3000 端口已经被使用了，所以使用的是 3001 端口
 >     ▲ Next.js 14.2.3
 >     - Local:        http://localhost:3001 # 访问这儿显示的端口
@@ -512,7 +512,7 @@ export default function WalletButtons() {
        const params = new URLSearchParams(fragment)
        return params.get('id_token')
      }
-
+  
      // window.location.href = https://.../callback#id_token=...
      const jwt = parseJWTFromURL(window.location.href)
      ```
@@ -548,16 +548,16 @@ export default function WalletButtons() {
      nonce: string
    ): EphemeralKeyPair | null => {
      const keyPairs = getLocalEphemeralKeyPairs()
-
+   
      // 使用给定 nonce 获取账户（生成的 nonce 可能与 localStorage 中的 nonce 不匹配）
      // 因此，我们需要在返回之前验证它（特定于实现）。
      const ephemeralKeyPair = keyPairs[nonce]
      if (!ephemeralKeyPair) return null
-
+   
      // 如果账户有效，则返回它，否则从设备中移除并返回 null
      return validateEphemeralKeyPair(nonce, ephemeralKeyPair)
    }
-
+   
    /**
     * 使用给定的 nonce 和过期时间戳验证临时密钥对。如果 nonce 与临时密钥对生成的 nonce 不匹配，
     * 则从 localStorage 中移除临时密钥对。这是为了验证 nonce 算法是否相同（例如，如果 nonce 算法发生了变化）。
@@ -576,7 +576,7 @@ export default function WalletButtons() {
      removeEphemeralKeyPair(nonce)
      return null
    }
-
+   
    /**
     * 从localStorage中移除给定 nonce 的临时密钥对。
     */
@@ -1781,7 +1781,6 @@ export default CallbackPage
 <summary>ClientOnly.tsx</summary>
 
 ```tsx
-
 'use client'
 
 import { PropsWithChildren, useEffect, useState } from 'react'
@@ -1811,7 +1810,6 @@ export default ClientOnly
 <summary>GoogleLogo.tsx</summary>
 
 ```tsx
-
 function GoogleLogo() {
   return (
     <svg
@@ -1861,7 +1859,6 @@ export default GoogleLogo;
 <summary>index.tsx</summary>
 
 ```tsx
-
 'use client'
 
 import useEphemeralKeyPair from '@/hooks/useEphemeralKeyPair'
@@ -1929,7 +1926,6 @@ export default function WalletButtons() {
 <summary>KeylessAccountContext.tsx</summary>
 
 ```tsx
-
 'use client' // 指定这个文件应该被当作客户端组件来处理。
 import React, { createContext, useContext, useState } from 'react'
 import { Account } from '@aptos-labs/ts-sdk'
@@ -1976,116 +1972,144 @@ export const useKeylessAccount = () => {
 <summary>useEphemeralKeyPair.ts</summary>
 
 ```tsx
+import { EphemeralKeyPair } from '@aptos-labs/ts-sdk';
 
-import { EphemeralKeyPair } from '@aptos-labs/ts-sdk'
+/**
+ * Stored ephemeral key pairs in localStorage (nonce -> ephemeralKeyPair)
+ */
+export type StoredEphemeralKeyPairs = { [nonce: string]: EphemeralKeyPair };
 
-export type StoredEphemeralKeyPairs = { [nonce: string]: EphemeralKeyPair }
-
+/**
+ * Retrieve the ephemeral key pair with the given nonce from localStorage.
+ */
 export const getLocalEphemeralKeyPair = (
-nonce: string
+  nonce: string,
 ): EphemeralKeyPair | null => {
-const keyPairs = getLocalEphemeralKeyPairs()
-console.log('keyPairs', keyPairs)
-console.log('正在查找 nonce', nonce)
+  const keyPairs = getLocalEphemeralKeyPairs();
 
-const ephemeralKeyPair = keyPairs[nonce]
-console.log('ephemeralKeyPair', ephemeralKeyPair)
-if (!ephemeralKeyPair) return null
+  // Get the account with the given nonce (the generated nonce of the ephemeral key pair may not match
+  // the nonce in localStorage), so we need to validate it before returning it (implementation specific).
+  const ephemeralKeyPair = keyPairs[nonce];
+  if (!ephemeralKeyPair) return null;
 
-return validateEphemeralKeyPair(nonce, ephemeralKeyPair)
-}
+  // If the account is valid, return it, otherwise remove it from the device and return null
+  return validateEphemeralKeyPair(nonce, ephemeralKeyPair);
+};
 
+/**
+ * Validate the ephemeral key pair with the given nonce and the expiry timestamp. If the nonce does not match
+ * the generated nonce of the ephemeral key pair, the ephemeral key pair is removed from localStorage. This is
+ * to validate that the nonce algorithm is the same (e.g. if the nonce algorithm changes).
+ */
 export const validateEphemeralKeyPair = (
-nonce: string,
-ephemeralKeyPair: EphemeralKeyPair
+  nonce: string,
+  ephemeralKeyPair: EphemeralKeyPair,
 ): EphemeralKeyPair | null => {
+  // Check the nonce and the expiry timestamp of the account to see if it is valid
+  if (
+    nonce === ephemeralKeyPair.nonce &&
+    ephemeralKeyPair.expiryDateSecs > BigInt(Math.floor(Date.now() / 1000))
+  ) {
+    return ephemeralKeyPair;
+  }
+  removeEphemeralKeyPair(nonce);
+  return null;
+};
 
-if (
-nonce === ephemeralKeyPair.nonce &&
-ephemeralKeyPair.expiryDateSecs > BigInt(Math.floor(Date.now() / 1000))
-) {
-return ephemeralKeyPair
-}
-removeEphemeralKeyPair(nonce)
-return null
-}
-
+/**
+ * Remove the ephemeral key pair with the given nonce from localStorage.
+ */
 export const removeEphemeralKeyPair = (nonce: string): void => {
-const keyPairs = getLocalEphemeralKeyPairs()
-delete keyPairs[nonce]
-localStorage.setItem('ephemeral-key-pairs', encodeEphemeralKeyPairs(keyPairs))
-}
+  const keyPairs = getLocalEphemeralKeyPairs();
+  delete keyPairs[nonce];
+  localStorage.setItem(
+    "ephemeral-key-pairs",
+    encodeEphemeralKeyPairs(keyPairs),
+  );
+};
 
+/**
+ * Retrieve all ephemeral key pairs from localStorage and decode them. The new ephemeral key pair
+ * is then stored in localStorage with the nonce as the key.
+ */
 export const storeEphemeralKeyPair = (
-ephemeralKeyPair: EphemeralKeyPair
+  ephemeralKeyPair: EphemeralKeyPair,
 ): void => {
-// Retrieve the current ephemeral key pairs from localStorage
-const accounts = getLocalEphemeralKeyPairs()
+  // Retrieve the current ephemeral key pairs from localStorage
+  const accounts = getLocalEphemeralKeyPairs();
 
-// Store the new ephemeral key pair in localStorage
-accounts[ephemeralKeyPair.nonce] = ephemeralKeyPair
-console.log('正在保存 ephemeral key pairs no', ephemeralKeyPair.nonce)
+  // Store the new ephemeral key pair in localStorage
+  accounts[ephemeralKeyPair.nonce] = ephemeralKeyPair;
 
-if (typeof localStorage === 'undefined') return
-localStorage.setItem('ephemeral-key-pairs', encodeEphemeralKeyPairs(accounts))
-}
+  if (typeof localStorage === 'undefined') return;
+  localStorage.setItem(
+    "ephemeral-key-pairs",
+    encodeEphemeralKeyPairs(accounts),
+  );
+};
 
+/**
+ * Retrieve all ephemeral key pairs from localStorage and decode them.
+ */
 export const getLocalEphemeralKeyPairs = (): StoredEphemeralKeyPairs => {
-const rawEphemeralKeyPairs =
-typeof localStorage !== 'undefined'
-? localStorage.getItem('ephemeral-key-pairs')
-: null
-try {
-return rawEphemeralKeyPairs
-? decodeEphemeralKeyPairs(rawEphemeralKeyPairs)
-: {}
-} catch (error) {
-// eslint-disable-next-line no-console
-console.warn(
-'Failed to decode ephemeral key pairs from localStorage',
-error
-)
-return {}
-}
-}
+  const rawEphemeralKeyPairs = typeof localStorage !== 'undefined' ? localStorage.getItem("ephemeral-key-pairs") : null;
+  try {
+    return rawEphemeralKeyPairs
+      ? decodeEphemeralKeyPairs(rawEphemeralKeyPairs)
+      : {};
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      "Failed to decode ephemeral key pairs from localStorage",
+      error,
+    );
+    return {};
+  }
+};
 
+/**
+ * Encoding for the EphemeralKeyPair class to be stored in localStorage
+ */
 const EphemeralKeyPairEncoding = {
-decode: (e: any) => EphemeralKeyPair.fromBytes(e.data),
-encode: (e: EphemeralKeyPair) => ({
-\_\_type: 'EphemeralKeyPair',
-data: e.bcsToBytes(),
-}),
-}
+  decode: (e: any) => EphemeralKeyPair.fromBytes(e.data),
+  encode: (e: EphemeralKeyPair) => ({ __type: 'EphemeralKeyPair', data: e.bcsToBytes() }),
+};
 
+/**
+ * Stringify the ephemeral key pairs to be stored in localStorage
+ */
 export const encodeEphemeralKeyPairs = (
-keyPairs: StoredEphemeralKeyPairs
+  keyPairs: StoredEphemeralKeyPairs,
 ): string =>
-JSON.stringify(keyPairs, (\_, e) => {
-if (typeof e === 'bigint') return { **type: 'bigint', value: e.toString() }
-if (e instanceof Uint8Array)
-return { **type: 'Uint8Array', value: Array.from(e) }
-if (e instanceof EphemeralKeyPair) return EphemeralKeyPairEncoding.encode(e)
-return e
-})
+  JSON.stringify(keyPairs, (_, e) => {
+    if (typeof e === "bigint") return { __type: "bigint", value: e.toString() };
+    if (e instanceof Uint8Array)
+      return { __type: "Uint8Array", value: Array.from(e) };
+    if (e instanceof EphemeralKeyPair)
+      return EphemeralKeyPairEncoding.encode(e);
+    return e;
+  });
 
+/**
+ * Parse the ephemeral key pairs from a string
+ */
 export const decodeEphemeralKeyPairs = (
-encodedEphemeralKeyPairs: string
+  encodedEphemeralKeyPairs: string,
 ): StoredEphemeralKeyPairs =>
-JSON.parse(encodedEphemeralKeyPairs, (\_, e) => {
-if (e && e.**type === 'bigint') return BigInt(e.value)
-if (e && e.**type === 'Uint8Array') return new Uint8Array(e.value)
-if (e && e.\_\_type === 'EphemeralKeyPair')
-return EphemeralKeyPairEncoding.decode(e)
-return e
-})
+  JSON.parse(encodedEphemeralKeyPairs, (_, e) => {
+    if (e && e.__type === "bigint") return BigInt(e.value);
+    if (e && e.__type === "Uint8Array") return new Uint8Array(e.value);
+    if (e && e.__type === "EphemeralKeyPair")
+      return EphemeralKeyPairEncoding.decode(e);
+    return e;
+  });
 
 export default function useEphemeralKeyPair() {
-const ephemeralKeyPair = EphemeralKeyPair.generate()
-storeEphemeralKeyPair(ephemeralKeyPair)
+  const ephemeralKeyPair = EphemeralKeyPair.generate();
+  storeEphemeralKeyPair(ephemeralKeyPair);
 
-return ephemeralKeyPair
+  return ephemeralKeyPair;
 }
-
 ```
 
 </details>
@@ -2098,7 +2122,6 @@ return ephemeralKeyPair
 <summary>aptosClient.tsx</summary>
 
 ```tsx
-
 import { Aptos, AptosConfig, Network } from '@aptos-labs/ts-sdk'
 
 export function getAptosClient() {

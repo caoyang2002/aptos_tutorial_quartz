@@ -1230,7 +1230,15 @@ export default function Home() {
 
 ---
 
-# 二、附录
+# 二、可能遇到的问题
+
+# "useKeylessAccount must be used within a KeylessAccountProvider"
+
+1. 检查 `app/layout.tsx` 的配置是否正确，如果使用了 `(default)` 文件夹，那么请在该文件里面配置，即 `app/(default)/layout.tsx`
+
+
+
+# 三、附录
 
 ## 1. `app` 中各个文件的作用
 
@@ -1378,6 +1386,7 @@ export function Body() {
 <summary>Connected.tsx</summary>
 
 ```tsx
+
 'use client'
 
 import { useEffect, useCallback, useState } from 'react'
@@ -1467,6 +1476,7 @@ export function Connected() {
 <summary>NotConnected.tsx</summary>
 
 ```tsx
+
 'use client'
 import Footer from './body/Footer'
 import Header from './body/Header'
@@ -1493,6 +1503,7 @@ export function NotConnected() {
 <summary>Header.tsx</summary>
 
 ```tsx
+
 import Image from 'next/image'
 import WalletButtons from '@/components/WalletButtons'
 
@@ -1529,6 +1540,7 @@ export default function Header() {
 <summary>Main.tsx</summary>
 
 ```tsx
+
 import Image from 'next/image'
 
 export default function Header() {
@@ -1553,6 +1565,7 @@ export default function Header() {
 <summary>Footer.tsx</summary>
 
 ```tsx
+
 import Image from 'next/image'
 
 export default function Footer() {
@@ -1638,6 +1651,7 @@ export default function Footer() {
 <summary>Page.tsx</summary>
 
 ```tsx
+
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -1765,7 +1779,9 @@ export default CallbackPage
 
 <details>
 <summary>ClientOnly.tsx</summary>
+
 ```tsx
+
 'use client'
 
 import { PropsWithChildren, useEffect, useState } from 'react'
@@ -1795,6 +1811,7 @@ export default ClientOnly
 <summary>GoogleLogo.tsx</summary>
 
 ```tsx
+
 function GoogleLogo() {
   return (
     <svg
@@ -1834,7 +1851,7 @@ function GoogleLogo() {
 }
 
 export default GoogleLogo;
-````
+```
 
 </details>
 
@@ -1844,6 +1861,7 @@ export default GoogleLogo;
 <summary>index.tsx</summary>
 
 ```tsx
+
 'use client'
 
 import useEphemeralKeyPair from '@/hooks/useEphemeralKeyPair'
@@ -1911,6 +1929,7 @@ export default function WalletButtons() {
 <summary>KeylessAccountContext.tsx</summary>
 
 ```tsx
+
 'use client' // 指定这个文件应该被当作客户端组件来处理。
 import React, { createContext, useContext, useState } from 'react'
 import { Account } from '@aptos-labs/ts-sdk'
@@ -1955,7 +1974,9 @@ export const useKeylessAccount = () => {
 
 <details>
 <summary>useEphemeralKeyPair.ts</summary>
+
 ```tsx
+
 import { EphemeralKeyPair } from '@aptos-labs/ts-sdk'
 
 export type StoredEphemeralKeyPairs = { [nonce: string]: EphemeralKeyPair }
@@ -2065,7 +2086,7 @@ storeEphemeralKeyPair(ephemeralKeyPair)
 return ephemeralKeyPair
 }
 
-````
+```
 
 </details>
 
@@ -2075,6 +2096,7 @@ return ephemeralKeyPair
 <details>
 <summary>aptosClient.tsx</summary>
 ```tsx
+
 import { Aptos, AptosConfig, Network } from '@aptos-labs/ts-sdk'
 
 export function getAptosClient() {
@@ -2082,7 +2104,7 @@ export function getAptosClient() {
   const config = new AptosConfig({ network: Network.TESTNET })
   return new Aptos(config)
 }
-````
+```
 
 </details>
 

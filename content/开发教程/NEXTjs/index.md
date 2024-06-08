@@ -1,0 +1,53 @@
+---
+title: Nextjs
+---
+# `index`
+
+
+# `index.tsx` 与 `page.tsx`
+
+在 Next.js 中，`index.tsx` 和 `page.tsx` 文件通常用于定义页面组件，但它们在使用场景和目的上有所不同。
+
+1. `index.tsx`:
+   - `index.tsx` 文件通常用于定义一个目录的默认页面。
+   - 当你访问一个目录的 URL 时，Next.js 会自动寻找该目录下的 `index.tsx` 文件作为该目录的入口点。
+   - 例如，如果你有一个名为 `pages/about` 的目录，那么访问 `/about` 时，Next.js 会渲染 `pages/about/index.tsx` 文件。
+   - `index.tsx` 文件可以包含一个页面的布局、导航栏、侧边栏等，它通常用于展示目录的主页内容。
+
+2. `page.tsx`:
+   - `page.tsx` 文件通常用于定义一个特定页面的组件。
+   - 如果你有一个特定的页面需要独立的 URL，你可以在 `pages` 目录下创建一个同名的 `.tsx` 文件，例如 `pages/about.tsx`。
+   - 这样，访问 `/about` 时，Next.js 会渲染 `pages/about.tsx` 文件。
+   - `page.tsx` 文件通常包含该页面特有的内容和布局，它不依赖于其他页面的结构。
+
+总结来说，`index.tsx` 用于定义目录的默认页面，而 `page.tsx` 用于定义特定页面的组件。在实际开发中，你可以根据需要创建多个 `page.tsx` 文件来定义不同的页面，而 `index.tsx` 则用于目录的默认展示。这样的设计使得 Next.js 的路由系统非常灵活，能够适应各种不同的页面结构需求。
+
+
+
+# (default) 文件夹
+
+在 Next.js 应用中，`app/(default)/layout.tsx` 是一个特殊的文件，它定义了应用的默认布局。这个布局会自动应用于所有页面，除非页面有自己特定的布局文件。
+
+在 Next.js 13 中，引入了新的文件系统路由系统，其中 `app` 目录用于定义应用的布局和页面。在 `app` 目录下，你可以创建一个 `layout.tsx` 文件，这个文件定义了应用的默认布局。如果一个页面没有自己的布局文件，那么它将使用这个默认布局。
+
+如果你在页面目录下创建了一个 `layout.tsx` 文件，那么这个页面将使用这个特定的布局，而不是默认的 `app/(default)/layout.tsx`。这意味着页面特定的布局文件具有更高的优先级。
+
+例如，如果你有以下结构：
+
+```
+app/
+  layout.tsx
+  page.tsx
+  pages/
+    another-page/
+      layout.tsx
+      page.tsx
+```
+
+在 `app/layout.tsx` 中定义的布局将应用于 `app/page.tsx`，除非 `app/page.tsx` 有它自己的布局文件。同样，`app/pages/another-page/layout.tsx` 定义的布局将应用于 `app/pages/another-page/page.tsx`，而不会使用 `app/layout.tsx`。
+
+总结来说，页面特定的布局文件优先级高于默认布局文件。如果页面没有自己的布局文件，那么它将使用默认布局。
+
+
+
+

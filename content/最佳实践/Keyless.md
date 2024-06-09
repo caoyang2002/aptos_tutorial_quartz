@@ -1236,6 +1236,105 @@ export default function Home() {
 
 1. 检查 `app/layout.tsx` 的配置是否正确，如果使用了 `(default)` 文件夹，那么请在该文件里面配置，即 `app/(default)/layout.tsx`
 
+# 页面空白
+
+>[!NOTE]
+>务必检查是不是自己的组件没有渲染出来，我有一次就是因为组件没有被正确渲染出来，而误以为是 hook 的问题。建议的检查方法，在确定已经连接到账户的情况，仅渲染单个元素，比如账户地址，看是否能显示。（泪）
+
+
+
+> `No ephemeral key pair found for the given nonce. Please try logging in again.`
+
+看一下 nonce 是不是不匹配
+
+在`callback/page.tsx` 添加调试输出
+
+```tsx
+const payload = jwtDecode<{ nonce: string }>(jwt)
+
+const jwtNonce = payload.nonce
+
+const ephemeralKeyPair = getLocalEphemeralKeyPair(jwtNonce)
+console.log('jwtNonce: ', jwtNonce)
+console.log('ephemeralKeyPair: ', ephemeralKeyPair)
+if (!ephemeralKeyPair) {
+	setHasError(true)
+	setProgress(100)
+	console.log(
+	  'No ephemeral key pair found for the given nonce. Please try logging in again.'
+	)
+return
+}
+```
+
+在 `useEphemeralKeyPair.tsx` 添加调试输出，
+```tsx
+export const storeEphemeralKeyPair = (
+  ephemeralKeyPair: EphemeralKeyPair,
+): void => {
+  // Retrieve the current ephemeral key pairs from localStorage
+  const accounts = getLocalEphemeralKeyPairs();
+
+  console.log("accounts: ",accounts)
+
+  // Store the new ephemeral key pair in localStorage
+  accounts[ephemeralKeyPair.nonce] = ephemeralKeyPair;
+
+  if (typeof localStorage === 'undefined') return;
+  localStorage.setItem(
+    "ephemeral-key-pairs",
+    encodeEphemeralKeyPairs(accounts),
+  );
+};
+```
+
+看本地保存的 `ephemeralKeyPair` 是不是和服务端保存的不同
+
+
+
+```bash
+nonce:  135439416000000000000000000000000000000000000000000000000150402128658
+```
+
+```bash
+store-ephemeralKeyPair: i {privateKey: r, publicKey: i, expiryDateSecs: 1719050400, blinder: Uint8Array(31), nonce: '135439416000000000000000000000000000000000000000000000000006342150402128658'}
+
+```
+
+```bash
+local-ephemeralKeyPairs:  i {privateKey: r, publicKey: i, expiryDateSecs: 1719050400, blinder: Uint8Array(31), nonce: '5917686203750125670000000000000000000000000000000000000000000557410168845959'}
+```
+
+
+```bash
+callback-get-local-ephemeralKeyPair:  i {privateKey: r, publicKey: i, expiryDateSecs: 1719050400, blinder: Uint8Array(31), nonce: '5917686203750125000000000000000000000000000000000000000006561557410168845959'}
+```
+
+`ephemeralKeyPair` 和服务端的 `ephemeralKeyPair` 不同，表明 `ClientOnly.tsx` 的配置不正确（位置）
+
+- 通过仅在客户端渲染子组件来防止 hydration 不匹配。这与“use client”指令不同，因为它防止了子组件在服务器端的预渲染。
+
+
+
+
+在 `keylessAccountContent.tsx` 中添加调试输出
+
+```tsx {3}
+export const useKeylessAccount = () => {
+  const context = useContext(KeylessAccountContext)
+  console.log('context', context)
+  if (!context) {
+    throw new Error(
+      'useKeylessAccount must be used within a KeylessAccountProvider'
+    )
+  }
+  return context
+}
+```
+
+你应该可以看到 `content` 的值是 null 说明上下文正确，这一般是 ` <KeylessAccountProvider>{children}</KeylessAccountProvider>` 的位置不正确
+
+
 
 
 # 三、附录

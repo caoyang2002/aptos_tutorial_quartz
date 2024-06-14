@@ -1,5 +1,5 @@
 ---
-title: 开发教程
+title: DApp-开发
 ---
 ```yaml
 aptos:"https://learn.aptoslabs.com/tutorials"

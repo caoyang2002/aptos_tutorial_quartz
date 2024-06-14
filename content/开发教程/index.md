@@ -15,7 +15,7 @@ title: 开发教程
 
 # React
 
-Aptos 提供了一个[[简单的 React 模板]]
+Aptos 提供了一个[[Aptos-TS-模板]]
 
 [[无密钥账户]]
 

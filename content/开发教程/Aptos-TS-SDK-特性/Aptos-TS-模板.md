@@ -1,5 +1,5 @@
 ---
-title: 简单的 React 模版
+title: Aptos-TS-模板
 ---
 ```bash
 npx create-react-app dapp_name --template typescript

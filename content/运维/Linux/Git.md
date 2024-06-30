@@ -2311,7 +2311,20 @@ echo "password.txt" >> .gitignore  # 添加忽略文件名到文件末尾
 
 ### 多次提交后才发现错误的解决方法
 
-
+```bash
+# 切换到一个脱离主分支的另外一条全新主分支，不用太在意叫什么，因为后面还会修改分支名称
+git checkout --orphan latest_branch
+# 暂存所有改动过的文件，内容为当前旧分支的最新版本所有文件
+git add -A
+#提交更改
+git commit -am "commit message"
+#删除原始主分支
+git branch -D main
+#将当前分支重命名为 main
+git branch -m main
+#最后，强制更新您的存储库
+git push -f origin main
+```
 
 
 

@@ -1,5 +1,14 @@
 ---
 title: SOLANA-白皮书
+draft: 
+aliases:
+  - 索拉纳白皮书
+date: 2024-06-12
+description: solana白皮书中文版
+tags:
+  - whitepaper
+cssclasses:
+  - "1"
 ---
 ```yaml
 original:

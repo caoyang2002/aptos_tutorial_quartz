@@ -1,5 +1,15 @@
 ---
 title: 目录
+draft: 
+aliases:
+  - 计算机与编程
+date: 2024-04-24
+description: 编程与计算机，wbe3
+tags:
+  - coding
+cssclasses: []
+sticker: emoji//1f3e0
+banner: "static/space.jpg"
 ---
 推荐使用 [IP 访问](http://43.138.107.218/)
 
@@ -13,7 +23,7 @@ title: 目录
 
 [[Move 的历史]]
 
-一、[[安装-Aptos-CLI]] 【完成】
+一、[[install-Aptos-CLI]] 【完成】
 
 二、[[开发教程]]【未编辑】
 
@@ -117,8 +127,8 @@ title: 目录
 
 | [白皮书](https://whitepaper.io/) | 书籍                                                     |
 | ----------------------------- | ------------------------------------------------------ |
-| [[APTOS-白皮书]]                 | [[精通以太坊]]                                              |
-| [[BITCOIN-白皮书]]               | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
+| [[APTOS-Whitepaper]]                 | [[精通以太坊]]                                              |
+| [[BITCOIN-Whitepaper]]               | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
 | [[ETHEREUM-白皮书]]              | [权益证明]()                                               |
 | [[SOLANA-白皮书]]                |                                                        |
 |                               |                                                        |

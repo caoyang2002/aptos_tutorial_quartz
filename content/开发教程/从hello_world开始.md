@@ -1,7 +1,6 @@
 ---
 title: 从 hello_world 开始
 ---
-
 > 建议使用 Linux & Mac
 
 # 写一个 hello world 程序

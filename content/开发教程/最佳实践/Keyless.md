@@ -1,5 +1,14 @@
 ---
-title: keyless-最佳实践
+title: keyless-案例教程
+aliases:
+  - keyless
+date: 2024-06-21
+draft: 
+description: aptos 的 keyless 前端案例教程，aptos Dapp 使用 Google 账户登陆
+tags:
+  - aptos
+cssclasses:
+  - "1"
 ---
 ```yaml
 original: "https://github.com/caoyang2002/aptos_mvoe-learning/tree/main/Dapp/aa-top-keyless-example-next"

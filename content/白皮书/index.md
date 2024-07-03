@@ -1,9 +1,9 @@
 ---
 title: 白皮书
 ---
-[[APTOS-白皮书]]
+[[APTOS-Whitepaper]]
 
-[[BITCOIN-白皮书]]
+[[BITCOIN-Whitepaper]]
 
 [[ETHEREUM-白皮书]]
 

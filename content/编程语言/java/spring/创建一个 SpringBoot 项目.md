@@ -13,7 +13,7 @@ title: 创建一个 SpringBoot 项目
 - Mybatis framework
 - MySQL Deiver
 
-没有mysql，则需要先[[mysql_install_and _collocate]]
+没有mysql，则需要先[[../../SQL/mysql_install_and _collocate]]
 
 ```bash title="apolication.properties"
 # 你的项目名称，这里spring会自动给你配置好

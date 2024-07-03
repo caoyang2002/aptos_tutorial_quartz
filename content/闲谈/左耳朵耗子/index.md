@@ -1,5 +1,7 @@
 ---
 title: 左耳朵耗子
+aliases:
+  - chenhao
 ---
 
 

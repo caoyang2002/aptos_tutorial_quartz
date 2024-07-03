@@ -5,7 +5,7 @@ title: 开发教程
 
 # Move
 - [[从hello_world开始]]【完成】
-- [[基础语法]]【编辑中】
+- [[basic-syntax-of-the-Move-language.]]【编辑中】
 - [[控制流]]【编辑中】
 - [[源码学习]]【未编辑】
 - [[待整理]]【编辑中】

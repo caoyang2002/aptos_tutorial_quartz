@@ -1,7 +1,9 @@
 ---
 title: 编程语言
+cssclasses:
+  - cards
 ---
-[[Move]]
+[[Move/Move]]
 
 [[Solidity]]
 

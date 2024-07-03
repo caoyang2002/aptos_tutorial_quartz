@@ -1,5 +1,14 @@
 ---
 title: ETHEREUM-白皮书
+draft: 
+aliases:
+  - 以太坊白皮书
+date: 2024-06-12
+description: 以太坊白皮书中文版
+tags:
+  - whitepaper
+cssclasses:
+  - "1"
 ---
 
 ```yaml

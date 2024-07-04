@@ -5,3 +5,6 @@ aliases:
   - Aptos Move Book
 ---
 Aptos.
+
+[[chapter-1-HelloWorld|第一章 Hello World]]
+

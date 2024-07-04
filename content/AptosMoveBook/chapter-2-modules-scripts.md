@@ -1,7 +1,7 @@
 ---
-title: 模块与脚本
+title: 第二章 模块与脚本
 aliases:
-  - Module-Script
+  - 第二章 模块与脚本
 draft: 
 description: Move 中的模块和脚本
 tags:

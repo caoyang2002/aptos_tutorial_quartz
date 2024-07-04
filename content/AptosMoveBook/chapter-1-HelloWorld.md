@@ -1,5 +1,7 @@
 ---
 title: 第一章 Hello World
+aliases:
+  - 第一章 Hello World
 ---
 > 建议使用 Linux & Mac
 

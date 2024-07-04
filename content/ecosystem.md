@@ -10,7 +10,7 @@ aliases:
 cssclasses:
   - "1"
 sticker: emoji//1f30f
-banner: static/aptos-b.jpg
+banner: "static/aptos-b.jpg"
 ---
 
 [Aptos](https://aptosfoundation.org/ecosystem/projects/all)生态 ｜ [Sui]()生态 ｜ [SOL]()生态 ｜[ETH]()生态

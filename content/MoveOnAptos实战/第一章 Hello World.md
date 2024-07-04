@@ -1,9 +1,13 @@
 ---
-title: 第一章 Hello World
+title: 第一章 hello world
+aliases:
+  - hello move
 ---
-> 建议使用 Linux & Mac
+>[!TIP] 选择 IDE 并安装插件
+>Aptos CLI 主要用于编译和发布 Move 模块，为了方便编写 Move 代码，我们一般会选择一个 IDE，推荐使用  [IDEA](https://www.jetbrains.com/idea/) 的工具，安装 [Move on Aptos](https://plugins.jetbrains.com/plugin/14721-move-on-aptos) 插件即可。当然， [VS Code](https://code.visualstudio.com/) 也可以，安装 [aptos-move-analyzer](https://marketplace.visualstudio.com/items?itemName=MoveBit.aptos-move-analyzer) 插件，但是提示功能没有 IDEA 那么好。
 
-# 写一个 hello world 程序
+
+# Hello World !
 
 1. 创建一个目录
 
@@ -57,7 +61,7 @@ title: 第一章 Hello World
     >- 选择
     >
     >```bash
-    >caoyang@cccy hello_world % aptos init --network testnet
+    >$ aptos init --network testnet
     >
     >Configuring for profile default
     >Configuring for network Testnet

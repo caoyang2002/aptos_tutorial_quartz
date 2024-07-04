@@ -26,7 +26,7 @@ https://github.com/Eternaldeath/BlockchainHome
 
 [[Move 的历史]]
 
-[[AptosMoveBook/AptosMoveBook|AptosMoveBook]]
+[[AptosMoveBook/index|Aptos Move Book]]
 
 一、[[install-Aptos-CLI]] 【完成】
 

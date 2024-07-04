@@ -9,5 +9,5 @@ _sort:
 _template: ""
 _templateName: ""
 sticker: emoji//1f99c
-banner: static/MoveOnAptos.jpg
+banner: "static/MoveOnAptos.jpg"
 ---

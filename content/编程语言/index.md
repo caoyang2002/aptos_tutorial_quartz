@@ -5,6 +5,6 @@ cssclasses:
 ---
 [[Move/Move]]
 
-[[Solidity]]
+[[../资料/Solidity]]
 
-[[rust]]
+[[Rust/Rust]]

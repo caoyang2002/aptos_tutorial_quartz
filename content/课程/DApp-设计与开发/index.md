@@ -14,7 +14,7 @@ note: 已校对
 - Solidity基础：[官方文档](https://docs.soliditylang.org/zh/latest/)
 
 相关技术栈：
-- [[Solidity]] / [[JavaScript]]
+- [[../../资料/Solidity]] / [[JavaScript]]
 - [[Node.js]] / [[React.js]]
 - [[Hardhat]] / [[Remix IDE]] / [[Metamask]]
 - [[ERC20]] / [[ERC-721]] / [[Openzepplin]]

@@ -8,4 +8,7 @@ _sort:
   group: false
 _template: ""
 _templateName: ""
+sticker: emoji//1fad8
+banner: static/solidity.jpg
 ---
+[在线网站](https://professional-solidity.readthedocs.io/zh-cn)

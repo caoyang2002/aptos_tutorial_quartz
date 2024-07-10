@@ -61,7 +61,7 @@ if err != nil {
 ```
 在 Go 程序中，这种做法很常见。有些开发人员认为，这种做法很繁琐，因为它要求调用每个方法或函数时都检查错误，导致代码重复。
 
-这说得也许没错，但 Go 语言处理错误的方式比其他语言更灵活，因为可像其他类型一样在函数之间传递错误。这通常意味着代码要简短得多。如果您要更深入地了解这一点，可阅读 Rob Pike 的博文[《Errors are Values》](https://go.dev/blog/errors-are-values)。[[../../闲谈/Errors are values|错误就是值]]
+这说得也许没错，但 Go 语言处理错误的方式比其他语言更灵活，因为可像其他类型一样在函数之间传递错误。这通常意味着代码要简短得多。如果您要更深入地了解这一点，可阅读 Rob Pike 的博文[《Errors are Values》](https://go.dev/blog/errors-are-values)。[[../../杂文/Errors are values|错误就是值]]
 
 # 理解错误类型
 在Go语言中，错误是一个值。标准库声明了接口 error，如下所示。

@@ -1,4 +1,4 @@
-o "Checking for processes running on port 8080..."
+echo "Checking for processes running on port 8080..."
 lsof -i :8080 | grep LISTEN
 
 # 如果找到8080端口上的监听进程，则杀死该进程

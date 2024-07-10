@@ -1,7 +1,6 @@
 ---
 title: Rust 教程
 ---
-
 <a name="readme-top"/>
 
 目录

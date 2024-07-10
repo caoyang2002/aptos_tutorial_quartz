@@ -4,7 +4,7 @@ title: 使用 move v2 和编译器 v2
 参考
 
 [Move 的未来（原文）](https://medium.com/aptoslabs/the-future-of-move-at-aptos-17d0656dcc31)
-[[The-Future-of-Move-at-Aptos]]
+[[../杂文/The-Future-of-Move-at-Aptos]]
 
 ```bash
 aptos move compile --compiler-version=2 --language-version=2

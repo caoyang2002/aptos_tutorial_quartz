@@ -1,5 +1,5 @@
 ---
-title: 安装和使用 mysql
+title: mysql 教程
 ---
 [[mysql_install_and _collocate|MySQL 安装与配置]]
 

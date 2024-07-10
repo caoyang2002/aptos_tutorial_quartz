@@ -1,7 +1,6 @@
 ---
 title: Aptos-Math64
 ---
-
 [toc]
 
 # 0x1::math64

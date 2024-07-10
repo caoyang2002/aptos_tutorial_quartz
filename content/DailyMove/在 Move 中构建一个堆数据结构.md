@@ -10,13 +10,14 @@ original:
 note: 纯机翻、未校对
 ```
 
-# 中文
-
-Move Institute Technology 的课程正在进行 #DailyMove 。还记得你衣柜里那堆杂物吗？最大的东西必须在底部，最小的必须在顶部。今天我们将展示如何在 Move 中构建一个堆（heap）数据结构，并测试它。
-
 ![image](https://pbs.twimg.com/media/GHXNLJwasAAsOTp?format=jpg&name=medium)
 
-堆是一种半有序的数据结构。就像你的衣服堆一样，你可以看到并获取顶部的物品，但你必须拉下衣服才能深入到堆中。它可以表示为树或数组。在 Move 中，我们将使用向量中的数组表示。
+
+Move Institute Technology 的 [DailyMove](https://x.com/hashtag/DailyMove?src=hashtag_click) 课程正在进行中。还记得您衣柜里的那堆破烂吗？最大的东西必须在底部，最小的东西必须在顶部。今天我们将展示如何在 Move 中构建堆（heap）数据结构，以及如何对其进行测试。
+
+堆是一种半有序的数据结构。就像您的那堆衣服，您能够看到并获取顶部的物品，但您得把衣服挪开才能拿到堆中更低位置的物品。
+
+它可以表示为树或数组。在 Move 中，我们将表示为向量中的数组。
 
 ![image](https://pbs.twimg.com/media/GHXN3NgaEAEJu63?format=jpg&name=medium)
 
@@ -25,6 +26,12 @@ Move Institute Technology 的课程正在进行 #DailyMove 。还记得你衣柜
 [https://en.wikipedia.org/wiki/Priority_queue](https://t.co/bcOEdeqcPL)
 
 ![images](https://t.co/OzYnHLgUDD)
+
+在这种情况下，我们正在创建一个最小堆。顶部的值始终是最小的。这提供了两个主要用例，一个是排序，第二个通常被称为优先队列，其中最高优先级首先被移除。 [https://en.wikipedia.org/wiki/Heap_(data_structure)…](https://t.co/7K7cdcS3GB) 
+[https://en.wikipedia.org/wiki/Priority_queue…](https://t.co/bcOEdeqcPL) 
+![](https://pbs.twimg.com/card_img/1807813443464110080/FvPRUEzM?format=png&name=360x360)
+
+
 
 [堆（数据结构） - 维基百科](https://t.co/OzYnHLgUDD)
 

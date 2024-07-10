@@ -19,7 +19,7 @@ note: 已校对
 - [[Hardhat]] / [[Remix IDE]] / [[Metamask]]
 - [[ERC20]] / [[ERC-721]] / [[Openzepplin]]
 - [[VSCode]] / [[GitHub]] / [[vercel]] / [[Cloudflare]]
-- [[IPFS]] / [[The Graph]] / [[Readthedocs]]
+- [[../../资料/IPFS]] / [[The Graph]] / [[Readthedocs]]
 
 ---
 # 课程笔记

@@ -18,18 +18,18 @@ original:
 
 [[Smart 的 Gas save]]
 
-[[Move 0x1 中断是什么意思？]]
+[[Move-0x1-abro ]]
 
 [[VRF（可验证的随机函数）的使用]]
 
 [[为什么要使用对象，如何使用]]
 
-[[NFT 的可拓展性]]
+[[delete]]
 
 [[分割 NFT]]
 
 [[出售可组合的 NFT]]
 
-[[Move 0x1 中断是什么意思？]]
+[[Move-0x1-abro ]]
 
 [[在 Move 中构建一个堆数据结构]]

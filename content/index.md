@@ -1,32 +1,37 @@
 ---
 title: 目录
-draft: 
+draft: false
 aliases:
   - 计算机与编程
 date: 2024-04-24
 description: 编程与计算机，wbe3
 tags:
   - coding
-cssclasses: []
+cssclasses: 
 sticker: emoji//1f3e0
 banner: "static/space.jpg"
 ---
+本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。
+
+目前我正在学习英语（以翻译文档的方式），所以可以保证在头部 yaml 中标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[翻译原则与术语规范]]。
+
 推荐使用 [IP 访问](http://43.138.107.218/)
 
 [GitHub 开源地址](https://github.com/caoyang2002/aptos_tutorial_quartz)
 
 
-https://github.com/Eternaldeath/BlockchainHome
 
-本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。
 
-目前我正在学习英语（以翻译文档的方式），所以可以保证在头部 yaml 中标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[翻译原则与术语规范]]。
+
 
 [[Aptos-优化提案]]（AIP）
 
 [[Move 的历史]]
 
-[[AptosMoveBook/index|Aptos Move Book]]
+[[AptosMoveBook]]
+
+[[MoveOnAptos实战教程]]
+
 
 一、[[install-Aptos-CLI]] 【完成】
 
@@ -63,11 +68,6 @@ https://github.com/Eternaldeath/BlockchainHome
 十三、[[文档语法格式]]
 
 十四、[[开发教程/最佳实践]]
-
-
-已引用的回复
-
-`不霁何虹`、`Aaron`、`Greg`
 
 
 
@@ -132,28 +132,28 @@ https://github.com/Eternaldeath/BlockchainHome
 
 | [白皮书](https://whitepaper.io/) | 书籍                                                     |
 | ----------------------------- | ------------------------------------------------------ |
-| [[APTOS-Whitepaper]]                 | [[精通以太坊]]                                              |
-| [[BITCOIN-Whitepaper]]               | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
+| [[APTOS-Whitepaper]]          | [[精通以太坊]]                                              |
+| [[BITCOIN-Whitepaper]]        | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
 | [[ETHEREUM-白皮书]]              | [权益证明]()                                               |
 | [[SOLANA-白皮书]]                |                                                        |
 |                               |                                                        |
 |                               |                                                        |
 
-| 导航站                                                  | 社区                                                          | 高校                                               | 机构                                               | 安全团队                               | 书籍论文                                                                                       | 其他平台                                                        |
-| ---------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| [dexnav](https://dexnav.com)                         | [登链社区](https://learnblockchain.cn)                          | [复旦链协](https://www.fudanblockchain.club)         | [Odaily](https://www.odaily.news)                | [慢雾](https://cn.slowmist.com/)     | [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide)                                       | [decert](https://decert.me/)<br>                            |
-| [币圈导航](https://www.biquandh.com)                     | [HackQuest](https://hackquest.io)                           | [浙大链协](https://zjubcadocs.readthedocs.io/zh-cn/) | [blockbeats](https://www.theblockbeats.info)     | [BitsLab](https://www.bitslab.xyz) | [HuangLab](http://xintelligence.pro/archives/category/blog/high-quality-blockchain-papers) | [区块链开源项目](https://www.github-zh.com/collections/blockchain) |
-| [Mytoken](https://www.mytokencap.com/zh/navigation/) | [web3doc](https://aptos.web3doc.top/guides/getting-started) | [清华链协](https://www.thubadao.xyz/aboutus)         | [blockchair](https://blockchair.com/zh/bitcoin)  | [零时](https://noneage.com)          |                                                                                            | [精选游戏](https://www.jbb.one)                                 |
-| [区块链导航w](https://www.qklw.com/daohang/)              | [BuilerDao](https://buidlerdao.xyz)                         |                                                  | [coincarp](https://www.coincarp.com/zh/project/) |                                    |                                                                                            | [链安](https://lianantech.com/#/index)                        |
-| [币百度](https://bibaidu.cn)                            | [OpenBuild](https://openbuild.xyz)                          |                                                  | [区块链日报](http://qklrb.com)                        |                                    |                                                                                            |                                                             |
-| [区块链导航zz](https://www.qklzz.com)                     | [加密湾（疑似被劫持）](https://jiami.one)                             |                                                  | [MyToken](https://www.mytokencap.com/zh/)        |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [币圈活动网](https://bicoin8.com)                     |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [加密货币新闻](https://cn.cryptonews.com)              |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [链圈子](https://www.wwsww.cn)                      |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [币币情](https://m.bibiqing.com/news)               |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [coinmarketcap](https://coinmarketcap.com/zh/)   |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [coinsbi](http://coins.bi)                       |                                    |                                                                                            |                                                             |
-|                                                      |                                                             |                                                  | [0xzx](https://0xzx.com)                         |                                    |                                                                                            |                                                             |
+| 导航站                                                  | 社区                                                                                                                                                                                                                                                   | 高校                                               | 机构                                               | 安全团队                               | 书籍论文                                                                                       | 其他平台                                                        | GitHub                                                   | 聚合器                                 |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------- | ----------------------------------- |
+| [dexnav](https://dexnav.com)                         | [登链社区](https://learnblockchain.cn)                                                                                                                                                                                                                   | [复旦链协](https://www.fudanblockchain.club)         | [Odaily](https://www.odaily.news)                | [慢雾](https://cn.slowmist.com/)     | [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide)                                       | [decert](https://decert.me/)<br>                            | [区块链学习库](https://github.com/Eternaldeath/BlockchainHome) | [DefiLlama](https://defillama.com/) |
+| [币圈导航](https://www.biquandh.com)                     | [HackQuest](https://hackquest.io)                                                                                                                                                                                                                    | [浙大链协](https://zjubcadocs.readthedocs.io/zh-cn/) | [blockbeats](https://www.theblockbeats.info)     | [BitsLab](https://www.bitslab.xyz) | [HuangLab](http://xintelligence.pro/archives/category/blog/high-quality-blockchain-papers) | [区块链开源项目](https://www.github-zh.com/collections/blockchain) |                                                          |                                     |
+| [Mytoken](https://www.mytokencap.com/zh/navigation/) | [web3doc](https://aptos.web3doc.top/guides/getting-started)                                                                                                                                                                                          | [清华链协](https://www.thubadao.xyz/aboutus)         | [blockchair](https://blockchair.com/zh/bitcoin)  | [零时](https://noneage.com)          |                                                                                            | [精选游戏](https://www.jbb.one)                                 |                                                          |                                     |
+| [区块链导航w](https://www.qklw.com/daohang/)              | [BuilerDao](https://buidlerdao.xyz)                                                                                                                                                                                                                  |                                                  | [coincarp](https://www.coincarp.com/zh/project/) |                                    |                                                                                            | [链安](https://lianantech.com/#/index)                        |                                                          |                                     |
+| [币百度](https://bibaidu.cn)                            | [OpenBuild](https://openbuild.xyz)                                                                                                                                                                                                                   |                                                  | [区块链日报](http://qklrb.com)                        |                                    |                                                                                            |                                                             |                                                          |                                     |
+| [区块链导航zz](https://www.qklzz.com)                     | [加密湾（疑似被劫持）](https://jiami.one)                                                                                                                                                                                                                      |                                                  | [MyToken](https://www.mytokencap.com/zh/)        |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      | [![](data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27248%27%20height=%2740%27/%3e)![Hackernoon logo](https://hackernoon.imgix.net/hn-logo.png?auto=format&fit=max&w=640)](https://hackernoon.com/) |                                                  | [币圈活动网](https://bicoin8.com)                     |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [加密货币新闻](https://cn.cryptonews.com)              |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [链圈子](https://www.wwsww.cn)                      |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [币币情](https://m.bibiqing.com/news)               |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [coinmarketcap](https://coinmarketcap.com/zh/)   |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [coinsbi](http://coins.bi)                       |                                    |                                                                                            |                                                             |                                                          |                                     |
+|                                                      |                                                                                                                                                                                                                                                      |                                                  | [0xzx](https://0xzx.com)                         |                                    |                                                                                            |                                                             |                                                          |                                     |
 
 **学习参考**
 > - [Aptos 开发者文档](https://gushi10546.gitbook.io/aptos-kai-fa-zhe-wen-dang/kai-fa-zhe-jiao-cheng/ni-de-di-yi-bi-jiao-yi)

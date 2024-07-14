@@ -33,9 +33,9 @@ MutatorRef 对于 token / collection 而言是特殊的。在这种情形下，c
 
 ![https://pbs.twimg.com/media/GGMeIa5aQAAgcFK?format=jpg&name=medium](https://pbs.twimg.com/media/GGMeIa5aQAAgcFK?format=jpg&name=medium)
 
-然而，ExtendRef 更加强大。我们实际上可以在事后向 collection 添加积分。
+然而，`ExtendRef` 更加强大。我们实际上可以在事后向 `collection` 添加积分。
 
-就像积分已经在 collection 中一样，具有可扩展性！
+就像积分已经在 `collection` 中一样，具有可扩展性！
 
 ![https://pbs.twimg.com/media/GGMeZolbgAAiNxW?format=jpg&name=900x900](https://pbs.twimg.com/media/GGMeZolbgAAiNxW?format=jpg&name=900x900)
 
@@ -43,17 +43,17 @@ MutatorRef 对于 token / collection 而言是特殊的。在这种情形下，c
 
 但是，token 呢？
 
-token 也可以通过扩展引用、mutator ref 和 burn ref 来扩展和修改。这些必须在创建时指定。
+`token` 也可以通过扩展引用、`mutator ref` 和 `burn ref` 来扩展和修改。这些必须在创建时指定。
 
 ![https://pbs.twimg.com/media/GGMe0fmaMAA6eME?format=jpg&name=medium](https://pbs.twimg.com/media/GGMe0fmaMAA6eME?format=jpg&name=medium)
 
-扩展引用让我们可以做一些令人惊奇的事情！我们实际上可以检查集合是否设置了积分，并分发它们并扩展 token
+扩展引用让我们可以做一些令人惊奇的事情！我们实际上可以检查集合是否设置了积分，并分发它们并扩展 `token`
 
 这意味着我们可以为游戏和其他有趣的 token 扩展后续添加许多功能。
 
 ![https://pbs.twimg.com/media/GGMfKe5aYAAJ8_K?format=jpg&name=medium](https://pbs.twimg.com/media/GGMfKe5aYAAJ8_K?format=jpg&name=medium)
 
-mutator 引用让我们可以更改 URI、描述和名称，而 burn 引用让我们可以 burn 代币！
+`mutator` 引用让我们可以更改 URI、描述和名称，而 `burn` 引用让我们可以 burn 代币！
 
 ![https://pbs.twimg.com/media/GGMfbMlaEAAJ5VF?format=jpg&name=medium](https://pbs.twimg.com/media/GGMfbMlaEAAJ5VF?format=jpg&name=medium)
 

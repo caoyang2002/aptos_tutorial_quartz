@@ -1,5 +1,7 @@
 ---
 title: 结构体中能力的作用
+aliases:
+  - 结构体中能力的作用
 ---
 ```yaml
 original: 

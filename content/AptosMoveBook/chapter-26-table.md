@@ -47,10 +47,32 @@ aliases:
 
 ### 创建和使用表
 
-table.move
+`table.move`
 
 ```
-module example::table_usage {    use aptos_std::table::{Self, Table};     public entry fun main() {        let mut table = Table::new<u64, u64>();        Table::add(&mut table, 1, 100);        Table::add(&mut table, 2, 200);                let value1 = Table::borrow(&table, 1);        assert!(*value1 == 100, 0);                let value2 = Table::borrow(&table, 2);        assert!(*value2 == 200, 0);                let removed_value = Table::remove(&mut table, 1);        assert!(removed_value == 100, 0);                let contains_key = Table::contains(&table, 2);        assert!(contains_key, 0);                Table::destroy(table);    }}
+module example::table_usage {
+    use aptos_std::table::{Self, Table};
+ 
+    public entry fun main() {
+        let mut table = Table::new<u64, u64>();
+        Table::add(&mut table, 1, 100);
+        Table::add(&mut table, 2, 200);
+        
+        let value1 = Table::borrow(&table, 1);
+        assert!(*value1 == 100, 0);
+        
+        let value2 = Table::borrow(&table, 2);
+        assert!(*value2 == 200, 0);
+        
+        let removed_value = Table::remove(&mut table, 1);
+        assert!(removed_value == 100, 0);
+        
+        let contains_key = Table::contains(&table, 2);
+        assert!(contains_key, 0);
+        
+        Table::destroy(table);
+    }
+}
 ```
 
 ### 添加多个条目和更新插入
@@ -58,15 +80,47 @@ module example::table_usage {    use aptos_std::table::{Self, Table};     public
 table.move
 
 ```
-module example::table_usage {    use aptos_std::table::{Self, Table};     public fun add_and_upsert_entries() {		let mut table = Table::new<u64, u64>();		Table::add(&mut table, 1, 100);		Table::upsert(&mut table, 1, 200);		Table::upsert(&mut table, 2, 300);				let value1 = Table::borrow(&table, 1);		assert!(*value1 == 200, 0);				let value2 = Table::borrow(&table, 2);		assert!(*value2 == 300, 0);				Table::destroy(table);	}}
+module example::table_usage {
+    use aptos_std::table::{Self, Table};
+ 
+    public fun add_and_upsert_entries() {
+		let mut table = Table::new<u64, u64>();
+		Table::add(&mut table, 1, 100);
+		Table::upsert(&mut table, 1, 200);
+		Table::upsert(&mut table, 2, 300);
+		
+		let value1 = Table::borrow(&table, 1);
+		assert!(*value1 == 200, 0);
+		
+		let value2 = Table::borrow(&table, 2);
+		assert!(*value2 == 300, 0);
+		
+		Table::destroy(table);
+	}
+}
 ```
 
 ### 借用可变引用
 
-table.move
+`table.move`
 
 ```
-module example::table_usage {    use aptos_std::table::{Self, Table};     public fun borrow_mutable_references() {		let mut table = Table::new<u64, u64>();		Table::add(&mut table, 1, 100);				let value_mut = Table::borrow_mut(&mut table, 1);		*value_mut = 200;				let value = Table::borrow(&table, 1);		assert!(*value == 200, 0);				Table::destroy(table);	}}
+module example::table_usage {
+    use aptos_std::table::{Self, Table};
+ 
+    public fun borrow_mutable_references() {
+		let mut table = Table::new<u64, u64>();
+		Table::add(&mut table, 1, 100);
+		
+		let value_mut = Table::borrow_mut(&mut table, 1);
+		*value_mut = 200;
+		
+		let value = Table::borrow(&table, 1);
+		assert!(*value == 200, 0);
+		
+		Table::destroy(table);
+	}
+}
 ```
 
 ## 源代码

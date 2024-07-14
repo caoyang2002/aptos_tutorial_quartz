@@ -8,7 +8,4 @@ _sort:
   group: false
 _template: ""
 _templateName: ""
-sticker: emoji//1f438
-banner: "static/rust.jpg"
-darft: "true"
 ---

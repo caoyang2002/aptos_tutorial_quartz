@@ -2298,7 +2298,7 @@ https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%8
 
 ```bash
 git add . #（使用点是一种懒人做法，但是我很喜欢） 提交了当前目录的所有文件，但是忘记添加 password.txt 到忽略文件了
-git atatus # 你可以看到已经存在于暂存区的文件
+git status # 你可以看到已经存在于暂存区的文件
 git reset HEAD password.txt
 git status # 你现在可以看到它已经被移出了，
 echo "password.txt" >> .gitignore  # 添加忽略文件名到文件末尾
@@ -2327,8 +2327,124 @@ git push -f origin main
 ```
 
 
+从暂存区删除文件
+
+```bash
+git rm -r --cached target/
+git commit -m "Remove target directory from Git"
+```
+
+
+# 撤销上一个错误的本地提交
+```bash
+git reset --soft HEAD~1
+# git rm --cached <file> # 从版本控制中移除文件
+# git rm -r --cached <folder>  # 从版本控制中移除目录
+```
+
+上一个提交
+```bash
+git reset --hard HEAD^
+
+```
 
 
 
 
 
+
+
+
+
+
+
+-----
+如果你在 Git 中提交了某些错误的文件，需要从提交历史中删除它们，可以通过以下步骤来处理：
+
+### 方法一：使用 `git reset` 和新的提交
+
+这种方法会移除错误提交及其修改，并允许你重新提交正确的文件。
+
+1. **查找错误提交的哈希值：**
+
+   首先，使用 `git log` 命令找到包含错误文件的提交的哈希值。
+
+   ```bash
+   git log
+   ```
+
+2. **使用 `git reset` 回滚到错误提交之前：**
+
+   执行 `git reset` 命令来撤销到错误提交之前的状态。选择一个正确的回滚模式，例如：
+
+   - 如果错误提交是最新的，可以使用 `--hard HEAD^` 回滚到前一个提交：
+
+     ```bash
+     git reset --hard HEAD^
+     ```
+
+   - 如果错误提交在历史中较早，可以使用 `--soft` 或 `--mixed` 模式，这样可以保留工作目录中的修改并允许你重新提交：
+
+     ```bash
+     git reset --soft HEAD~<number>
+     ```
+
+     `<number>` 是你希望回滚的提交数量，如果是单个提交可以使用 `HEAD~1`。
+
+3. **重新提交正确的文件：**
+
+   现在，可以添加和提交正确的文件。
+
+   ```bash
+   git add <corrected-file1> <corrected-file2> ...
+   git commit -m "Corrected files"
+   ```
+
+4. **强制推送更改：**
+
+   如果你已经将错误提交推送到了远程仓库，需要使用强制推送来更新远程仓库的提交历史。
+
+   ```bash
+   git push --force
+   ```
+
+### 方法二：使用 `git revert` 创建撤销提交
+
+如果你不想修改历史，而是希望创建一个新的提交来撤销错误提交的更改，可以使用 `git revert`。
+
+1. **查找错误提交的哈希值：**
+
+   同样，首先使用 `git log` 找到错误提交的哈希值。
+
+   ```bash
+   git log
+   ```
+
+2. **使用 `git revert` 创建撤销提交：**
+
+   使用 `git revert` 命令来创建一个新的提交，该提交将撤销指定错误提交的更改。
+
+   ```bash
+   git revert <commit-id>
+   ```
+
+   `<commit-id>` 是你要撤销的错误提交的哈希值。
+
+3. **解决冲突（如果有的话）并提交：**
+
+   如果在撤销提交过程中发生冲突，需要解决冲突并提交结果。
+
+   ```bash
+   git add <resolved-file1> <resolved-file2> ...
+   git commit
+   ```
+
+4. **推送更改：**
+
+   将撤销提交推送到远程仓库。
+
+   ```bash
+   git push
+   ```
+
+通过这些步骤，你可以从 Git 提交历史中删除或撤销错误的文件更改。选择哪种方法取决于你想要保留还是修改提交历史的需求。

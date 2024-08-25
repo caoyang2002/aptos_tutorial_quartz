@@ -1,7 +1,7 @@
-路由守卫
-
-react
-
+---
+title: react 路由守卫
+---
+过期
 
 # 快速创建一个 Dapp
 ```tsx
@@ -9,7 +9,6 @@ pnpx create-aptos-dapp
 cd my-aptos-dapp
 npm run dev
 ```
-
 
 # 安装 aptos SDK
 ```bash

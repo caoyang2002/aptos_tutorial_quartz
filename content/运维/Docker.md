@@ -20,6 +20,26 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+
+2. 使用DockerHub Proxy，以下以 `hub.uuuadc.top` 为例：可以根据列表自行替换
+
+```shell
+docker pull hub.uuuadc.top/library/mysql:5.7
+```
+
+说明：`library` 是一个特殊的命名空间，它代表的是官方镜像。如果是某个用户的镜像就把 `library` 替换为镜像的用户名
+> 例如 clash 
+```bash
+# 官方下载
+docker pull dreamacro/clash 
+# 镜像下载
+docker pull hub.uuuadc.top/dreamacro/clash 
+```
+
+原文链接：[https://www.wangdu.site/course/2109.html](https://www.wangdu.site/course/2109.html)
+
+
+
 >  如果无法找到 `docker.service` Unit 文件
 >  
 1. **检查服务名称**：

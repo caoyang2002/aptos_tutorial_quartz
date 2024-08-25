@@ -16,7 +16,6 @@ script {
       sum = sum + i;
       i = i + 1
     };
- 
     sum
   }
 }
@@ -45,7 +44,6 @@ script {
       if (n % i == 0) break;
       i = i + 1
     };
- 
     i
   }
 }
@@ -67,7 +65,6 @@ script {
       if (i % 10 == 0) continue;
       sum = sum + i;
     };
- 
     sum
   }
 }
@@ -120,7 +117,6 @@ script {
         else continue; // Here, `continue` has type `&vector<address>`
       vector::push_back(&mut result, *vector::borrow(chosen_vector, index))
     };
- 
     result
   }
 }
@@ -139,7 +135,6 @@ script {
     for (i in 0..n) {
       sum = sum + i;
     };
- 
     sum
   }
 }
@@ -162,10 +157,8 @@ script {
       if (iter % 3 == 0) {
         continue; // Skip the current iteration if the number is divisible by 3
       };
- 
       sum = sum + iter;
     };
- 
     sum
   }
 }
@@ -196,7 +189,6 @@ script {
       if (i > n) break;
       sum = sum + i
     };
- 
     sum
   }
 }
@@ -215,7 +207,6 @@ script {
       if (i > n) break;
       sum = sum + i
     };
- 
     sum
   }
 }

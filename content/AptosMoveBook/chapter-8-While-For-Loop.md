@@ -1,5 +1,9 @@
 ---
 title: 第八章 循环语句
+aliases:
+  - 第八章 循环语句
+tags:
+  - MoveOnAptos
 ---
 Move 提供了三种循环结构：while、for 和 loop。 
 

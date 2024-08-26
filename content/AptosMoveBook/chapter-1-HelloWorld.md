@@ -2,6 +2,8 @@
 title: 第一章 Hello World
 aliases:
   - 第一章 Hello World
+tags:
+  - MoveOnAptos
 ---
 > 建议使用 Linux & Mac
 
@@ -29,10 +31,8 @@ aliases:
     > }
     > ```
     > - Move 程序的配置文件
-    >
-    > ```toml
-    > caoyang@cccy hello_world % cat Move.toml 
     > 
+    > ```toml
     > [package]
     > name = "hello_move"
     > version = "1.0.0"
@@ -53,7 +53,7 @@ aliases:
 3. 初始化 aptos 账户
 
     ```bash
-    aptos init --network testnet # 选择测试网
+    aptos init --network testnet # 使用测试网
     ```
 
     >- 选择

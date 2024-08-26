@@ -1,5 +1,10 @@
 ---
 title: 第十八章 单元测试
+aliases:
+  - 第十八章 单元测试
+draft: 
+tags:
+  - MoveOnAptos
 ---
 针对 Move 的单元测试为 Move 源语言添加了三个新的注解：
 

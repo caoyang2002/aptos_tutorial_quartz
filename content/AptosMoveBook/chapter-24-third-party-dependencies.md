@@ -1,5 +1,10 @@
 ---
 title: 第二十四章 第三方依赖
+aliases:
+  - 第二十四章 第三方依赖
+link: https://aptos.dev/en/build/smart-contracts/third-party-dependencies
+tags:
+  - MoveOnAptos
 ---
 第三方依赖是受控模块与之交互的外部模块。通常，这些外部模块存在于不同的账户下。
 

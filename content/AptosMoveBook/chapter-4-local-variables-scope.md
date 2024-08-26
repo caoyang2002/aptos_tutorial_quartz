@@ -2,6 +2,8 @@
 title: 第四章 局部变量和作用域
 aliases:
   - 第四章 局部变量和作用域
+tags:
+  - MoveOnAptos
 ---
 # 局部变量和作用域
 

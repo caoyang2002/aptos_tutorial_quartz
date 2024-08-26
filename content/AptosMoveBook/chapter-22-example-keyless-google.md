@@ -1,9 +1,9 @@
 ---
-title: 第二十二章 aptos keyless
+title: 第二十二章 案例 aptos keyless
 aliases:
-  - 无密钥账户
+  - 第二十二章 案例 aptos keyless
 tags:
-  - aptos-ts
+  - MoveOnAptos
 draft: false
 description: 无密钥登陆
 date: 2024-07-04

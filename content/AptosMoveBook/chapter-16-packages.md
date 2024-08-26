@@ -1,11 +1,11 @@
 ---
 title: 第十六章 包
 aliases:
-  - packages
+  - 第十六章 包
 draft: false
 description: Aptos 上 Move 的包
 tags:
-  - Move
+  - MoveOnAptos
 date: 2024-07-04
 ---
 # 包

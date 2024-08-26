@@ -1,5 +1,9 @@
 ---
 title: 第二十三章 本地模拟、基准测试和Gas分析
+aliases:
+  - 第二十三章 本地模拟、基准测试和Gas分析
+tags:
+  - MoveOnAptos
 ---
 # 概述
 

@@ -1,12 +1,11 @@
 ---
 title: 第十三章 能力
 aliases:
-  - Abilities
+  - 第十三章 能力
 draft: false
-description: Aptos 上 Move 的别名
+description: Aptos 上 Move 的能力
 tags:
-  - abilities
-  - Move
+  - MoveOnAptos
 date: 2024-07-04
 ---
 [[../DailyMove/What-does-key- copy-drop-store-mean|结构体中能力的作用]]

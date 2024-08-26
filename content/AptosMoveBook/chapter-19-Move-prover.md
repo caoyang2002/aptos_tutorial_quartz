@@ -1,7 +1,9 @@
 ---
 title: 第十九章 Move 证明器
 tags:
-  - aptos-cli
+  - MoveOnAptos
+aliases:
+  - 第十九章 Move 证明器
 ---
 # 1. 概述
 

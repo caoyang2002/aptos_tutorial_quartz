@@ -1,5 +1,10 @@
 ---
 title: 第二十五章 事件
+aliases:
+  - 第二十五章 事件
+link: https://aptos.dev/en/network/blockchain/events
+tags:
+  - MoveOnAptos
 ---
 事件在交易执行期间被触发。每个 Move 模块都可以定义自己的事件，并选择在模块执行时触发事件的时机。Aptos Move 支持两种形式的事件：**模块事件** 和 **`EventHandle` 事件**。模块事件是现代的事件机制，并在框架 1.7 版本中推出。EventHandle 事件已被弃用，并随原始框架推出。由于区块链的工作方式，EventHandle 事件可能永远不会从 Aptos 中完全删除。
 

@@ -2,6 +2,8 @@
 title: 第六章 终止和断言
 aliases:
   - 第六章 终止和断言
+tags:
+  - MoveOnAptos
 ---
 [`return`](https://aptos.dev/en/build/smart-contracts/book/functions) 和 `abort` 是两种控制流结构，用于结束执行，一个用于当前函数，一个用于整个事务。
 

@@ -1,11 +1,11 @@
 ---
 title: 第九章 函数
 aliases:
-  - MoveOnAptos函数
+  - 第九章 函数
 draft: 
 description: Aptos 上 Move 的函数
 tags:
-  - 函数
+  - MoveOnAptos
 date: 2024-07-03
 ---
 # 函数

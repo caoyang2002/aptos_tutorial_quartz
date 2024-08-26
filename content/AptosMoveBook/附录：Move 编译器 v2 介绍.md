@@ -1,12 +1,13 @@
 ---
-title: 附录： Move 2.0
+title: 附录： Move 编译器 2.0
 aliases:
-  - Move 2.0
+  - 附录： Move 编译器 2.0
 draft: false
 description: Aptos 上 Move 的未来
 date: 2024-07-04
 tags:
   - Move2
+link: https://aptos.dev/en/build/smart-contracts/compiler_v2
 ---
 Move是一种新型的智能合约语言，被包括 Aptos Network 在内的几个区块链所采用。Move最初是为Meta的Libra/Diem区块链设计的，它基于“安全优先”原则，这使得它成为市场上智能合约可能最安全的语言。然而，这种方法导致了一个“极简主义”的语言，省略了许多高级语言特性，这些特性可以简化开发者的工作。在Aptos Labs，我们正在开发一个新的 Move 编译器——**Aptos Move 编译器**，它带来了一系列新的语言特性，填补了原始Move语言设计的空白，所有这些都不会影响安全性。在本文中，我们概述了一些最重要的即将推出的特性。这些特性中的许多还没有完全确定：我们提前预览分享，是为了在我们开始实施它们时征求社区的反馈。
 

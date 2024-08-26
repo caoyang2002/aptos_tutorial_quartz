@@ -1,8 +1,10 @@
 ---
 title: 附录：Aptos Token 标准
 tags:
-  - Tokens
+  - MoveOnAptos
 date: 2024-07-05
+aliases:
+  - 附录：Aptos Token 标准
 ---
 [查看原文](https://learn.aptoslabs.com/example/aptogotchi-intermediate/demo)
 

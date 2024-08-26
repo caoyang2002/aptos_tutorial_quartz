@@ -1,5 +1,7 @@
 ---
-title: Move 编译器 v2
+title: 附录：Move 编译器 v2
+aliases:
+  - 附录：Move 编译器 v2
 ---
 
 # Aptos 上的 Move 编译器（测试版）

@@ -1,5 +1,9 @@
 ---
 title: 第十二章 泛型
+aliases:
+  - 第十二章 泛型
+tags:
+  - MoveOnAptos
 ---
 # 泛型
 

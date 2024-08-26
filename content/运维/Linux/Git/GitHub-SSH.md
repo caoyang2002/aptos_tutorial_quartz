@@ -92,7 +92,19 @@ ssh -T git@github.com
 显示如下信息表明设置成功
 
 ```bash
+$ ssh -T git@github.com
 
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+
+ED25519 key fingerprint is SHA256:+Dxxxxxxxx
+
+This key is not known by any other names.
+
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+
+Hi caoyang2002! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 设置成功后，即可不需要账号密码 `clone` 和 `push` 代码

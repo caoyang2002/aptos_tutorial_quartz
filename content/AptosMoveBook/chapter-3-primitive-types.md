@@ -1,9 +1,11 @@
 ---
 title: 第三章 原始类型
 tags:
-  - Move
+  - MoveOnAptos
 aliases:
   - 第三章 原始类型
+draft: 
+description:
 ---
 原始类型包括：整型、布尔、地址、向量、签名、引用、元祖
 # 1. 整数

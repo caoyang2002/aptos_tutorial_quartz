@@ -1,10 +1,11 @@
 ---
 title: 第十一章 常量
 aliases:
-  - Move常量
+  - 第十一章 常量
 draft: 
 description: Aptos 上 Move 的常量
-tags: 
+tags:
+  - MoveOnAptos
 date: 2024-07-04
 ---
 常量是在`module`或`script`内部给共享的静态值命名的一种方式。

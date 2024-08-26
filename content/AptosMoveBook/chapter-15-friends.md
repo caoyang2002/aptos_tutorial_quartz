@@ -1,5 +1,9 @@
 ---
 title: 第十五章 友元
+aliases:
+  - 第十五章 友元
+tags:
+  - MoveOnAptos
 ---
 # 友元
 

@@ -2,6 +2,8 @@
 title: 第五章 等式判断
 aliases:
   - 第五章 等式判断
+tags:
+  - MoveOnAptos
 ---
 
 # 相等性
@@ -124,7 +126,7 @@ module 0x42::example {
 }
 ```
 
-但是，程序员可以 *总是* 首先借用该值而不是直接比较该值，并且引用类型具有 [`drop` 能力](https://aptos.dev/en/build/smart-contracts/book/abilities)。例如
+但是，程序员可以 **总是** 首先借用该值而不是直接比较该值，并且引用类型具有 [`drop` 能力](https://aptos.dev/en/build/smart-contracts/book/abilities)。例如
 
 ```rust
 module 0x42::example {

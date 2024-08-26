@@ -1,11 +1,11 @@
 ---
 title: 第十四章 别名
 aliases:
-  - Alias
+  - 第十四章 别名
 draft: false
 description: Aptos 上 Move 的别名
 tags:
-  - Move
+  - MoveOnAptos
 date: 2024-07-04
 ---
 `use`语法可以用来为其他模块中的成员创建别名。`use`可以用于创建在整个模块中有效或在特定表达式块范围内有效的别名。

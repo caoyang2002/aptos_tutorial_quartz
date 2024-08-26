@@ -1,5 +1,7 @@
 ---
-title: aptos sdk
+title: 附录：aptos sdk
+aliases:
+  - 附录：aptos sdk
 ---
 
 # Aptos Go SDK

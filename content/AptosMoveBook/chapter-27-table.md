@@ -1,7 +1,9 @@
 ---
-title: 第二十四章 表
+title: 第二十七章 表
 aliases:
-  - 第二十四章 表
+  - 第二十七章 表
+tags:
+  - Move
 ---
 `Table` 提供了一种灵活高效的以表格格式管理大量数据的方式。每个表项都被表示为一个单独的全局状态项，从而实现可扩展的存储解决方案。
 
@@ -49,7 +51,7 @@ aliases:
 
 `table.move`
 
-```
+```rust
 module example::table_usage {
     use aptos_std::table::{Self, Table};
  
@@ -77,9 +79,9 @@ module example::table_usage {
 
 ### 添加多个条目和更新插入
 
-table.move
+`table.move`
 
-```
+```rust
 module example::table_usage {
     use aptos_std::table::{Self, Table};
  
@@ -104,7 +106,7 @@ module example::table_usage {
 
 `table.move`
 
-```
+```rust
 module example::table_usage {
     use aptos_std::table::{Self, Table};
  

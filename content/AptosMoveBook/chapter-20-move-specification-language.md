@@ -2,7 +2,9 @@
 title: " 第二十章 Move 语言规范"
 draft: 
 aliases:
-  - Move Specification Language
+  - 第二十章 Move 语言规范
+tags:
+  - MoveOnAptos
 ---
 # 1. 概述
 

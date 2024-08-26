@@ -1,8 +1,9 @@
 ---
 title: 第二十一章 Aptos 随机数
-aliases: 
+aliases:
+  - 第二十一章 Aptos 随机数
 tags:
-  - aptos-move
+  - MoveOnAptos
 ---
 # Aptos Roll：一个随机性 API
 

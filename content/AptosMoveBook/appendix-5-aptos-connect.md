@@ -1,7 +1,7 @@
 ---
-title: 附录：aptos connect
+title: 附录五：aptos connect
 aliases:
-  - 附录：aptos connect
+  - 附录五：aptos connect
 ---
 [文档链接](https://aptosconnect.app/docs/)
 

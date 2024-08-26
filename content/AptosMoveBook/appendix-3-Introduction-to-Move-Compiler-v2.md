@@ -1,7 +1,7 @@
 ---
-title: 附录： Move 编译器 2.0
+title: 附录三： Move 编译器 2.0
 aliases:
-  - 附录： Move 编译器 2.0
+  - 附录三： Move 编译器 2.0
 draft: false
 description: Aptos 上 Move 的未来
 date: 2024-07-04

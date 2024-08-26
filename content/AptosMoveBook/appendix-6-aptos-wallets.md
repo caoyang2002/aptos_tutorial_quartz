@@ -1,7 +1,7 @@
 ---
-title: 附录：集成 Aptos 钱包适配器
+title: 附录六：集成 Aptos 钱包适配器
 aliases:
-  - 附录：集成 Aptos 钱包适配器
+  - 附录六：集成 Aptos 钱包适配器
 ---
 # 1. 为什么选择 Aptos 钱包适配器
 

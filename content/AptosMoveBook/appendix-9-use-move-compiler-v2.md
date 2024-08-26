@@ -1,9 +1,10 @@
 ---
-title: 附录：Move 编译器 v2
+title: 附录九：Move 编译器 v2
 aliases:
-  - 附录：Move 编译器 v2
+  - 附录九：Move 编译器 v2
+tags:
+  - MoveOnAptos
 ---
-
 # Aptos 上的 Move 编译器（测试版）
 
 Aptos 上的 Move 编译器（代号“compiler v2”）是一种将 Move 源代码转换为 Move 字节码的新工具。它统一了 Move 编译器和 Move 证明器的架构，能够在 Move 语言中实现更快的创新。它还提供了用于定义代码优化的新工具，可用于为 Move 程序生成更节省燃气的代码。
@@ -45,7 +46,7 @@ aptos move prove --compiler-version=2
 
 ## 使用 Move 2
 
-编译器 v2 实现了“Aptos 上的 Move 新版本 Move 2”的一些初始功能。Move 2 的范围在博客[The Future of Move at Aptos](https://medium.com/aptoslabs/the-future-of-move-at-aptos-17d0656dcc31) （中文：[[附录：Move 编译器 v2 介绍]]）中有描述。不断增加的新功能列表记录如下，并将随着新功能的添加而扩展：
+编译器 v2 实现了“Aptos 上的 Move 新版本 Move 2”的一些初始功能。Move 2 的范围在博客[The Future of Move at Aptos](https://medium.com/aptoslabs/the-future-of-move-at-aptos-17d0656dcc31) （中文：[[appendix-3-Introduction-to-Move-Compiler-v2]]）中有描述。不断增加的新功能列表记录如下，并将随着新功能的添加而扩展：
 
 - 接收者风格的函数调用（有关更多详细信息，请参阅 [Move 手册](https://aptos.dev/en/build/smart-contracts/book/functions)）
 

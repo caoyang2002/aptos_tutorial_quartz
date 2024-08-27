@@ -3,11 +3,11 @@ title: 基础概念与工具链
 aliases:
   - 基础概念与工具链
 ---
-要学习WASM，首先我们需要了解WASM的基础概念与工具链。
+要学习 WASM，首先我们需要了解 WASM 的基础概念与工具链。
 
 ## 基础概念
 
-在了解WASM的语法之前，我们应该首先了解WASM的相关概念及工具链。因此，这里我们不会详细介绍WASM的语法，而是留在之后详细介绍。
+在了解 WASM 的语法之前，我们应该首先了解 WASM 的相关概念及工具链。因此，这里我们不会详细介绍 WASM 的语法，而是留在之后详细介绍。
 
 ### WASM 格式
 
@@ -66,32 +66,26 @@ WASM 也不可避免地拥有这个问题，也就是不同 WASM 的实现对特
 
 我们常用的 C/Rust，都是通过 LLVM 后端来生成 WASM 程序的。[LLVM](https://www.llvm.org)是现在最主流的编译器后端之一，其通过 LLVM IR 中间语言，让编程语言的开发者只需要考虑编译器前端。关于 LLVM IR，可以参考我写的[LLVM IR入门指南](https://github.com/Evian-Zhang/llvm-ir-tutorial)。简单来说，对于C语言、Rust等编程语言，其编译器通过将代码变为AST，然后进行分析，最后生成LLVM IR。而LLVM后端则将LLVM IR生成到不同平台的可执行程序。
 
-### 处理WASM程序
+### 处理 WASM 程序
 
-我们在Hello world一章中，已经初次经历了wabt，一个用于处理WASM的工具链。wabt主要提供了以下几个工具：
+我们在 Hello world 一章中，已经初次经历了 wabt，一个用于处理 WASM 的工具链。wabt 主要提供了以下几个工具：
 
-* `wat2wasm`
+* `wat2wasm`: 将`.wat`的文本格式 WASM 转换为`.wasm`的二进制格式 WASM
+* `wasm2wat`: 将`.wasm`的二进制格式 WASM 转换为`.wat`的文本格式 WASM
+* `wasm-objdump`: 查看`.wasm`的二进制格式 WASM 中的信息。
 
-  将`.wat`的文本格式WASM转换为`.wasm`的二进制格式WASM
-* `wasm2wat`
+`wasm-objdump` 与 `wasm2wat` 的区别就在于，前者可以更好地查看二进制格式中每个字节对应的哪条文本指令，并且也可以查看相应的元信息。
 
-  将`.wasm`的二进制格式WASM转换为`.wat`的文本格式WASM
-* `wasm-objdump`
+此外，另一套工具链为[binaryen](https://github.com/WebAssembly/binaryen)。wabt 工具链在进行文本格式与二进制格式的转化的过程中，没有任何多余的步骤，采用一对一的直译；而 binaryen 工具链，定义了一整套 binaryen IR，比 WASM 更为底层，来优化 WASM 程序。
 
-  查看`.wasm`的二进制格式WASM中的信息。
-
-`wasm-objdump`与`wasm2wat`的区别就在于，前者可以更好地查看二进制格式中每个字节对应的哪条文本指令，并且也可以查看相应的元信息。
-
-此外，另一套工具链为[binaryen](https://github.com/WebAssembly/binaryen)。wabt工具链在进行文本格式与二进制格式的转化的过程中，没有任何多余的步骤，采用一对一的直译；而binaryen工具链，定义了一整套binaryen IR，比WASM更为底层，来优化WASM程序。
-
-例如，binaryen工具链提供了`wasm-opt`工具，我们可以使用
+例如，binaryen 工具链提供了 `wasm-opt` 工具，我们可以使用
 
 ```shell
 wasm-opt a.wasm -o optimized.wasm -O3
 ```
 
-将`a.wasm`优化，并输出`optimized.wasm`。
+将 `a.wasm` 优化，并输出 `optimized.wasm`。
 
-### 使用WASM程序
+### 使用 WASM 程序
 
-当WASM程序在Web端使用时，不同的主流浏览器的引擎分别有实现。当我们将其作为一个库在C++/Rust程序中使用的时候，可以使用wasmer、wasmtime等工具作为库来使用。
+当 WASM 程序在 Web 端使用时，不同的主流浏览器的引擎分别有实现。当我们将其作为一个库在 C++/Rust 程序中使用的时候，可以使用 wasmer、wasmtime 等工具作为库来使用。

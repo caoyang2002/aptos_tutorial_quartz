@@ -1,22 +1,29 @@
-# WASM的使用
+---
+title: WASM 的使用
+aliases:
+  - WASM 的使用
+---
 
-在我们使用高级语言生成了WASM之后，毫无疑问接下来就是对WASM的使用。本章将主要讲述WASM的基本使用方法，而一些高级的使用方法在后续章节里会陆续介绍。
+
+在我们使用高级语言生成了 WASM 之后，毫无疑问接下来就是对 WASM 的使用。本章将主要讲述WASM的基本使用方法，而一些高级的使用方法在后续章节里会陆续介绍。
 
 总的来说，在我们通过WASM引擎使用WASM程序的过程中，WASM标准规范了三个语义阶段：
 
 * 解码（Decoding）
 
   通常来说，WASM是以二进制格式分发的。因此，在使用WASM时，第一步就是将二进制格式的WASM解码成内存中的内部表示。
+  
 * 验证（Validation）
 
   WASM本身是一个有类型的编程语言，除此之外也有许多保证正确性的约束。在解码之后，执行之前，WASM引擎会对WASM程序的正确性作验证。
+  
 * 执行（Execution）
 
   在验证完正确性之后，WASM引擎会真正执行这个WASM程序。
 
 ## 在Web中使用
 
-WASM程序目前最多的用途，就是在Web中使用了。本节就主要介绍几种在Web中使用WASM的常见方式。
+WASM 程序目前最多的用途，就是在 Web 中使用了。本节就主要介绍几种在Web中使用WASM的常见方式。
 
 ### 基础方式
 
@@ -51,7 +58,7 @@ WASM程序目前最多的用途，就是在Web中使用了。本节就主要介�
 
 ### ES Module形式导入
 
-在JavaScript来到新时代之后，ES Module让JavaScript多文件组织变得异常清晰与简便。那我们多么希望能够这样使用WASM模块：
+在 JavaScript 来到新时代之后，ES Module 让 JavaScript 多文件组织变得异常清晰与简便。那我们多么希望能够这样使用WASM模块：
 
 ```javascript
 import { add } from "./adder.wasm";
@@ -81,13 +88,13 @@ module.exports = {
 
 ## 在通用程序中使用
 
-除了在Web中使用，由于其安全性与通用型，WASM目前也越来越多地在通用程序中作为库被使用。目前最常用的两个辅助库是[wasmer](https://wasmer.io)和[wasmtime](https://wasmtime.dev)。
+除了在Web中使用，由于其安全性与通用型，WASM 目前也越来越多地在通用程序中作为库被使用。目前最常用的两个辅助库是[wasmer](https://wasmer.io)和[wasmtime](https://wasmtime.dev)。
 
-wasmer目前支持的编程语言包括Rust, C/C++, JavaScript, Go, Python, PHP, Ruby, OCaml和Swift等。wasmtime目前支持的编程语言包括Rust, C/C++, Python, C#, Go, Ruby等。这里以Rust语言为例，介绍如何分别通过这两个库，在Rust程序中使用WASM库提供的函数。对于其他通用编程语言，这两个工具的官网上都有详细的指导，并且过程和原理与Rust语言并没有太大的差别。并且对于C/C++来说，WASM官方也正在推进统一的[WebAssembly C and C++ API](https://github.com/webassembly/wasm-c-api)，不过目前还不成熟。
+wasmer 目前支持的编程语言包括 Rust, C/C++, JavaScript, Go, Python, PHP, Ruby, OCaml 和 Swift 等。wasmtime 目前支持的编程语言包括 Rust, C/C++, Python, C#, Go, Ruby 等。这里以 Rust 语言为例，介绍如何分别通过这两个库，在 Rust 程序中使用WASM库提供的函数。对于其他通用编程语言，这两个工具的官网上都有详细的指导，并且过程和原理与Rust语言并没有太大的差别。并且对于C/C++来说，WASM官方也正在推进统一的[WebAssembly C and C++ API](https://github.com/webassembly/wasm-c-api)，不过目前还不成熟。
 
 ### 使用wasmer
 
-在Rust中使用wasmer的方式，在Hello world一章中已经介绍了。也就是在依赖中声明[wasmer](https://crates.io/crates/wasmer)这个库之后，编写如下代码：
+在Rust中使用wasmer的方式，在 Hello world 一章中已经介绍了。也就是在依赖中声明[wasmer](https://crates.io/crates/wasmer)这个库之后，编写如下代码：
 
 ```rust, ignore
 use anyhow::Result;
@@ -116,7 +123,7 @@ fn main() -> Result<()> {
 
 #### Store
 
-随后，我们创建了一个默认的`Store`类型变量。Store实际上是一个通用的[WASM中的概念](https://webassembly.github.io/spec/core/exec/runtime.html#store)，但是放在Rust的代码里讲，就直观很多。
+随后，我们创建了一个默认的 `Store` 类型变量。Store 实际上是一个通用的[WASM中的概念](https://webassembly.github.io/spec/core/exec/runtime.html#store)，但是放在 Rust 的代码里讲，就直观很多。
 
 我们知道，Rust是一个非常强调所有权和生命周期的编程语言。在一个WASM程序运行的过程中，会有很多全局的状态。例如，WASM程序中的函数本身，其生命周期理应是全局的。用来托管这些全局状态的，就称为Store。
 

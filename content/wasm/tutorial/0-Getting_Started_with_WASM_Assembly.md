@@ -1,7 +1,5 @@
 ---
 title: wasm 汇编入门教程
-aliases:
-  - wasm 汇编入门教程
 ---
 本系列教程的GitHub仓库为[Evian-Zhang/wasm-tutorial](https://github.com/Evian-Zhang/wasm-tutorial)，所有代码的源代码位于`code`目录下，推荐在[evian-zhang.github.io/wasm-tutorial](https://evian-zhang.github.io/wasm-tutorial)中阅读，获得最佳体验。如需PDF版本，可在对应网页的右上角点击「打印」即可。
 

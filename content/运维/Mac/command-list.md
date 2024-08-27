@@ -1,5 +1,7 @@
 ---
 title: Mac 命令列表
+aliases:
+  - Mac 命令列表
 ---
 ```bash
 yacc          # Yet Another Compiler Compiler（另一个编译器编译器），用于创建编程语言的解析器。

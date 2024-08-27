@@ -1,5 +1,7 @@
 ---
 title: Ubuntu 安装 Nvidia 驱动
+aliases:
+  - Ubuntu 安装 Nvidia 驱动
 ---
 > 3080 在 Ubuntu 上有一定的几率不能运行，
 > case:

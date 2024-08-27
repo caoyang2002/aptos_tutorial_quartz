@@ -1,5 +1,7 @@
 ---
-title:  群晖 DS220J ARM 架构机型安装使用 docker
+title: 群晖 DS220J ARM 架构机型安装使用 docker
+aliases:
+  - 群晖 DS220J ARM 架构机型安装使用 docker
 ---
 https://www.moluyao.wang/31735.html
 

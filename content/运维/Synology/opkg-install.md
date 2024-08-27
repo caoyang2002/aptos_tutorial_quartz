@@ -1,5 +1,7 @@
 ---
 title: 群晖安装 opkg
+aliases:
+  - 群晖安装 opkg
 ---
 安装方法：https://github.com/Entware/Entware/wiki/Install-on-Synology-NAS
 

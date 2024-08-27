@@ -1,5 +1,7 @@
 ---
 title: 在 mac 下制作 ubuntu 启动盘
+aliases:
+  - 在 mac 下制作 ubuntu 启动盘
 ---
 # 使用命令行
 

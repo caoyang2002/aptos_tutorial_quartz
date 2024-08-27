@@ -1,5 +1,7 @@
 ---
 title: 翻译原则与术语规范
+aliases:
+  - 翻译原则与术语规范
 ---
 ```yaml
 original: 原创
@@ -7,7 +9,7 @@ status: 正在更新
 note: 主观内容
 ```
 
-关于术语规范可以查看 [[Aptos-术语表]]
+关于术语规范可以查看 [[Aptos-term-list]]
 
 # 一、不翻译的单词
 

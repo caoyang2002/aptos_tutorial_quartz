@@ -5,6 +5,6 @@ title: 白皮书
 
 [[BITCOIN-Whitepaper]]
 
-[[ETHEREUM-白皮书]]
+[[ETHEREUM-Whitepaper]]
 
-[[SOLANA-白皮书]]
+[[SOLANA-Whitepaper]]

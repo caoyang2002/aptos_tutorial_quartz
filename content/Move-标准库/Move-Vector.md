@@ -112,7 +112,7 @@ public fun push_back<Element>(v: &mut vector<Element>, e: Element)
 native public fun push_back<Element>(v: &mut vector<Element>, e: Element);
 ```
 
-5. `borrow_mut`：返回向量 `v` 中第 `i` 个元素的可变引用。如果 `i` 出界了就中止。
+### 5. `borrow_mut`：返回向量 `v` 中第 `i` 个元素的可变引用。如果 `i` 出界了就中止。
 
 ```rust
 #[bytecode_instruction]
@@ -125,7 +125,7 @@ public fun borrow_mut<Element>(v: &mut vector<Element>, i: u64): &mut Element
 native public fun borrow_mut<Element>(v: &mut vector<Element>, i: u64): &mut Element;
 ```
 
-6. `pop_back`：从矢量 `v` 的末尾弹出一个元素。如果 `v` 为空，则中止。
+### 6. `pop_back`：从矢量 `v` 的末尾弹出一个元素。如果 `v` 为空，则中止。
 
 ```rust
 #[bytecode_instruction]
@@ -138,7 +138,7 @@ public fun pop_back<Element>(v: &mut vector<Element>): Element
 native public fun pop_back<Element>(v: &mut vector<Element>): Element;
 ```
 
-7. `destroy_empty`：销毁向量 `v`。如果 `v` 不为空，则中止。
+### 7. `destroy_empty`：销毁向量 `v`。如果 `v` 不为空，则中止。
 
 ```rust
 #[bytecode_instruction]
@@ -151,7 +151,7 @@ public fun destroy_empty<Element>(v: vector<Element>)
 native public fun destroy_empty<Element>(v: vector<Element>);
 ```
 
-8. `swap`：交换向量 `v` 中第 `i` 个和第 `j` 个索引处的元素。如果 `i` 或 `j` 超出边界，则中止。
+### 8. `swap`：交换向量 `v` 中第 `i` 个和第 `j` 个索引处的元素。如果 `i` 或 `j` 超出边界，则中止。
 
 ```rust
 #[bytecode_instruction]
@@ -164,7 +164,7 @@ public fun swap<Element>(v: &mut vector<Element>, i: u64, j: u64)
 native public fun swap<Element>(v: &mut vector<Element>, i: u64, j: u64);
 ```
 
-9. `singleton`：返回一个包含元素 `e` 的大小为一的向量。
+### 9. `singleton`：返回一个包含元素 `e` 的大小为一的向量。
 
 
 ```rust
@@ -181,7 +181,7 @@ public fun singleton<Element>(e: Element): vector<Element> {
 }
 ```
 
-10. `reverse`：反转向量 `v` 中元素的顺序。
+### 10. `reverse`：反转向量 `v` 中元素的顺序。
 
 ```rust
 public fun reverse<Element>(v: &mut vector<Element>)
@@ -196,7 +196,7 @@ public fun reverse<Element>(v: &mut vector<Element>) {
 }
 ```
 
-11. `reverse_slice`：反转向量v中元素[左，右)的顺序。
+### 11. `reverse_slice`：反转向量v中元素[左，右)的顺序。
 
 ```rust
 public fun reverse_slice<Element>(v: &mut vector<Element>, left: u64, right: u64)
@@ -217,7 +217,7 @@ public fun reverse_slice<Element>(v: &mut vector<Element>, left: u64, right: u64
 }
 ```
 
-12. `append`：将 `other` 向量的所有元素推入 `lhs` 向量。
+### 12. `append`：将 `other` 向量的所有元素推入 `lhs` 向量。
 
 ```rust
 public fun append<Element>(lhs: &mut vector<Element>, other: vector<Element>)
@@ -233,7 +233,7 @@ public fun append<Element>(lhs: &mut vector<Element>, other: vector<Element>) {
 ```
 
 
-13. `reverse_append`：将 `other` 向量的所有元素推入 `lhs` 向量。
+### 13. `reverse_append`：将 `other` 向量的所有元素推入 `lhs` 向量。
 
 ```rust
 public fun reverse_append<Element>(lhs: &mut vector<Element>, other: vector<Element>)
@@ -252,7 +252,7 @@ public fun reverse_append<Element>(lhs: &mut vector<Element>, other: vector<Elem
 }
 ```
 
-14. `trim`：将向量修剪到较小的大小，并按顺序返回被移除的元素。
+### 14. `trim`：将向量修剪到较小的大小，并按顺序返回被移除的元素。
 
 ```rust
 public fun trim<Element>(v: &mut vector<Element>, new_len: u64): vector<Element>
@@ -268,7 +268,7 @@ public fun trim<Element>(v: &mut vector<Element>, new_len: u64): vector<Element>
 }
 ```
 
-15. `trim_reverse`：将向量修剪到较小的大小，并按相反的顺序返回被移除的元素。
+### 15. `trim_reverse`：将向量修剪到较小的大小，并按相反的顺序返回被移除的元素。
 
 ```rust
 public fun trim_reverse<Element>(v: &mut vector<Element>, new_len: u64): vector<Element>
@@ -289,7 +289,7 @@ public fun trim_reverse<Element>(v: &mut vector<Element>, new_len: u64): vector<
 }
 ```
 
-16. `is_empty`：如果向量 `v` 没有元素，则返回 `true`，否则返回 `false`。
+### 16. `is_empty`：如果向量 `v` 没有元素，则返回 `true`，否则返回 `false`。
 
 ```rust
 public fun is_empty<Element>(v: &vector<Element>): bool
@@ -303,7 +303,7 @@ public fun is_empty<Element>(v: &vector<Element>): bool {
 }
 ```
 
-17. `contains`：如果 `e` 在向量 `v` 中，则返回 `true`。
+### 17. `contains`：如果 `e` 在向量 `v` 中，则返回 `true`。
 
 ```rust
 public fun contains<Element>(v: &vector<Element>, e: &Element): bool
@@ -323,7 +323,7 @@ public fun contains<Element>(v: &vector<Element>, e: &Element): bool {
 }
 ```
 
-18. `index_of`：如果 `e` 在索引 `i` 的向量 `v` 中，则返回 `(true, i)` 否则，返回 `(false, 0)`
+### 18. `index_of`：如果 `e` 在索引 `i` 的向量 `v` 中，则返回 `(true, i)` 否则，返回 `(false, 0)`
 
 ```rust
 public fun index_of<Element>(v: &vector<Element>, e: &Element): (bool, u64)
@@ -343,7 +343,7 @@ public fun index_of<Element>(v: &vector<Element>, e: &Element): (bool, u64) {
 }
 ```
 
-19. `find`：如果存在与条件匹配的元素，则返回 `(true, i)`。如果有多个与条件匹配的元素，则只返回第一个的索引。否则，返回 `(false, 0)`。
+### 19. `find`：如果存在与条件匹配的元素，则返回 `(true, i)`。如果有多个与条件匹配的元素，则只返回第一个的索引。否则，返回 `(false, 0)`。
 
 ```rust
 public fun find<Element>(v: &vector<Element>, f: |&Element|bool): (bool, u64)
@@ -369,7 +369,7 @@ public inline fun find<Element>(v: &vector<Element>, f: |&Element|bool): (bool, 
     (find, found_index)
 }
 ```
-20. `insert`：在位置 $0 <= i <= length$ 处插入一个新元素，时间复杂度为 $O(length - i)$。如果越界则中止。
+### 20. `insert`：在位置 $0 <= i <= length$ 处插入一个新元素，时间复杂度为 $O(length - i)$。如果越界则中止。
 
 ```rust
 public fun insert<Element>(v: &mut vector<Element>, i: u64, e: Element)
@@ -390,7 +390,7 @@ public fun insert<Element>(v: &mut vector<Element>, i: u64, e: Element) {
 ```
 
 
-21. `remove`：移除向量 `v` 的第 `i` 个元素，将所有后续元素向前移动。这是 $O(n)$ 的操作，并保持向量中元素的顺序。如果 `i` 越界则中止。
+### 21. `remove`：移除向量 `v` 的第 `i` 个元素，将所有后续元素向前移动。这是 $O(n)$ 的操作，并保持向量中元素的顺序。如果 `i` 越界则中止。
 
 ```rust
 public fun remove<Element>(v: &mut vector<Element>, i: u64): Element
@@ -411,7 +411,9 @@ public fun remove<Element>(v: &mut vector<Element>, i: u64): Element {
 ```
 
 
-22. `remove_value`：从向量 `v` 中移除给定值的第一个出现，并将其返回为一个新的向量，同时将所有后续元素向前移动。这是$ O(n)$ 的操作，并保持向量中元素的顺序。如果值在向量中不存在，则返回一个空向量。请注意，这不能返回一个选项，因为选项使用向量，这将导致选项和向量之间出现循环依赖。
+### 22. `remove_value`
+
+从向量 `v` 中移除给定值的第一个出现，并将其返回为一个新的向量，同时将所有后续元素向前移动。这是$ O(n)$ 的操作，并保持向量中元素的顺序。如果值在向量中不存在，则返回一个空向量。请注意，这不能返回一个选项，因为选项使用向量，这将导致选项和向量之间出现循环依赖。
 
 ```rust
 public fun remove_value<Element>(v: &mut vector<Element>, val: &Element): vector<Element>
@@ -432,7 +434,8 @@ public fun remove_value<Element>(v: &mut vector<Element>, val: &Element): vector
 }
 ```
 
-23. `swap_remove`：交换向量 `v` 的第 `i` 个元素与最后一个元素，然后弹出向量。这是 $O(1)$ 的操作，但不保持向量中元素的顺序。如果 `i` 越界则中止。
+## 23. `swap_remove`
+交换向量 `v` 的第 `i` 个元素与最后一个元素，然后弹出向量。这是 $O(1)$ 的操作，但不保持向量中元素的顺序。如果 `i` 越界则中止。
 
 ```rust
 public fun swap_remove<Element>(v: &mut vector<Element>, i: u64): Element

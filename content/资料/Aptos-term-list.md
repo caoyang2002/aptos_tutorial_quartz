@@ -1,5 +1,7 @@
 ---
 title: Aptos-术语表
+aliases:
+  - Aptos-术语表
 ---
 > 纯机翻，未核对
 

@@ -1,8 +1,7 @@
 ---
 title: AIP-56 资源访问控制
 aliases:
-  - 资源访问控制
-  - AIP-56
+  - AIP-56 资源访问控制
 draft: 
 tags:
   - AIP

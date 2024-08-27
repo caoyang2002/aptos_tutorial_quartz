@@ -1,5 +1,7 @@
 ---
 title: 安装 git
+aliases:
+  - 安装 git
 ---
 
 ```bash

@@ -1,5 +1,7 @@
 ---
 title: 群晖DS220J 利用SSD做虚拟内存优化
+aliases:
+  - 群晖DS220J 利用SSD做虚拟内存优化
 ---
 https://www.bilibili.com/read/cv15528962/
 

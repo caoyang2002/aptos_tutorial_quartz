@@ -1,5 +1,7 @@
 ---
-title: find
+title: find 命令
+aliases:
+  - find 命令
 ---
 ```bash
 Cynthias-MacBook-Pro:/ cynthia$ man find

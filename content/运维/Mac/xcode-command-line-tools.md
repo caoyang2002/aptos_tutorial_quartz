@@ -1,5 +1,7 @@
 ---
 title: 安装 xcode 命令行工具
+aliases:
+  - 安装 xcode 命令行工具
 ---
 # 使用安装包安装
 https://developer.apple.com/download/all/ 

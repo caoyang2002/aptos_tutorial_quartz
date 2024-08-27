@@ -1,5 +1,7 @@
 ---
 title: 安装 mysql
+aliases:
+  - 安装 mysql
 ---
 
 用opkg安装myserver及其依赖包  

@@ -1,5 +1,7 @@
 ---
 title: 使用 ssh
+aliases:
+  - 使用 ssh
 ---
 
 # 群晖

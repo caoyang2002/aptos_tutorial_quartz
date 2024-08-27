@@ -1,5 +1,7 @@
 ---
 title: 安装 OpenWRT
+aliases:
+  - 安装 OpenWRT
 ---
 下载 [OpenWRT](https://lidrive.vip) 镜像文件：
 

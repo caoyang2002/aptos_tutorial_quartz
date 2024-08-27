@@ -1,5 +1,5 @@
 ---
-title: 目录
+title: 在 web3 之下
 draft: false
 aliases:
   - 计算机与编程
@@ -13,18 +13,11 @@ banner: "static/space.jpg"
 ---
 本站主要基于 Aptos 的文档，以及 OpenBuild、BuilderDAO、Alcove、各大高校的资源等，如若为引用，会在文中或目录处的 yaml 中标明出处。
 
-目前我正在学习英语（以翻译文档的方式），所以可以保证在头部 yaml 中标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[翻译原则与术语规范]]。
-
-推荐使用 [IP 访问](http://43.138.107.218/)
+目前我正在学习英语（以翻译文档的方式），所以可以保证在头部 yaml 中标记为 “已校验” 的内容为 AI 翻译 + 本人核对，具体请查看[[资料/Translation-principles-and-terminology-norms|翻译原则与术语规范]]
 
 [GitHub 开源地址](https://github.com/caoyang2002/aptos_tutorial_quartz)
 
-
-
-
-
-
-[[Aptos-优化提案]]（AIP）
+[[AIP/AIP|Aptos 优化提案]]
 
 [[Move 的历史]]
 
@@ -134,8 +127,8 @@ banner: "static/space.jpg"
 | ----------------------------- | ------------------------------------------------------ |
 | [[APTOS-Whitepaper]]          | [[精通以太坊]]                                              |
 | [[BITCOIN-Whitepaper]]        | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
-| [[ETHEREUM-白皮书]]              | [权益证明]()                                               |
-| [[SOLANA-白皮书]]                |                                                        |
+| [[白皮书/ETHEREUM-Whitepaper]]              | [权益证明]()                                               |
+| [[白皮书/SOLANA-Whitepaper]]                |                                                        |
 |                               |                                                        |
 |                               |                                                        |
 

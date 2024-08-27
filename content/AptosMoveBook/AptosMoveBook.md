@@ -11,6 +11,7 @@ _templateName: ""
 draft: false
 link:
 ---
+[[preface-way-Move?|前言：为什么是 Move？]]
 
 [[chapter-1-HelloWorld|第一章 Hello World]]
 

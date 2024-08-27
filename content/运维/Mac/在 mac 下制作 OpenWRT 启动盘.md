@@ -1,5 +1,9 @@
-
-https://lidrive.vip
+---
+title: 在 mac 下制作 OpenWRT 启动盘
+aliases:
+  - 在 mac 下制作 OpenWRT 启动盘
+link: https://lidrive.vip
+---
 # 使用命令行
 
 为了跑 LLM 选择了Ubuntu Server，记录一下在 Mac 下做启动盘的过程。

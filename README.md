@@ -1,3 +1,3 @@
 # knowledge base
 
-https://aptos-tutorial-quartz.vercel.app/
+https://go2web3.vercel.app/

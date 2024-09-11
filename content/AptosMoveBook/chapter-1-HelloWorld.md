@@ -18,7 +18,7 @@ tags:
 2. 初始化项目结构为 move 结构
 
     ```bash
-    aptos mvoe init --name hello_move
+    aptos move init --name hello_move
     #  --name <NAME>       Name of the new Move package
     # 这里的 --name 会作为配置文件中的 name 名称
     ```

@@ -107,7 +107,6 @@ banner: "static/space.jpg"
 >
 > - [[DApp-金融]]：
 >
->
 > **肖臻（北京大学）**
 > - [北京大学肖臻老师《区块链技术与应用》公开课](https://www.bilibili.com/video/av37065233/?p=2&vd_source=8c6436f893599ab79e15253337a87ed5)
 > 
@@ -127,9 +126,8 @@ banner: "static/space.jpg"
 | ----------------------------- | ------------------------------------------------------ |
 | [[APTOS-Whitepaper]]          | [[精通以太坊]]                                              |
 | [[BITCOIN-Whitepaper]]        | [精通比特币](https://github.com/inoutcode/bitcoin_book_2nd) |
-| [[白皮书/ETHEREUM-Whitepaper]]              | [权益证明]()                                               |
-| [[白皮书/SOLANA-Whitepaper]]                |                                                        |
-|                               |                                                        |
+| [[白皮书/ETHEREUM-Whitepaper]]   | [权益证明]()                                               |
+| [[白皮书/SOLANA-Whitepaper]]     |                                                        |
 |                               |                                                        |
 
 | 导航站                                                  | 社区                                                                                                                                                                                                                                                   | 高校                                               | 机构                                               | 安全团队                               | 书籍论文                                                                                       | 其他平台                                                        | GitHub                                                   | 聚合器                                 |
@@ -158,12 +156,11 @@ banner: "static/space.jpg"
 > - [区块链演示](https://blockchaindemo.io)
 
 
-
 - [V2EX](https://v2ex.com)
 - [IPFS图床](https://cdn.ipfsscan.io)
 - [菜鸟工具](https://www.jyshare.com/)
 - [Web3 图谱](https://learnblockchain.cn/maps/Web3)
-- 
+
 
 ---
 - 当前网站地址： https://www.chyraw.com
@@ -172,12 +169,7 @@ banner: "static/space.jpg"
 - 邮箱：[reggiesimons2cy@gmail.com](mailto:reggiesimons2cy@gmail.com)
 
 
-
- [菜鸟工具](https://www.jyshare.com/)
+[菜鸟工具](https://www.jyshare.com/)
  
 [在线工具](https://tool.lu/)
-
-
-
-
 
